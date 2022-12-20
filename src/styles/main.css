@@ -340,6 +340,16 @@ body, #__next {
    }
 }
 
+@media screen and (max-width: 768px)
+{
+   .table--home tbody tr:hover td {
+      font-size: 13px;
+   }
+   .table--home tr th:first-child > div,
+   .table--home tr td:first-child > div {
+      width: 10rem;
+   }
+}
 
 
 
@@ -472,8 +482,8 @@ body, #__next {
    display: none;
   }
   .swiper-button-next:after, .swiper-button-prev:after {
-   font-size: 15px !important;
-   color: gray !important;
+    font-size: 15px !important;
+    color: gray !important;
 }
   .bg-highlight {
    background-image: var(--bg);

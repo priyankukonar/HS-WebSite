@@ -1,8 +1,7 @@
 // @ts-nocheck
 import styled from "@emotion/styled"
-import { motion, useAnimation } from "framer-motion"
-import { useEffect } from "react"
-import { InView } from "react-intersection-observer"
+import { motion } from "framer-motion"
+
 
 const StyledSection = styled(motion.section)`
    --container-size: 100%;

@@ -180,13 +180,13 @@ function Home({ Component, pageProps, news, settings }) {
                      <tbody className="text-sm text-muted-new">
                         <tr className="bg-gray-100 bg-blue-trans mb-3 text-green-600 text-lg">
                            <td className="p-3">
-                              <div className="md:flex items-center gap-3">
+                              <div className="flex items-center gap-3">
                                  <img src="/assets/tests_icon.svg" alt="" className="w-10" />
                                  <span className="font-semibold">UID Test</span>
                               </div>
                            </td>
                            <td className="p-3">
-                              <div className="md:flex items-center gap-3">
+                              <div className="flex items-center gap-3">
                                  <img src="/assets/turn_around_icon.svg" alt="" className="w-8" />
                                  <div>8-12 hours</div>
                               </div>
@@ -205,7 +205,7 @@ function Home({ Component, pageProps, news, settings }) {
                         </tr>
                         <tr className="bg-gray-trans mb-3">
                            <td className="p-3">
-                              <div className="md:flex items-center gap-3">
+                              <div className="flex items-center gap-3">
                                  <img src="/assets/culture_test.svg" alt="" className="w-8" />
                                  <span className="font-semibold">Culture Test</span>
                               </div>
@@ -224,7 +224,7 @@ function Home({ Component, pageProps, news, settings }) {
                         </tr>
                         <tr className="bg-gray-trans-1 mb-3">
                            <td className="p-3">
-                              <div className="md:flex items-center gap-3">
+                              <div className="flex items-center gap-3">
                                  <img src="/assets/molecular_test_icon.svg" alt="" className="w-8" />
                                  <span className="font-semibold">Molecular Test</span>
                               </div>
@@ -244,7 +244,7 @@ function Home({ Component, pageProps, news, settings }) {
                         </tr>
                         <tr className="bg-gray-trans mb-3">
                            <td className="p-3">
-                              <div className="md:flex items-center gap-3">
+                              <div className="flex items-center gap-3">
                                  <img src="/assets/sequence_test.svg" alt="" className="w-8" />
                                  <span className="font-semibold">Sequencing Test</span>
                               </div>
