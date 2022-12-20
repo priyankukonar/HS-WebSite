@@ -11,8 +11,8 @@ import Link from "next/link";
 import SectionPosts from "../components/organisms/SectionPosts";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import ResearchItem from "../components/molecules/ResearchItem";
-import { Navigation } from "../components/organisms/SidebarNav/Navigation";
 import ContactFormProvider from "../components/providers/ContactFormProvider";
+import { Navigation } from "swiper";
 
 const StyledHome = styled(AppTemplate)`
 `
