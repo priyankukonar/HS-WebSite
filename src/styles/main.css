@@ -322,7 +322,10 @@ body, #__next {
 .table--home {
 
 }
-@media screen and (min-width: 800px) {
+.table--home tr td:first-child {
+   width: 295px;
+}
+@media screen and (min-width: 1024px) {
    .table--home tr td:first-child {
       width: 295px;
    }
@@ -468,6 +471,10 @@ body, #__next {
   {
    display: none;
   }
+  .swiper-button-next:after, .swiper-button-prev:after {
+   font-size: 15px !important;
+   color: gray !important;
+}
   .bg-highlight {
    background-image: var(--bg);
    background-repeat: no-repeat;

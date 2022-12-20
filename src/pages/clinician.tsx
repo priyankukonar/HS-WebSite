@@ -77,7 +77,7 @@ export default function Clinician({ Component, pageProps, news, settings }) {
          <HeroSection
             title={`Bringing precision therapy <br />
                with Genomics, ensuring <br />
-               improved personalised Pdia<br />
+               improved personalised <br />
                patient outcomes`}
             description={`Stay on top with cutting edge technology`}
             defaultAction={true}
