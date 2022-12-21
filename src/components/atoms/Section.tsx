@@ -1,10 +1,8 @@
 // @ts-nocheck
 import styled from "@emotion/styled"
-import { motion, useAnimation } from "framer-motion"
-import { useEffect } from "react"
-import { InView } from "react-intersection-observer"
 
-const StyledSection = styled(motion.section)`
+
+const StyledSection = styled.div`
    --container-size: 100%;
    @media screen and (min-width: 800px)
    {
