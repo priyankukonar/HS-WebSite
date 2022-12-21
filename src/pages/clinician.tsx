@@ -11,8 +11,8 @@ import Link from "next/link";
 import SectionPosts from "../components/organisms/SectionPosts";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import ResearchItem from "../components/molecules/ResearchItem";
-import { Navigation } from "../components/organisms/SidebarNav/Navigation";
 import ContactFormProvider from "../components/providers/ContactFormProvider";
+import { Navigation } from "swiper";
 
 const StyledHome = styled(AppTemplate)`
 `
@@ -77,7 +77,7 @@ export default function Clinician({ Component, pageProps, news, settings }) {
          <HeroSection
             title={`Bringing precision therapy <br />
                with Genomics, ensuring <br />
-               improved personalised Pdia<br />
+               improved personalised <br />
                patient outcomes`}
             description={`Stay on top with cutting edge technology`}
             defaultAction={true}
