@@ -147,7 +147,7 @@ function Home({ Component, pageProps, news, settings }) {
             items={[
                { title: '1200+ PATHOGENS', thumbnailUrl: '/assets/pathogens-icon.svg', description: 'Comprehensive single screening test covering bacteria and fungi' },
                { title: 'ARG PROFILING', thumbnailUrl: '/assets/microscope_icon.svg', description: 'Identifies drug resistance based on Antibiotic Resistance Gene (ARG) profile' },
-               { title: 'RESULT REPORTED IN < 12 HOURS', thumbnailUrl: '/assets/timer_icon.svg', description: 'Hands on time < 4 hours turnaround time of 12 hours' },
+               { title: 'RESULT REPORTED IN < 12 HOURS', thumbnailUrl: '/assets/timer_icon.svg', description: 'Hands on time < 4 hours' },
             ]}
          />
          <Section className="bg-light">
