@@ -83,14 +83,14 @@ export default function Clinician({ Component, pageProps, news, settings }) {
             bg={'/assets/clinician-bg.jpg'}
          />
          <SectionGridItems
-            title={`Benefits of ΩTB®`}
+            title={`Why Choose Haystack`}
             titleClassName="text-center"
             gridClassName={'grid-cols-1 md:grid-cols-4 gap-8 w-11/12 mx-auto'}
             items={[
-               { title: 'Comprehensive', thumbnailUrl: '/assets/testtube.svg', description: `DR profile of 18 drugs, Mixed infections and Co-infections incl NTM` },
-               { title: 'Validated', thumbnailUrl: '/assets/time.svg', description: `Tested and validated on >10,000 genomes and >1000 clinical samples` },
-               { title: 'Accurate', thumbnailUrl: '/assets/micro.svg', description: `High sensitivity and specificity comparable to molecular methods` },
-               { title: 'Affordable', thumbnailUrl: '/assets/hand.svg', description: `Test cost less than or comparable to culture testing` },
+               { title: 'Easy Access To 200+ Partner Labs', thumbnailUrl: '/assets/micro.svg',titleClassName:'text-md' },
+               { title: 'No change in sample collection', thumbnailUrl: '/assets/testtube.svg',titleClassName:'text-md' },
+               { title: 'Easy to read reports', thumbnailUrl: '/assets/note.svg',titleClassName:'text-md'},
+               { title: 'Digital Age Ready', thumbnailUrl: '/assets/touch.svg',titleClassName:'text-md' },
             ]}
          />
          <TestimonialsSection
