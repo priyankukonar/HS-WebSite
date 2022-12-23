@@ -1,8 +1,6 @@
 // @ts-nocheck
 
 import AppTemplate from "../components/templates/AppTemplate";
-import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import Section from '../components/atoms/Section'
@@ -206,19 +204,6 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
          </Section>
       </StyledHome>
    )
-}
-
-export async function getStaticProps(context) {
-   let news = getActiveNews()
-   console.log({ news })
-   const settings = getSettings()
-
-   return {
-     props: {
-      news: JSON.parse(JSON.stringify(news)),
-      settings: JSON.parse(JSON.stringify(settings))
-     }, // will be passed to the page component as props
-   }
 }
 
 

@@ -18,14 +18,14 @@ const BlogPostItem = (props: IBlogPostItem) => {
          <picture className="item__thumbnail">
             <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-[16/9] bg-gray-200 object-cover" />
          </picture>
-         <figcaption className="item__caption my-6">
+         <figcaption className="item__caption mt-6">
             <p className="font-medium text-sm line-clamp-3">{dateFormat(props.date)}</p>
             <Link href={props.url}>
-               <p className="cursor-pointer font-semibold text-md my-6 line-clamp-3 post-title min-70px">{props.title}</p>
+               <p className="cursor-pointer font-semibold text-md mt-6 line-clamp-3 post-title min-70px">{props.title}</p>
             </Link>
-            <p>
+            {/* <p>
                <a className="font-bold text-blue-600 text-xs">Authored By {props.author_name} <span className="flex author-bio font-normal text-blue-600">{props.author_bio}</span></a>
-            </p>
+            </p> */}
          </figcaption>
       </figure>
    )
