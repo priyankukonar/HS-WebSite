@@ -188,11 +188,11 @@ function Home({ Component, pageProps, news, settings }) {
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/turn_around_icon.svg" alt="" className="w-8" />
-                                 <div>8-12 hours</div>
+                                 <div>12 hours</div>
                               </div>
                            </td>
                            <td className="p-3">
-                              <div>{'>1200 pathogens*'}</div>
+                              <div>{'>1200 pathogens'}</div>
                            </td>
                            <td className="p-3">
                               <div>{'ARGs'}</div>

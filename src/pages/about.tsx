@@ -205,8 +205,8 @@ export default function About({ Component, pageProps, news, settings }) {
                </div>
             </Section.Container>
          </Section>
-         <Section className="SectionGridItems bg-gray-100 ">
-            <Section.Container className="container mx-auto py-12 md:py-16 text-center">
+         <Section className="SectionGridItems bg-gray-100 h-0.5">
+            <Section.Container className="container mx-auto py-12 md:py-16 text-center hidden">
                <div className="flex flex-col md:flex-row items-center gap-6 my-6 justify-center">
                   <a className={`font-bold px-4 py-3 border-2 btn-outline-info bg-transparent opacity-50 hover:opacity-100 active'`}>{`Join The Healthcare Revolution Driven By NGS`}</a>
                   <a className={`font-bold px-4 py-3 border-2 btn-outline-info bg-transparent opacity-50 hover:opacity-100 active'`}>{`Find The Openings Here`}</a>

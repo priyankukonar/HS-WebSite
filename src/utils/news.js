@@ -7,7 +7,6 @@ export const getNewsFiles = () => {
    let news = []
 
    const fileNames = fs.readdirSync(jsonDirectory + '/news');
-   // console.log({ fileNames })
    if(!fs.existsSync(jsonDirectory + '/news')) {
       console.warn('not found')
       return news

@@ -137,7 +137,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                                     <span className="font-semibold">{'ΩTB®'}</span>
                                  </td>
                                  <td className="p-3">
-                                    <div>{'18 antibiotics including bedaquiline, delamanid, etc.'}</div>
+                                    <div>{'18 antibiotics including bedaquiline and delamanid.'}</div>
                                  </td>
                               </tr>
                               <tr className="bg-gray-trans mb-3 text-sm">
