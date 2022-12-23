@@ -162,17 +162,17 @@ function Home({ Component, pageProps, news, settings }) {
                            <th className="text-lg text-left p-3 md:w-3/12">
                               Tests for <br />ID
                            </th>
-                           <th className="text-left p-3 md:w-2/12">
+                           <th className="text-lg text-left p-3 md:w-2/12">
                               Turn<br />
                               Around Time
                            </th>
-                           <th className="text-left p-3">
+                           <th className="text-lg text-left p-3">
                               Pathogen <br />Coverage
                            </th>
-                           <th className="text-left p-3">
+                           <th className="text-lg text-left p-3">
                               Antibiotic<br />Coverage
                            </th>
-                           <th className="text-left p-3">
+                           <th className="text-lg text-left p-3">
                               Additional <br />Information
                            </th>
                         </tr>
@@ -272,6 +272,7 @@ function Home({ Component, pageProps, news, settings }) {
                      className="partners-carousel w-4/5"
                      spaceBetween={0}
                      navigation={true}
+                     loop={true}
                      ref={partnersCarousel}
                      onSlideChange={console.info}
                      onReachEnd={console.info}
@@ -349,6 +350,7 @@ function Home({ Component, pageProps, news, settings }) {
                         delay: 2500,
                         disableOnInteraction: false,
                      }}
+                     loop={true}
                      breakpoints={{
                         300: {
                            slidesPerView: 2,

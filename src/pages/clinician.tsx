@@ -2,11 +2,10 @@
 import research_papers from "../json/research_papers.json";
 import testimonials from "../json/testimonials.json";
 import AppTemplate from "../components/templates/AppTemplate";
-import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
 import {  filteredResearchPapers, filteredTestimonials } from "../utils/index";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
+import SectionGridItems from "../components/organisms/SectionGridItems";
 import Link from "next/link";
 import SectionPosts from "../components/organisms/SectionPosts";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
@@ -83,6 +82,17 @@ export default function Clinician({ Component, pageProps, news, settings }) {
             defaultAction={true}
             bg={'/assets/clinician-bg.jpg'}
          />
+         <SectionGridItems
+            title={`Benefits of ΩTB®`}
+            titleClassName="text-center"
+            gridClassName={'grid-cols-1 md:grid-cols-4 gap-8 w-11/12 mx-auto'}
+            items={[
+               { title: 'Comprehensive', thumbnailUrl: '/assets/testtube.svg', description: `DR profile of 18 drugs, Mixed infections and Co-infections incl NTM` },
+               { title: 'Validated', thumbnailUrl: '/assets/time.svg', description: `Tested and validated on >10,000 genomes and >1000 clinical samples` },
+               { title: 'Accurate', thumbnailUrl: '/assets/micro.svg', description: `High sensitivity and specificity comparable to molecular methods` },
+               { title: 'Affordable', thumbnailUrl: '/assets/hand.svg', description: `Test cost less than or comparable to culture testing` },
+            ]}
+         />
          <TestimonialsSection
             title="Testimonials"
             items={filteredTestimonials(testimonials.data)}
@@ -99,18 +109,3 @@ export default function Clinician({ Component, pageProps, news, settings }) {
       </StyledHome>
    )
 }
-
-export async function getStaticProps(context) {
-   let news = getActiveNews()
-   console.log({ news })
-   const settings = getSettings()
-
-   return {
-     props: {
-      news: JSON.parse(JSON.stringify(news)),
-      settings: JSON.parse(JSON.stringify(settings))
-     }, // will be passed to the page component as props
-   }
-}
-
-

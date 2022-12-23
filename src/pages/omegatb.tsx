@@ -3,8 +3,6 @@
 import testimonials from "../json/testimonials.json";
 import research_papers from "../json/research_papers.json";
 import AppTemplate from "../components/templates/AppTemplate";
-import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
 import SectionGridItems from "../components/organisms/SectionGridItems";
@@ -152,7 +150,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                                     <span>Culture Test</span>
                                  </td>
                                  <td className="p-3 py-1">
-                                    <div>{'13 - 15 anti-biotics'}</div>
+                                    <div>{'13 - 15 antibiotics'}</div>
                                  </td>
                               </tr>
                               <tr className="bg-gray-trans-1  mb-3 text-sm">
@@ -227,7 +225,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
             gridClassName={'grid-cols-1 md:grid-cols-4 gap-8 w-11/12 mx-auto'}
             items={[
                { title: 'Comprehensive', thumbnailUrl: '/assets/testtube.svg', description: `DR profile of 18 drugs, Mixed infections and Co-infections incl NTM` },
-               { title: 'Validated', thumbnailUrl: '/assets/time.svg', description: `Tested and validated on >10,000 genomes and >300 clinical samples` },
+               { title: 'Validated', thumbnailUrl: '/assets/time.svg', description: `Tested and validated on >10,000 genomes and >1000 clinical samples` },
                { title: 'Accurate', thumbnailUrl: '/assets/micro.svg', description: `High sensitivity and specificity comparable to molecular methods` },
                { title: 'Affordable', thumbnailUrl: '/assets/hand.svg', description: `Test cost less than or comparable to culture testing` },
             ]}
@@ -249,17 +247,5 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
    )
 }
 
-export async function getStaticProps(context) {
-   let news = getActiveNews()
-   console.log({ news })
-   const settings = getSettings()
-
-   return {
-      props: {
-         news: JSON.parse(JSON.stringify(news)),
-         settings: JSON.parse(JSON.stringify(settings)),
-      }, // will be passed to the page component as props
-   }
-}
 
 
