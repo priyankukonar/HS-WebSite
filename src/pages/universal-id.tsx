@@ -221,7 +221,7 @@ export default function Diseases({ Component, pageProps, news, settings }) {
             gridClassName={'grid-cols-1 md:grid-cols-3 gap-8 w-11/12 mx-auto'}
             items={[
                { title: 'Personalised Therapy', thumbnailUrl: '/assets/diseas-personal-therapy.png', description: `Know the infection before starting the treatment` },
-               { title: 'Accurate from start to finish', thumbnailUrl: '/assets/disease-accurate-finish.png', description: `1200+ pathogens including bacteria, fungi, protozoa.` },
+               { title: 'Accurate from start to finish', thumbnailUrl: '/assets/disease-accurate-finish.png', description: `1200+ pathogens including bacteria and fungi.` },
                { title: 'Enabling antibiotic stewardship', thumbnailUrl: '/assets/disease-benefit-icon3.png', description: `Treat infections, protect patients from harm caused by unnecessary antibiotic use, and combat antibiotic resistance.` },
             ]}
          />
