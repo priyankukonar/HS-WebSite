@@ -1,12 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 // @ts-nocheck
 import AppTemplate from "../components/templates/AppTemplate";
-import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
 import SectionGridItems from "../components/organisms/SectionGridItems";
-
 
 const page = {
    omegaComparisionTable: {
@@ -95,9 +92,6 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                               <span>MOLECULAR<br />PANEL</span>
                            </th>
                            <th className="text-left font-normal">
-                              <span>SANGER<br />SEQUENCING</span>
-                           </th>
-                           <th className="text-left font-normal">
                               <span>CULTURE</span>
                            </th>
                         </tr>
@@ -111,13 +105,10 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                               <span className="font-bold text-sm">{`Very Low <= 12hrs`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{`High*`}</span>
+                              <span className="font-regular text-sm">{`High*`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{`High`}</span>
-                           </td>
-                           <td className="text-red-600">
-                              <span className="font-bold text-sm">{`High`}</span>
+                              <span className="font-regular text-sm">{`High`}</span>
                            </td>
                         </tr>
                         <tr>
@@ -128,13 +119,10 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                               <span className="font-bold text-sm">{`Not Limited By Probes`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{`Probe Based`}</span>
-                           </td>
-                           <td className="text-green-600">
-                              <span className="font-bold text-sm">{`High`}</span>
+                              <span className="font-regular text-sm">{`Probe Based`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{`Limited By Culturability`}</span>
+                              <span className="font-regular text-sm">{`Limited By Culturability`}</span>
                            </td>
                         </tr>
                         <tr>
@@ -145,13 +133,10 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                               <span className="font-bold text-sm">{`High/Genotypic`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{`Low/Genotypic`}</span>
+                              <span className="font-regular text-sm">{`Low/Genotypic`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{``}</span>
-                           </td>
-                           <td className="text-red-600">
-                              <span className="font-bold text-sm">{`Low/Phenotypic`}</span>
+                              <span className="font-regular text-sm">{`Low/Phenotypic`}</span>
                            </td>
                         </tr>
                         <tr>
@@ -162,13 +147,10 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                               <span className="font-bold text-sm">{`High (84-88%)`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{`Low`}</span>
-                           </td>
-                           <td className="text-green-600">
-                              <span className="font-bold text-sm">{`High`}</span>
+                              <span className="font-regular text-sm">{`Low`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{`Low (15-20%)`}</span>
+                              <span className="font-regular text-sm">{`Low (15-20%)`}</span>
                            </td>
                         </tr>
                         <tr>
@@ -179,13 +161,10 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                               <span className="font-bold text-sm">{`Highest (99%)`}</span>
                            </td>
                            <td className="text-green-600">
-                              <span className="font-bold text-sm">{`High`}</span>
+                              <span className="font-regular text-sm">{`High`}</span>
                            </td>
                            <td className="text-green-600">
-                              <span className="font-bold text-sm">{`Highest`}</span>
-                           </td>
-                           <td className="text-green-600">
-                              <span className="font-bold text-sm">{`High`}</span>
+                              <span className="font-regular text-sm">{`High`}</span>
                            </td>
                         </tr>
                         <tr>
@@ -196,13 +175,10 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                               <span className="font-bold text-sm">{`On Site`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{`Centralised`}</span>
-                           </td>
-                           <td className="text-red-600">
-                              <span className="font-bold text-sm">{`Centralised`}</span>
+                              <span className="font-regular text-sm">{`Centralised`}</span>
                            </td>
                            <td className="text-green-600">
-                              <span className="font-bold text-sm">{`On Site`}</span>   
+                              <span className="font-regular text-sm">{`On Site`}</span>   
                            </td>
                         </tr>
                         <tr>
@@ -213,13 +189,10 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                               <span className="font-bold text-sm">{`Zero Upskilling`}</span>
                            </td>
                            <td className="text-green-600">
-                              <span className="font-bold text-sm">{`Zero Upskilling`}</span>
-                           </td>
-                           <td className="text-red-600">
-                              <span className="font-bold text-sm">{`High Skill`}</span>
+                              <span className="font-regular text-sm">{`Zero Upskilling`}</span>
                            </td>
                            <td className="text-green-600">
-                              <span className="font-bold text-sm">{`Zero Upskilling`}</span>
+                              <span className="font-regular text-sm">{`Zero Upskilling`}</span>
                            </td>
                         </tr>
                         <tr>
@@ -230,21 +203,15 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                               <span className="font-bold text-sm">{`Low`}</span>
                            </td>
                            <td className="text-red-600">
-                              <span className="font-bold text-sm">{`High`}</span>
-                           </td>
-                           <td className="text-red-600">
-                              <span className="font-bold text-sm">{`High`}</span>
+                              <span className="font-regular text-sm">{`High`}</span>
                            </td>
                            <td className="text-green-600">
-                              <span className="font-bold text-sm">{`Low`}</span>
+                              <span className="font-regular text-sm">{`Low`}</span>
                            </td>
                         </tr>
                      </tbody>
                   </table>
                </div>
-               <p className="text-xs text-muted mt-4">
-                  {`*In silico analysis, UID can identify >1200 pathogens, pre-clinical validation has been done for 48 pathogens`}
-               </p>
             </Section.Container>
          </Section>
 
@@ -253,8 +220,8 @@ export default function Diseases({ Component, pageProps, news, settings }) {
             titleClassName="text-center"
             gridClassName={'grid-cols-1 md:grid-cols-3 gap-8 w-11/12 mx-auto'}
             items={[
-               { title: 'Personalised treatment/ therapy', thumbnailUrl: '/assets/diseas-personal-therapy.png', description: `Know the infection before starting the treatment` },
-               { title: 'Accurate from start to finish', thumbnailUrl: '/assets/disease-accurate-finish.png', description: `1200+ pathogens including bacteria, fungi, protozoa.` },
+               { title: 'Personalised Therapy', thumbnailUrl: '/assets/diseas-personal-therapy.png', description: `Know the infection before starting the treatment` },
+               { title: 'Accurate from start to finish', thumbnailUrl: '/assets/disease-accurate-finish.png', description: `1200+ pathogens including bacteria and fungi.` },
                { title: 'Enabling antibiotic stewardship', thumbnailUrl: '/assets/disease-benefit-icon3.png', description: `Treat infections, protect patients from harm caused by unnecessary antibiotic use, and combat antibiotic resistance.` },
             ]}
          />
@@ -269,17 +236,5 @@ export default function Diseases({ Component, pageProps, news, settings }) {
    )
 }
 
-export async function getStaticProps(context) {
-   let news = getActiveNews()
-   console.log({ news })
-   const settings = getSettings()
-
-   return {
-      props: {
-         news: JSON.parse(JSON.stringify(news)),
-         settings: JSON.parse(JSON.stringify(settings)),
-      }, // will be passed to the page component as props
-   }
-}
 
 

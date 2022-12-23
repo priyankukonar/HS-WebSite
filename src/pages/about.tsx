@@ -55,9 +55,9 @@ const HeroSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8 px-3 md:px-0">
                   <h3 className="mb-4 text-3xl">
-                  Building state-of-the-art<br/> 
-                     <span className="font-extrabold"> genomics technology</span> for<br/>
-                     <span className="font-extrabold"> accurate personalised</span><br/>
+                  Building state of the art<br/> 
+                     <span className="font-extrabold"> genomics solution</span> for<br/>
+                     <span className="font-extrabold"> accurate, personalised</span><br/>
                      <span className="font-extrabold"> clinical</span> decisions
                   </h3>
                </div>
@@ -86,14 +86,9 @@ export default function About({ Component, pageProps, news, settings }) {
                About Haystack Analytics
                </h3>
                <p className="text-center mb-4 text-sm md:w-10/12 m-auto">
-               HaystackAnalytics is a Mumbai-based startup, incubated at IIT Bombay, initially funded by grants from the Department of Science &
-               Technology and BIRAC, the Government of India, and backed by healthcare veterans like Dr.Velumani. We build, validate and offer tests that
-               accurately identify the condition of the patient. The reports are based on genomic analysis and are readily usable by clinicians.
-               </p>
+               Based out of IIT Bombay, HaystackAnalytics is a HealthTech company creating clinical genomics products, which enable diagnostic labs and hospitals to offer accurate and personalized diagnostics. Supported by India's most respected science agencies (DST, BIRAC, DBT), we created and launched a portfolio of products to offer genomics in infectious diseases. Our genomics based diagnostic solution for Tuberculosis was recognized as one of top innovations supported by BIRAC in the past 10 years, and was launched by the Prime Minister of India in the BIRAC Showcase event in Delhi, 2022.</p>
                <p className="text-center mb-4 text-sm md:w-10/12 m-auto">
-               We have been selected and recognized in some of the industry’s best startup accelerators, including the Intel India Startup Program and GE
-               Edison Program. To make genomics data consumable for all general healthcare systems, they have managed to bring the solutions
-               directly to the users with their unique computing hardware, co-developed with Intel.
+               While the TB genomics test brought genomics to one of India's greatest healthcare challenges, the Universal ID solution targets one of WHO's SDG goals.
                </p>
             </Section.Container>
          </Section>
@@ -204,7 +199,7 @@ export default function About({ Component, pageProps, news, settings }) {
                               epidemiology</span>
                            </div>
                         </div>
-                        <h3 className="font-bold mt-4 text-xl">Prof. Dr. Kiran Kondabagil</h3>
+                        <h3 className="font-bold mt-4 text-xl">Prof. Kiran Kondabagil</h3>
                      </div>
                   </div>
                </div>

@@ -27,7 +27,7 @@ const WebinarItem = (props: IWebinarItem) => {
 
    return (
       <>
-      <figure className="post-item item">
+      <figure className="post-item item cursor-pointer">
          <picture className="item__thumbnail" onClick={() => setModalIsOpen(true)}>
             <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-[16/9] bg-gray-200 object-cover" />
          </picture>

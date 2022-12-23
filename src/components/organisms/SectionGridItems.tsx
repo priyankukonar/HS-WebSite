@@ -28,11 +28,12 @@ interface ISectionGridItem {
    thumbnailUrl?: string,
    title?: string,
    description?: string,
+   titleClassName?: string,
 }
 
 interface IHeroPros {
    gridClassName?: string,
-   titleClassName?: string,
+   innerTitleClassName?: string,
    title?: string|any,
    subtitle?: string|any,
    subtitle?: string,
@@ -48,7 +49,7 @@ export const SectionGridItem = (props: ISectionGridItem) => {
             <img src={props.thumbnailUrl} className="img" alt={props.title} className="w-100" />
          </picture>
          <figcaption className="flex-1">
-            <h4 className="mb-4 font-semibold text-md leading-none">{props.title}</h4>
+            <h4 className={`${props.titleClassName ?? 'mb-4 text-md leading-none'} font-semibold`}>{props.title}</h4>
             <p className="text-sm">{props.description}</p>
          </figcaption>
       </figure>

@@ -2,11 +2,10 @@
 import research_papers from "../json/research_papers.json";
 import testimonials from "../json/testimonials.json";
 import AppTemplate from "../components/templates/AppTemplate";
-import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
 import {  filteredResearchPapers, filteredTestimonials } from "../utils/index";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
+import SectionGridItems from "../components/organisms/SectionGridItems";
 import Link from "next/link";
 import SectionPosts from "../components/organisms/SectionPosts";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
@@ -83,6 +82,17 @@ export default function Clinician({ Component, pageProps, news, settings }) {
             defaultAction={true}
             bg={'/assets/clinician-bg.jpg'}
          />
+         <SectionGridItems
+            title={`Why Choose Haystack`}
+            titleClassName="text-center"
+            gridClassName={'grid-cols-1 md:grid-cols-4 gap-4 w-11/12 mx-auto'}
+            items={[
+               { title: 'Easy Access To 200+ Partner Labs', thumbnailUrl: '/assets/micro.svg',titleClassName:'text-md md:w-11/12' },
+               { title: 'No change in sample collection', thumbnailUrl: '/assets/testtube.svg',titleClassName:'text-md md:w-10/12' },
+               { title: 'Easy to read reports', thumbnailUrl: '/assets/note.svg',titleClassName:'text-md md:w-10/12'},
+               { title: 'Digital Age Ready', thumbnailUrl: '/assets/touch.svg',titleClassName:'text-md md:w-8/12' },
+            ]}
+         />
          <TestimonialsSection
             title="Testimonials"
             items={filteredTestimonials(testimonials.data)}
@@ -99,18 +109,3 @@ export default function Clinician({ Component, pageProps, news, settings }) {
       </StyledHome>
    )
 }
-
-export async function getStaticProps(context) {
-   let news = getActiveNews()
-   console.log({ news })
-   const settings = getSettings()
-
-   return {
-     props: {
-      news: JSON.parse(JSON.stringify(news)),
-      settings: JSON.parse(JSON.stringify(settings))
-     }, // will be passed to the page component as props
-   }
-}
-
-
