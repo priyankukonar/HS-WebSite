@@ -85,12 +85,12 @@ export default function Clinician({ Component, pageProps, news, settings }) {
          <SectionGridItems
             title={`Why Choose Haystack`}
             titleClassName="text-center"
-            gridClassName={'grid-cols-1 md:grid-cols-4 gap-8 w-11/12 mx-auto'}
+            gridClassName={'grid-cols-1 md:grid-cols-4 gap-4 w-11/12 mx-auto'}
             items={[
-               { title: 'Easy Access To 200+ Partner Labs', thumbnailUrl: '/assets/micro.svg',titleClassName:'text-md' },
-               { title: 'No change in sample collection', thumbnailUrl: '/assets/testtube.svg',titleClassName:'text-md' },
-               { title: 'Easy to read reports', thumbnailUrl: '/assets/note.svg',titleClassName:'text-md'},
-               { title: 'Digital Age Ready', thumbnailUrl: '/assets/touch.svg',titleClassName:'text-md' },
+               { title: 'Easy Access To 200+ Partner Labs', thumbnailUrl: '/assets/micro.svg',titleClassName:'text-md md:w-11/12' },
+               { title: 'No change in sample collection', thumbnailUrl: '/assets/testtube.svg',titleClassName:'text-md md:w-10/12' },
+               { title: 'Easy to read reports', thumbnailUrl: '/assets/note.svg',titleClassName:'text-md md:w-10/12'},
+               { title: 'Digital Age Ready', thumbnailUrl: '/assets/touch.svg',titleClassName:'text-md md:w-8/12' },
             ]}
          />
          <TestimonialsSection
