@@ -109,7 +109,7 @@ function Home({ Component, pageProps, news, settings }) {
                </p>
                <div className="flex flex-col md:flex-row gap-4 my-8 mt-8 md:mt-24">
                   <div className="md:w-5/12">
-                     <h3 className="heading">SEPSIS AS A LEADING CAUSE OF DEATH</h3>
+                     <h3 className="heading">SEPSIS IS A LEADING CAUSE OF DEATH</h3>
                      <SepsisChart />
                   </div>
                   <div className="flex-1">
@@ -143,23 +143,23 @@ function Home({ Component, pageProps, news, settings }) {
          <SectionGridItems
             gridClassName={'grid-cols-1 md:grid-cols-3'}
             title={`The Universal Infectious Diseases Test`}
-            description={`UID Test is an NGS based culture-free test to identify causative pathogen in quick turn around time`}
+            description={`UID Test is an NGS based culture-free test to identify causative pathogen in a quick turn around time`}
             items={[
-               { title: '1200+ PATHOGENS', thumbnailUrl: '/assets/pathogens-icon.svg', description: 'Comprehensive single screening test covering bacteria, fungi, protozoa' },
-               { title: 'ARG PROFILING', thumbnailUrl: '/assets/microscope_icon.svg', description: 'Identifies drug resistance based on ARG (Antibiotic Resistance Gene) profile' },
-               { title: 'RESULT REPORTED IN 8-12 HOURS', thumbnailUrl: '/assets/timer_icon.svg', description: 'Hands on time < 4 hours Unbeatable turnaround time of 12 hours' },
+               { title: '1200+ PATHOGENS', thumbnailUrl: '/assets/pathogens-icon.svg', description: 'Comprehensive single screening test covering bacteria and fungi' },
+               { title: 'ARG PROFILING', thumbnailUrl: '/assets/microscope_icon.svg', description: 'Identifies drug resistance based on Antibiotic Resistance Gene (ARG) profile' },
+               { title: 'RESULT REPORTED IN < 12 HOURS', thumbnailUrl: '/assets/timer_icon.svg', description: 'Hands on time < 4 hours turnaround time of 12 hours' },
             ]}
          />
          <Section className="bg-light">
             <Section.Container className="container mx-auto py-8 md:py-16 ">
                <h3 className="section-heading">
-                  The Current System Needs An<br /> Upgrade To Save Lives
+                  The Current System Needs An Upgrade To Save Lives
                </h3>
                <div className="table-wrapper w-full overflow-auto table--home">
                   <table className="border-spacing-table">
                      <thead>
                         <tr className="text-blue-600 font-extrabold">
-                           <th className="text-left p-3 md:w-3/12">
+                           <th className="text-lg text-left p-3 md:w-3/12">
                               Tests for <br />ID
                            </th>
                            <th className="text-left p-3 md:w-2/12">
@@ -196,11 +196,9 @@ function Home({ Component, pageProps, news, settings }) {
                            </td>
                            <td className="p-3">
                               <div>{'ARGs'}</div>
-                              <div>{'Anti-microbial Resistance Genes'}</div>
                            </td>
                            <td className="p-3">
                               <div>Species and Genus identification</div>
-                              <div>Poly-microbial Identification</div>
                            </td>
                         </tr>
                         <tr className="bg-gray-trans mb-3">
@@ -242,32 +240,9 @@ function Home({ Component, pageProps, news, settings }) {
                               <div>Upgradation of technology on existing set up is not possible or is very difficult</div>
                            </td>
                         </tr>
-                        <tr className="bg-gray-trans mb-3">
-                           <td className="p-3">
-                              <div className="flex items-center gap-3">
-                                 <img src="/assets/sequence_test.svg" alt="" className="w-8" />
-                                 <span className="font-semibold">Sequencing Test</span>
-                              </div>
-                           </td>
-                           <td className="p-3">
-                              <div>1-3 days</div>
-                           </td>
-                           <td className="p-3">
-                              <div>{'Several pathogens'}</div>
-                           </td>
-                           <td className="p-3">
-                              <div>{'Limitedly available with some'}</div>
-                           </td>
-                           <td className="p-3">
-
-                           </td>
-                        </tr>
                      </tbody>
                   </table>
                </div>
-               <p className="text-xs text-muted mt-4">
-                  {`*In silico analysis, UID can identify >1200 pathogens, pre-clinical validation has been done for 48 pathogens`}
-               </p>
             </Section.Container>
          </Section>
 
