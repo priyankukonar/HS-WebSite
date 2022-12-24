@@ -73,8 +73,6 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths(context) {
    let posts = getActivePosts()
-
-   console.log({ posts })
    let slugs = []
 
    return {

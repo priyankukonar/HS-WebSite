@@ -141,7 +141,6 @@ export async function getStaticPaths(params:any) {
 
 export async function getStaticProps(context) {
    let news = getActiveNews()
-   console.log({ news })
    const settings = getSettings()
 
    return {

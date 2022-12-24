@@ -497,3 +497,7 @@ body, #__next {
    padding:0 18px !important;
 }
 }
+.break-word
+{
+   overflow-wrap: break-word;
+}

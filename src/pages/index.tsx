@@ -147,7 +147,7 @@ function Home({ Component, pageProps, news, settings }) {
             items={[
                { title: '1200+ PATHOGENS', thumbnailUrl: '/assets/pathogens-icon.svg', description: 'Comprehensive single screening test covering bacteria and fungi' },
                { title: 'ARG PROFILING', thumbnailUrl: '/assets/microscope_icon.svg', description: 'Identifies drug resistance based on Antibiotic Resistance Gene (ARG) profile' },
-               { title: 'RESULT REPORTED IN < 12 HOURS', thumbnailUrl: '/assets/timer_icon.svg', description: 'Hands on time < 4 hours turnaround time of 12 hours' },
+               { title: 'RESULT REPORTED IN < 12 HOURS', thumbnailUrl: '/assets/timer_icon.svg', description: 'Hands on time < 4 hours' },
             ]}
          />
          <Section className="bg-light">
@@ -188,11 +188,11 @@ function Home({ Component, pageProps, news, settings }) {
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/turn_around_icon.svg" alt="" className="w-8" />
-                                 <div>8-12 hours</div>
+                                 <div>12 hours</div>
                               </div>
                            </td>
                            <td className="p-3">
-                              <div>{'>1200 pathogens*'}</div>
+                              <div>{'>1200 pathogens'}</div>
                            </td>
                            <td className="p-3">
                               <div>{'ARGs'}</div>
