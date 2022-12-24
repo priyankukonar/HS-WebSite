@@ -27,7 +27,7 @@ function Footer({  }) {
    return (
       <StyledFooter className="bg-gray-100">
          <div className="container mx-auto pt-8 pb-0 md:py-8 px-3 md:px-0">
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-6">
                <div className="md:w-4/12">
                   <Link href={"/"}>
                      <a className="flex px-3 md:px-0">
@@ -35,7 +35,7 @@ function Footer({  }) {
                      </a>
                   </Link>
                </div>
-               <div className="md:w-3/12">
+               <div className="md:w-2/12">
                   <ul className="text-sm text-gray-600 flex flex-col gap-3">
                      {menus.footer?.map((fm, fmIndex) => (
                      <li key={`fm_${fmIndex}`}>
@@ -112,29 +112,14 @@ function Footer({  }) {
                      </li>
                   </ul>
                </div>
-               <div className="w-full mt-4 md:mt-0 md:w-6/12 md:self-end">
-                  
-               </div>
-            </div>
-         </div>
-         <div className="container mx-auto pt-0 pb-4 md:py-4 px-3 md:px-0">
-            <div className="flex flex-col md:flex-row gap-4">
-            <div className="md:w-3/12">
-               </div>
-               <div className="md:w-6/12">
-                  <p class="text-xs">
-                  HaystackAnalytics Private Limited
+               <div className="mt-4 md:mt-0 md:w-4/12">
+                  <p class="text-sm">
+                     HaystackAnalytics Private Limited
                   </p>
-                  <p class="text-xs">
-                  CM 03, SINE, KReSIT Building 4th Floor, Department of Computer Science, IIT Bombay, Powai, Mumbai - 400076
+                  <p class="text-xs my-2  ">
+                     CM 03, SINE, KReSIT Building 4th Floor, Department of Computer Science, IIT Bombay, Powai, Mumbai - 400076
                   </p>
-               </div>
-               <div className="w-full mt-4 md:mt-0 md:w-3/12 md:self-end">
-                  <ul className="text-sm text-gray-600 flex flex-col gap-3 md:justify-end">
-                     <li className="text-center md:text-end text-xs md:text-sm">
-                        <Link href="">© HaystackAnalytics</Link>
-                     </li>
-                  </ul>
+                  <Link href=""><span className="text-center md:text-end text-sm">© HaystackAnalytics</span></Link>
                </div>
             </div>
          </div>

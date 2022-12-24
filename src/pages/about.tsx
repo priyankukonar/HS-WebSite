@@ -83,7 +83,7 @@ export default function About({ Component, pageProps, news, settings }) {
          <Section className="bg-blue-800 text-white">
             <Section.Container className="container mx-auto py-12 md:py-20">
                <h3 className="font-extrabold text-center text-3xl mb-4">
-               About Haystack Analytics
+               About HaystackAnalytics
                </h3>
                <p className="text-center mb-4 text-sm md:w-10/12 m-auto">
                Based out of IIT Bombay, HaystackAnalytics is a HealthTech company creating clinical genomics products, which enable diagnostic labs and hospitals to offer accurate and personalized diagnostics. Supported by India's most respected science agencies (DST, BIRAC, DBT), we created and launched a portfolio of products to offer genomics in infectious diseases. Our genomics based diagnostic solution for Tuberculosis was recognized as one of top innovations supported by BIRAC in the past 10 years, and was launched by the Prime Minister of India in the BIRAC Showcase event in Delhi, 2022.</p>
