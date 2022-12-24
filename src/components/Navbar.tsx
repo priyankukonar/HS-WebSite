@@ -203,7 +203,7 @@ const Navbar = ({ renderMenu }) => {
                            {menus.sciencecornerHeader.map((mn, mnIndex) => (
                            <li key={`scm_${mnIndex}`}>
                            <Link key={`mn${mnIndex}`} href={mn.url}>
-                           <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == mn.url ? 'active text-blue-600': ''}`}>- {mn.label}</a>
+                           <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == mn.url ? 'active text-blue-600': ''}`}>{mn.label}</a>
                            </Link>
                            </li>
                            ))}
@@ -227,7 +227,7 @@ const Navbar = ({ renderMenu }) => {
                            {menus.productsHeader.map((mn, mnIndex) => (
                            <li key={`mnss_${mnIndex}`}>
                            <Link key={`mn${mnIndex}`} href={mn.url}>
-                           <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == mn.url ? 'active text-blue-600': ''}`}>- {mn.label}</a>
+                           <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == mn.url ? 'active text-blue-600': ''}`}>{mn.label}</a>
                            </Link>
                            </li>
                            ))}

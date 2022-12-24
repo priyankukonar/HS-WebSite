@@ -116,7 +116,6 @@ export default function Diagnostician({ Component, pageProps, posts, settings })
 
 export async function getStaticProps(context) {
    let posts = getActivePosts()
-   console.log({ posts })
    const settings = getSettings()
 
    return {
