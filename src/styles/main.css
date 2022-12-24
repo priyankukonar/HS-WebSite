@@ -513,11 +513,17 @@ body, #__next {
    list-style: inherit;
    font-size: 0.85rem;
 }
-.share-btn .is-opened
-{
-   width: 
-}
-.share-btn .is-closed
-{
 
+.share-btn__menu {
+   width: 0px;
+   transform-origin: center right;
+   transition: all .2s ease-out;
+   overflow: hidden;
+   white-space: nowrap;
+   opacity: 0;
+}
+.share-btn__menu.is-opened
+{
+   width: 200px;
+   opacity: 1;
 }
