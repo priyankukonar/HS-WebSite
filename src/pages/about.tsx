@@ -221,6 +221,7 @@ export default function About({ Component, pageProps, news, settings }) {
                <div className="relative">
                   <Swiper
                      spaceBetween={50}
+                     loop={true}
                      autoplay={{
                         delay: 2500,
                         disableOnInteraction: false,

@@ -285,15 +285,15 @@ function Home({ Component, pageProps, news, settings }) {
                      breakpoints={{
                         300: {
                            slidesPerView: 2,
-                           spaceBetween: 0,
+                           spaceBetween: 20,
                         },
                         768: {
                            slidesPerView: 4,
-                           spaceBetween: 0,
+                           spaceBetween: 20,
                         },
                         1024: {
                            slidesPerView: 5,
-                           spaceBetween: 0,
+                           spaceBetween: 20,
                         },
                      }}
                      onSwiper={(swiper: any) => partnersCarousel.current = swiper}
