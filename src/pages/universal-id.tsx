@@ -85,13 +85,13 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                            <th className="md:w/4/12">
 
                            </th>
-                           <th className="text-left font-bold">
+                           <th className="td-same-size text-left font-bold">
                               <span className="text-blue-600">UNIVERSAL<br />ID TEST</span>
                            </th>
-                           <th className="text-left font-normal">
+                           <th className="td-same-size text-left font-normal">
                               <span>MOLECULAR<br />PANEL</span>
                            </th>
-                           <th className="text-left font-normal">
+                           <th className="td-same-size text-left font-normal">
                               <span>CULTURE</span>
                            </th>
                         </tr>

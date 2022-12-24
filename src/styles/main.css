@@ -527,3 +527,10 @@ body, #__next {
    width: 200px;
    opacity: 1;
 }
+
+@media screen and (min-width: 800px) 
+{
+   .td-same-size {
+      width: 200px !important;
+   }   
+}
