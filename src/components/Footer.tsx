@@ -113,10 +113,10 @@ function Footer({  }) {
                   </ul>
                </div>
                <div className="mt-4 md:mt-0 md:w-4/12">
-                  <p class="text-sm">
+                  <p className="text-sm">
                      HaystackAnalytics Private Limited
                   </p>
-                  <p class="text-xs my-2  ">
+                  <p className="text-xs my-2  ">
                      CM 03, SINE, KReSIT Building 4th Floor, Department of Computer Science, IIT Bombay, Powai, Mumbai - 400076
                   </p>
                   <Link href=""><span className="text-center md:text-end text-sm">© HaystackAnalytics</span></Link>
