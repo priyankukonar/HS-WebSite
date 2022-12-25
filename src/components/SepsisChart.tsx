@@ -6,10 +6,23 @@ position: relative;
 width: 100%;
 .chart__labels {
    position: absolute;
-   right: 2rem;
-   top: 25%;
+   right: 0;
+   top: 10%;
+   font-size: 10px;
+   @media screen and (min-width: 800px)
+   {
+      right: 2rem;
+      top: 25%;
+      font-size: 1rem;
+   }
    ul {
       li {
+         .label .label__text {
+            transition: all .1s ease-out;
+         }
+         .label.active .label__text {
+            transform: scale(1.15);
+         }
          .red {
             background: #ea1f2e
          }
@@ -57,6 +70,7 @@ export default function SepsisChart(props) {
                         <g transform="matrix(1,0,0,1,273.675,1786.14)">
                            <path
                               id="blue"
+                              onMouseEnter={() => setActivePie('blue')}
                               className={activePie == 'blue' ? 'active': ''}
                               d="M0,-152.258L61.759,0C78.782,-6.884 94.353,-16.541 107.924,-28.428L0,-152.258Z"
                               style={{ fill: "rgb(50,71,102)" }}
@@ -65,6 +79,7 @@ export default function SepsisChart(props) {
                         <g transform="matrix(1,0,0,1,273.675,1757.84)">
                            <path
                               id="green"
+                              onMouseEnter={() => setActivePie('green')}
                               className={activePie == 'green' ? 'active': ''}
                               d="M0,-123.957L-158.839,-164.18C-162.024,-151.325 -163.713,-137.853 -163.713,-123.957C-163.713,-32.746 -90.951,40.223 0,40.223C21.895,40.223 42.735,35.994 61.759,28.301L0,-123.957Z"
                               style={{ fill: "rgb(4,180,84)" }}
@@ -74,6 +89,7 @@ export default function SepsisChart(props) {
                            <g transform="matrix(1,0,0,1,273.675,1469.7)">
                               <path
                                  id="gray"
+                                 onMouseEnter={() => setActivePie('gray')}
                                  className={activePie == 'gray' ? 'active': ''}
                                  d="M0,164.181L-0.133,0C-77.132,0.06 -141.069,52.42 -158.814,123.853L0,164.181Z"
                                  style={{ fill: "rgb(155,155,155)" }}
@@ -83,6 +99,7 @@ export default function SepsisChart(props) {
                         <g  transform="matrix(0.656385,0.754426,0.754426,-0.656385,287,1565.500) scale(0.90)">
                            <path
                               id="red"
+                              onMouseEnter={() => setActivePie('red')}
                               className={activePie == 'red' ? 'active': ''}
                               d="M48.065,-60.854L230.347,-60.854C230.224,-10.254 208.886,40.035 167.313,76.205C90.988,142.612 -23.027,134.887 -89.289,58.846L48.065,-60.854Z"
                               style={{ fill: "rgb(234,31,45)" }}
@@ -114,10 +131,10 @@ export default function SepsisChart(props) {
             <div className="chart__labels">
                <ul>
                   {props.labels?.map((lbl, lbIndex) => (
-                     <li key={`chart_labels_${lbIndex}`}>
-                        <div className="flex items-center gap-2" onMouseEnter={() => setActivePie(lbl.value)}>
+                     <li key={`chart_labels_${lbIndex}`} className="mb-2">
+                        <div className={`label flex items-center gap-3 ${activePie == lbl.value ? 'active': ''} `} onMouseEnter={() => setActivePie(lbl.value)}>
                            <span className={`w-4 h-4 block ${lbl.value}`}></span>
-                           <span>{lbl.label}</span>
+                           <span className="label__text">{lbl.label}</span>
                         </div>
                      </li>
                   ))}

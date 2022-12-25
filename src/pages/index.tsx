@@ -94,19 +94,19 @@ const HeroSection = () => {
 
 const sepsisChartLabels = [
    {
-      label: 'Sepsis',
+      label: 'Sepsis 11Mn',
       value: 'red',
    },
    {
-      label: 'TB',
+      label: 'TB 1.5Mn',
       value: 'blue',
    },
    {
-      label: 'Cancer',
+      label: 'Cancer 10Mn',
       value: 'green',
    },
    {
-      label: 'Stroke',
+      label: 'Stroke 6Mn',
       value: 'gray',
    }
 ]
