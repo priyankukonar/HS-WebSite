@@ -306,16 +306,20 @@ body, #__next {
 .SepsisChart #green {
    transition: all .5s ease;
 }
-.SepsisChart #gray:hover {
+.SepsisChart #gray:hover,
+.SepsisChart #gray.active {
    transform: translate(-11px, -13px);
 }
-.SepsisChart #red:hover {
+.SepsisChart #red:hover,
+.SepsisChart #red.active {
    transform: translate(8px, 16px);
 }
-.SepsisChart #blue:hover {
+.SepsisChart #blue:hover,
+.SepsisChart #blue.active {
    transform: translate(10px, 16px);
 }
-.SepsisChart #green:hover {
+.SepsisChart #green:hover,
+.SepsisChart #green.active {
    transform: translate(-8px, 14px);
 }
 
@@ -500,4 +504,33 @@ body, #__next {
 .break-word
 {
    overflow-wrap: break-word;
+}
+.post-content ol
+{
+   padding-left:1rem;
+   list-style: decimal;
+   font-size: 0.85rem;
+}
+.post-content ul
+{
+   padding-left:1rem;
+   list-style: inherit;
+   font-size: 0.85rem;
+}
+
+.share-btn__menu {
+   width: 0px;
+   transform-origin: center right;
+   transition: all .2s ease-out;
+   overflow: hidden;
+   white-space: nowrap;
+   opacity: 0;
+}
+.share-btn__menu.is-opened
+{
+   width: 200px;
+   opacity: 1;
+}
+thead tr {
+   vertical-align: top;
 }

@@ -1,16 +1,17 @@
 {
    "footer": [
       {
-         "title": "SCIENCE CORNER",
+         "title": "Science Corner",
          "url": "/blog"
       },
+      
       {
-         "title": "PRODUCT",
-         "url": "/universal-id"
+         "title": "About Us",
+         "url": "/about"
       },
       {
-         "title": "ABOUT US",
-         "url": "/about"
+         "title": "Products",
+         "url": "/universal-id"
       }
    ],
    "navbar": [

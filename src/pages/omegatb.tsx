@@ -91,7 +91,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                </h3>
                <div className="flex flex-col md:flex-row gap-4 my-8">
                   <div className="md:w-4/12">
-                     <h3 className="text-md font-bold">India accounts for <big className="text-blue-600">27Lakh</big> TB cases<br />out of <big className="text-blue-600">1Cr</big> cases across the world.</h3>
+                     <h3 className="text-md font-bold">India accounts for <big className="text-blue-600">2.7 million</big> cases out of <big className="text-blue-600">10 million</big> cases across the world.</h3>
                      <div className="mb-12 flex"></div>
                      {/* <img src="/assets/tb-pie-chart.png" alt="tb-pie-chart" /> */}
                      <TBPieChart />
@@ -137,7 +137,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                                     <span className="font-semibold">{'ΩTB®'}</span>
                                  </td>
                                  <td className="p-3">
-                                    <div>{'18 antibiotics including bedaquiline and delamanid.'}</div>
+                                    <div>{'18 antibiotics including bedaquiline and delamanid'}</div>
                                  </td>
                               </tr>
                               <tr className="bg-gray-trans mb-3 text-sm">
@@ -181,7 +181,6 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                               </tr>
                            </tbody>
                         </table>
-                        <p class="text-xs text-muted">*For smear positive samples</p>
                      </div>
                   </div>
                   <div className=" border my-4 md:my-0 md:ml-12 border-gray-300"></div>
