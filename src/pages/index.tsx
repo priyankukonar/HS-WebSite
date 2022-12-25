@@ -92,6 +92,25 @@ const HeroSection = () => {
    )
 }
 
+const sepsisChartLabels = [
+   {
+      label: 'Sepsis',
+      value: 'red',
+   },
+   {
+      label: 'TB',
+      value: 'blue',
+   },
+   {
+      label: 'Cancer',
+      value: 'green',
+   },
+   {
+      label: 'Stroke',
+      value: 'gray',
+   }
+]
+
 function Home({ Component, pageProps, news, settings }) {
    const partnersCarousel = useRef(null)
    const awardsCarousel = useRef(null)
@@ -110,7 +129,7 @@ function Home({ Component, pageProps, news, settings }) {
                <div className="flex flex-col md:flex-row gap-4 my-8 mt-8 md:mt-24">
                   <div className="md:w-5/12">
                      <h3 className="heading">SEPSIS IS A LEADING CAUSE OF DEATH</h3>
-                     <SepsisChart />
+                     <SepsisChart labels={sepsisChartLabels} />
                   </div>
                   <div className="flex-1">
                      <h3 className="heading ">{`>2 BILLION PEOPLE WITH THE FOLLOWING PRE-EXISTING`}<br />CONDITIONS ARE AT A HIGHER RISK OF SEPSIS</h3>
