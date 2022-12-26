@@ -22,7 +22,7 @@ const StyledHome = styled(AppTemplate)`
 const StyledHeroSection = styled(Section)`
    background-position: right;
    background-image: url("/assets/product-disease-banner.png");
-   background-size: contain;
+   background-size: cover;
    background-repeat: no-repeat;
    .section__container {
       min-height: calc(85vh - var(--safe-top-padding, 100px));
@@ -32,7 +32,7 @@ const StyledHeroSection = styled(Section)`
    }
    @media (max-width: 768px) {
       background-image: none;
-      background-size: contain;
+      background-size: cover;
       background-position: bottom;
       .section__container {
          min-height: 40vh;
@@ -76,7 +76,7 @@ export default function Diseases({ Component, pageProps, news, settings }) {
          <Section className="">
             <Section.Container className="container mx-auto py-12">
                <h3 className="section-heading">
-                  The current system needs an <br />upgrade to save lives
+                  The current system needs an upgrade to save lives
                </h3>
                <div className="table-wrapper overflow-auto table--striped table-icons">
                   <table className="w-full">
@@ -85,13 +85,13 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                            <th className="md:w/4/12">
 
                            </th>
-                           <th className="text-left font-bold">
+                           <th className="td-same-size text-left font-bold">
                               <span className="text-blue-600">UNIVERSAL<br />ID TEST</span>
                            </th>
-                           <th className="text-left font-normal">
+                           <th className="td-same-size text-left font-normal">
                               <span>MOLECULAR<br />PANEL</span>
                            </th>
-                           <th className="text-left font-normal">
+                           <th className="td-same-size text-left font-normal">
                               <span>CULTURE</span>
                            </th>
                         </tr>

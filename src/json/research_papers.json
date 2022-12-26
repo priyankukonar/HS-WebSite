@@ -6,55 +6,35 @@
          "image_url": "/assets/research/research-1.jpg",
          "url": "https://pubmed.ncbi.nlm.nih.gov/32339719/",
          "category": "clinician",
-         "date":"2020-04-24",
-         "authors": [
-            { "name": "Saikoi Y Bah" },
-            { "name": "Collins Misita Moranga" }
-         ]
+         "date":"2020-04-24"
       },
       {
          "title": "Cost-effectiveness of molecular diagnostic assays for the therapy of severe sepsis and septic shock in the emergency department.",
          "reference": "Zacharioudakis IM, Zervou FN, Shehadeh F, Mylonakis E",
          "image_url": "/assets/research/research-2.jpg",
          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0217508",
-         "date":"2019-05-24",
-         "authors": [
-            { "name": "Saikoi Y Bah" },
-            { "name": "Collins Misita Moranga" }
-         ]
+         "date":"2019-05-24"
       },
       {
          "title": "The Effect of Molecular Rapid Diagnostic Testing on Clinical Outcomes in Bloodstream Infections: A Systematic Review and Meta-analysis.",
          "reference": "Timbrook TT, Morton JB, McConeghy KW, Caffrey AR, Mylonakis E, LaPlante KL",
          "image_url": "/assets/research/research-3.jpg",
          "url": "https://pubmed.ncbi.nlm.nih.gov/27678085/",
-         "date":"2017-01-01",
-         "authors": [
-            { "name": "Saikoi Y Bah" },
-            { "name": "Collins Misita Moranga" }
-         ]
+         "date":"2017-01-01"
       },
       {
          "title": "Whole genome sequencing of Mycobacterium tuberculosis isolates and clinical outcomes of patients treated for multidrug-resistant tuberculosis in Tanzania.",
          "reference": "Katale BZ, Mbelele PM, Lema NA, Campino S, Mshana SE, Rweyemamu MM, Phelan JE, Keyyu JD, Majigo M, Mbugi EV, Dockrell HM, Clark TG, Matee MI, Mpagama S",
          "image_url": "/assets/research/research-4.jpg",
          "url": "https://doi.org/10.1186/s12864-020-6577-1",
-         "date":"2020-02-21",
-         "authors": [
-            { "name": "Saikoi Y Bah" },
-            { "name": "Collins Misita Moranga" }
-         ]
+         "date":"2020-02-21"
       },
       {
          "title": "Whole Genome Sequencing of Mycobacterium tuberculosis Clinical Isolates From India Reveals Genetic Heterogeneity and Region-Specific Variations That Might Affect Drug Susceptibility.",
          "reference": "Advani J, Verma R, Chatterjee O, et al",
          "image_url": "/assets/research/research-5.jpg",
          "url": "https://www.frontiersin.org/articles/10.3389/fmicb.2019.00309/full",
-         "date":"2019-02-26",
-         "authors": [
-            { "name": "Saikoi Y Bah" },
-            { "name": "Collins Misita Moranga" }
-         ]
+         "date":"2019-02-26"
       },
       {
          "title": "Analysis of Serial Multidrug-Resistant Tuberculosis Strains Causing Treatment Failure and Within-Host Evolution by Whole Genome Sequencing. MSphere.",
@@ -62,11 +42,7 @@
          "image_url": "/assets/research/research-6.jpg",
          "url": "https://journals.asm.org/doi/10.1128/mSphere.00884-20",
          "category": "diagnostic",
-         "date":"2020-12-23",
-         "authors": [
-            { "name": "Saikoi Y Bah" },
-            { "name": "Collins Misita Moranga" }
-         ]
+         "date":"2020-12-23"
       },
       {
          "title": "Optimization of sepsis therapy based on patient-specific digital precision diagnostics using next generation sequencing(DigiSep-Trial)—study protocol for a randomized, controlled, interventional, open-label, multicenter trial.",
@@ -74,23 +50,95 @@
          "image_url": "/assets/research/research-7.jpg",
          "url": "https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-021-05667-x",
          "category": "diagnostic",
-         "date":"2021-10-18",
-         "authors": [
-            { "name": "Saikoi Y Bah" },
-            { "name": "Collins Misita Moranga" }
-         ]
+         "date":"2021-10-18"
       },
       {
-         "title": "Rapid Next-Generation Sequencing- Based Diagnostics of Bacteremia in Septic Patients.",
-         "reference": "Grumaz C, Hoffmann A, Vainshtein Y, et al",
-         "image_url": "/assets/research/research-8.jpg",
-         "url": "https://doi.org/10.1016/j.jmoldx.2019.12.006",
+         "title": "Whole-genome sequencing of presumptive MDR-TB isolates from a tertiary healthcare setting in Mumbai.",
+         "reference": "Amrutraj Zade, Sanchi Shah, Nilma Hirani, Kiran Kondabagil, Ameeta Joshi, Anirvan Chatterjee",
+         "image_url": "/assets/research/Whole-genome sequencing of presumptive MDR-TB isolates from a tertiary healthcare setting in Mumbai.jpg",
+         "url": "https://www.sciencedirect.com/science/article/pii/S2213716522002326",
          "category": "diagnostic",
-         "date":"2020-03-01",
-         "authors": [
-            { "name": "Saikoi Y Bah" },
-            { "name": "Collins Misita Moranga" }
-         ]
+         "date":"2022-12-18"
+      },
+      {
+         "title": "COVID-19 and global childhood tuberculosis notifications.",
+         "reference": "Sachin Atre, Anirvan Chatterjee, Maha Farhat",
+         "image_url": "/assets/research/COVID-19 and global childhood tuberculosis notifications.jpg",
+         "url": "https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(22)00453-3/fulltext",
+         "category": "diagnostic",
+         "date":"2022-12-15"
+      },
+      {
+         "title": "Development of a PNA–DiSc2 based portable absorbance platform for the detection of pathogen nucleic acids",
+         "reference": "Shailesh B. Lad, Shomdutta Roy, Jijo Easo George, Himadri Chakraborti, Saumitra Lalsare,  Bikash Barik,  Arushi Singh,  Amrutraj Zade,  Sachee Agrawal, Jayanthi Shastri,  Anirvan Chatterjee,  Kantimay Das Gupta,  Debjani Paul and  Kiran Kondabagil",
+         "image_url": "/assets/research/Development of a PNA DiSc2 based portable absorbance platform for the detection of pathogen nucleic acids.jpg",
+         "url": "https://pubs.rsc.org/en/content/articlehtml/2022/an/d2an01351g",
+         "category": "diagnostic",
+         "date":"2022-12-07"
+      },
+      {
+         "title": "Giant viral genomic signatures in the previously reported gut metagenomes of pre-school children in rural India",
+         "reference": "Anirvan Chatterjee and Kiran Kondabagil",
+         "image_url": "/assets/research/Giant viral genomic signatures in the previously reported gut metagenomes of pre-school children in rural India.jpg",
+         "url": "https://link.springer.com/article/10.1007/s00705-019-04387-7",
+         "category": "diagnostic",
+         "date":"2022-12-03"
+      },
+      {
+         "title": "Whole genome sequencing of clinical strains of Mycobacterium tuberculosis from Mumbai, India: A potential tool for determining drug-resistance and strain lineage",
+         "reference": "AnirvanChatterjee, Kayzad Nilgiriwala, Dhananjaya Saranath, Camilla Rodrigues, Nerges Mistry",
+         "image_url": "/assets/research/Whole genome sequencing of clinical strains of Mycobacterium tuberculosis from Mumbai India.jpg",
+         "url": "https://www.sciencedirect.com/science/article/pii/S1472979217301786",
+         "category": "diagnostic",
+         "date":"2017-12-13"
+      },
+      {
+         "title": "Genome-wide analysis of multi- and extensively drug-resistant Mycobacterium tuberculosis",
+         "reference": "Francesc Coll, Jody Phelan, Grant A. Hill-Cawthorne, Mridul B. Nair, Kim Mallard, Shahjahan Ali, Abdallah M. Abdallah, Saad Alghamdi, Mona Alsomali, Abdallah O. Ahmed, Stephanie Portelli, Yaa Oppong, Adriana Alves, Theolis Barbosa Bessa, Susana Campino, Maxine Caws, Anirvan Chatterjee, Amelia C. Crampin, Keertan Dheda, Nicholas Furnham, Judith R. Glynn, Louis Grandjean, Dang Minh Ha, Rumina Hasan, Taane G. Clark",
+         "image_url": "/assets/research/Genome-wide analysis of multi- and extensively drug-resistant Mycobacterium tuberculosis.jpg",
+         "url": "https://www.nature.com/articles/s41588-017-0029-0",
+         "category": "diagnostic",
+         "date":"2018-01-22"
+      },
+      {
+         "title": "Same-Day Diagnostic and Surveillance Data for Tuberculosis via Whole-Genome Sequencing of Direct Respiratory Samples",
+         "reference": "Antonina A. Votintseva, Phelim Bradley, Louise Pankhurst, Carlos del Ojo Elias, Matthew Loose, Kayzad Nilgiriwala, Anirvan Chatterjee, E. Grace Smith, Nicolas Sanderson, Timothy M. Walker, Marcus R. Morgan, David H. Wyllie, A. Sarah Walker, Tim E. A. Peto, Derrick W. Crook, Zamin Iqbal",
+         "image_url": "/assets/research/Same Day Diagnostic and Surveillance Data for Tuberculosis via Whole Genome Sequencing of Direct Respiratory Samples.jpg",
+         "url": "https://journals.asm.org/doi/full/10.1128/JCM.02483-16",
+         "category": "diagnostic",
+         "date":"2017-04-25"
+      },
+      {
+         "title": "Edge Implementation with Intel® NUC Mini PCs for MDR, XDR and XXDR Tuberculosis Genome Informatics Pipeline",
+         "reference": "Dr. Anirvan Chatterjee,  Dr. Ramanathan Sethuraman,  Lakshminarasimhan Ranganathan",
+         "image_url": "/assets/research/Edge Implementation with Intel.jpg",
+         "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/ai-haystackanalytics-tb-genomics-white-paper.pdf",
+         "category": "diagnostic",
+         "date":"2020-12-12"
+      },
+      {
+         "title": "Complete Genome Sequence of a New Megavirus Family Member Isolated from an Inland Water Lake for the First Time in India",
+         "reference": "Anirvan Chatterjee, Farhan Ali, Disha Bange, Kiran Kondabagil",
+         "image_url": "/assets/research/Complete Genome Sequence of a New Megavirus Family Member Isolated from an Inland Water Lake for the First Time in India.jpg",
+         "url": "https://journals.asm.org/doi/full/10.1128/genomeA.00402-16",
+         "category": "diagnostic",
+         "date":"2016-06-16"
+      },
+      {
+         "title": "Genomic and metagenomic signatures of giant viruses are ubiquitous in water samples from sewage, inland lake, waste water treatment plant, and municipal water supply in Mumbai, India",
+         "reference": "Anirvan Chatterjee, Thomas Sicheritz-Pontén, Rajesh Yadav & Kiran Kondabagil",
+         "image_url": "/assets/research/Genomic and metagenomic signatures of giant viruses are ubiquitous in water samples from sewage inland lake waste water treatment plant and municipal water supply in Mumbai India.jpg",
+         "url": "https://www.nature.com/articles/s41598-019-40171-y",
+         "category": "diagnostic",
+         "date":"2019-03-06"
+      },
+      {
+         "title": "Mimivirus encodes a multifunctional primase with DNA/RNA polymerase, terminal transferase and translesion synthesis activities",
+         "reference": "Ankita Gupta, Shailesh B Lad, Pratibha P Ghodke, P I Pradeepkumar, Kiran Kondabagil",
+         "image_url": "/assets/research/Mimivirus encodes a multifunctional primase with.jpg",
+         "url": "https://academic.oup.com/nar/article/47/13/6932/5475173",
+         "category": "diagnostic",
+         "date":"2019-07-26"
       }
    ]
 
