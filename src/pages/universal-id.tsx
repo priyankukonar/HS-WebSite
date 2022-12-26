@@ -86,10 +86,10 @@ export default function Diseases({ Component, pageProps, news, settings }) {
 
                            </th>
                            <th className="td-same-size text-left font-bold">
-                              <span className="text-blue-600">UNIVERSAL<br />ID TEST</span>
+                              <span className="text-blue-600">UNIVERSAL <br />ID TEST</span>
                            </th>
                            <th className="td-same-size text-left font-normal">
-                              <span>MOLECULAR<br />PANEL</span>
+                              <span>MOLECULAR <br />PANEL</span>
                            </th>
                            <th className="td-same-size text-left font-normal">
                               <span>CULTURE</span>
