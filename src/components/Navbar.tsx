@@ -125,10 +125,10 @@ const Navbar = ({ renderMenu }) => {
    return (
       <StyledNavbar isPinned={isPinned} className={`${isPinned ? 'header-pinned' : ''} ${inView ? '' : 'bg-white'}`} >
          <nav className="navbar-main container mx-auto flex justify-between gap-4">
-            <div className="navbar-brand">
+            <div className="navbar-brand flex">
                <Link href={"/"}>
                   <a className="flex px-3 md:px-0">
-                     <Image src={settings.logo_url} alt="" className="navbar-logo" width={'250'} height={'60'} />
+                  <img src={settings.logo_url} alt="" className="navbar-logo" width={'250'} height={'60'} />
                   </a>
                </Link>
             </div>
@@ -236,7 +236,7 @@ const Navbar = ({ renderMenu }) => {
                   </div>
                </div>
             </div>
-            <div className="mt-3 mr-3 md:hidden">
+            <div className="md:mt-3 mr-3 md:hidden">
                <MenuIcon className="w-8 h-8 cursor-pointer" onClick={() => setNavActive(true)} />
             </div>
          </nav>
