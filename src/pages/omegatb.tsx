@@ -235,7 +235,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                   </div>
                   <div className=" border my-4 md:my-0 md:ml-12 border-gray-300"></div>
                   <div className="md:w-5/12 ">
-                     <h4>ΩTB<sup>®</sup> Assessment Profile</h4>
+                     <h4>ΩTB<sup>®</sup> Assessment Profile</h4>
                      <div className="flex gap-4 md:mt-4">
                         <div className="w-6/12">
                            <img src="/assets/omega-tb-assessment-profile.png" alt="omega-tb-assessment-profile" />
@@ -269,7 +269,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
             </Section.Container>
          </Section>
          <SectionGridItems
-            title={`Benefits of ΩTB®`}
+            title={`Benefits of ΩTB®`}
             titleClassName="text-center"
             gridClassName={'grid-cols-1 md:grid-cols-4 gap-8 w-11/12 mx-auto'}
             items={[
