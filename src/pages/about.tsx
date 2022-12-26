@@ -55,7 +55,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8 px-3 md:px-0">
                   <h3 className="mb-4 text-3xl">
-                  Building state of the art<br/> 
+                  Building state of the art<br/>
                      <span className="font-extrabold"> genomics solution</span> for<br/>
                      <span className="font-extrabold"> accurate, personalised</span><br/>
                      <span className="font-extrabold"> clinical</span> decisions
@@ -98,8 +98,8 @@ export default function About({ Component, pageProps, news, settings }) {
                A Winning Team
                </h3>
                <p className="text-muted text-center text-sm md:w-10/12 m-auto">
-               The company with a multidisciplinary team which works relentlessly to solve the problems of the world 
-               through creating the right mix between technology, science and business to bring revolutionary life 
+               The company with a multidisciplinary team which works relentlessly to solve the problems of the world
+               through creating the right mix between technology, science and business to bring revolutionary life
                saving solutions to the world.
                </p>
                <div className="relative mt-8">
@@ -126,7 +126,7 @@ export default function About({ Component, pageProps, news, settings }) {
                            spaceBetween: 0,
                         },
                         1024: {
-                           slidesPerView: 3,
+                           slidesPerView: 2,
                            spaceBetween: 20,
                         },
                      }}

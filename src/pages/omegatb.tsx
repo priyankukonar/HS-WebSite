@@ -28,7 +28,7 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-  
+
    background-position: right;
    background-image: url("/assets/omega-tb-banner.png");
    background-size: cover;
@@ -79,6 +79,56 @@ const HeroSection = () => {
    )
 }
 
+const worldMapLocations = [
+   {
+      id: 'india',
+      label: 'INDIA',
+      text: '27%',
+      position: { x: '61%', y: '43%' },
+   },
+   {
+      id: 'pakistan',
+      label: 'PAKISTAN',
+      text: '6%',
+      position: { x: '57%', y: '35%' },
+   },
+   {
+      id: 'nigeria',
+      label: 'NIGERIA',
+      text: '4%',
+      position: { x: '57%', y: '35%' },
+   },
+   {
+      id: 'bangladesh',
+      label: 'BANGLADESH',
+      text: '4%',
+      position: { x: '57%', y: '35%' },
+   },
+   {
+      id: 'indonesia',
+      label: 'INDONESIA',
+      text: '4%',
+      position: { x: '57%', y: '35%' },
+   },
+   {
+      id: 'philippines',
+      label: 'PHILIPPINES',
+      text: '4%',
+      position: { x: '57%', y: '35%' },
+   },
+   {
+      id: 'south_africa',
+      label: <span>SOUTH<br/>AFRICA</span>,
+      text: '6%',
+      position: { x: '57%', y: '35%' },
+   },
+   {
+      id: '_rest',
+      label: 'REST',
+      text: '33%',
+      position: { x: '90%', y: '68%' },
+   },
+]
 export default function OmegaTab({ Component, pageProps, news, settings }) {
 
    return (
@@ -98,7 +148,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                   </div>
                   <div className="flex-1">
                      {/* <img src="/assets/tb-world-map.png" alt="tb-world-map" className="map-image"/> */}
-                     <TBWorldMap />
+                     <TBWorldMap locations={worldMapLocations} />
                   </div>
                </div>
             </Section.Container>
