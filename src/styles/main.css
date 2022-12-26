@@ -515,6 +515,7 @@ body, #__next {
 {
    padding-left:1rem;
    list-style: inherit;
+   
    font-size: 0.85rem;
 }
 
@@ -531,6 +532,6 @@ body, #__next {
    width: 200px;
    opacity: 1;
 }
-thead tr {
+thead tr , tbody tr{
    vertical-align: top;
 }
