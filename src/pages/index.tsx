@@ -182,14 +182,14 @@ function Home({ Component, pageProps, news, settings }) {
                               Tests for <br />ID
                            </th>
                            <th className="text-lg text-left p-3 md:w-2/12">
-                              Turn<br />
+                           Turn<br />
                               Around Time
                            </th>
                            <th className="text-lg text-left p-3">
                               Pathogen <br />Coverage
                            </th>
                            <th className="text-lg text-left p-3">
-                              Antibiotic<br />Coverage
+                              Antibiotic <br />Coverage
                            </th>
                            <th className="text-lg text-left p-3">
                               Additional <br />Information
