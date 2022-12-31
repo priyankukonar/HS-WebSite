@@ -60,7 +60,7 @@ function WorldMap(props) {
    return (
       <div className="map map--world">
          <div className="mb-3">
-            <img src={'/assets/map.svg'} className="w-full" alt="World map" />
+            <img src={'/assets/map.svg'} className="w-full opacity-40" alt="World map" />
          </div>
          {locations?.map((loc, locIndex) => (
             <div key={`loc_${locIndex}`} className={`map__marker map__marker--${loc.id}`} style={{ '--left': loc.position.x, '--top': loc.position.y }} >
