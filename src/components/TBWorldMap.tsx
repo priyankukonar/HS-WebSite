@@ -26,9 +26,11 @@ position: relative;
    .map_marker_icon {
       width: var(--size);
       transition: all .1s ease-out;
+      opacity:0.5;
    }
    &:hover .map_marker_icon {
       transform: scale(1.5);
+      opacity:1;
    }
 }
 .marker__text--lg {
@@ -41,7 +43,7 @@ position: relative;
    display: none;
    position: absolute;
    left: 0;
-   top: 115%;
+   top: 120%;
 }
 .map__marker--india {
 
