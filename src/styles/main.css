@@ -535,3 +535,8 @@ body, #__next {
 thead tr , tbody tr{
    vertical-align: top;
 }
+@media screen and (min-width:1500px) {
+   .container {
+      max-width: 85%!important;
+  }
+}
