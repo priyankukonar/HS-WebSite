@@ -540,3 +540,6 @@ thead tr , tbody tr{
       max-width: 85%!important;
   }
 }
+.social-media svg{
+   height:1em;
+}

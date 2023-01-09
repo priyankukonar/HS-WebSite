@@ -53,7 +53,7 @@ function Footer({  }) {
                      </li> */}
                   </ul>
                </div>
-               <div className="md:w-3/12">
+               <div className="md:w-3/12 social-media">
                   <ul className="text-sm text-gray-600 flex flex-col gap-3">
                      <li>
                      <a href={`mailto:${settings.email}`}>{settings.email}</a>
