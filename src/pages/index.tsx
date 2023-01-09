@@ -20,6 +20,7 @@ import { Navigation } from "swiper";
 import SepsisChart from "../components/SepsisChart";
 import { useRef } from "react";
 import { filteredNews } from "../utils/index";
+import Head from "next/head";
 
 const loadPartnerImg = ({ src }) => {
    return `/assets/${src}`
@@ -117,6 +118,11 @@ function Home({ Component, pageProps, news, settings }) {
 
    return (
       <StyledHome bodyClassName="home" settings={settings}>
+         <Head>
+            <title>HaystackAnalytics: Leader in Infectious Genomics</title>
+            <meta name="title" content="HaystackAnalytics: Leader in Infectious Genomics" />
+            <meta name="description" content="Based out of IIT Bombay, HaystackAnalytics is a HealthTech company creating clinical genomics products, which enable diagnostic labs and hospitals to offer accurate and personalized diagnostics." />
+         </Head>
          <HeroSection />
          <Section className="">
             <Section.Container className="container mx-auto py-8 md:py-16">

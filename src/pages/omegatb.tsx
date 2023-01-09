@@ -11,6 +11,7 @@ import SectionPosts from "../components/organisms/SectionPosts";
 import ResearchItem from "../components/molecules/ResearchItem";
 import TBWorldMap from "../components/TBWorldMap";
 import TBPieChart from "../components/TBPieChart";
+import Head from "next/head";
 
 
 const page = {
@@ -105,8 +106,8 @@ const worldMapLocations = [
       id: 'nigeria',
       label: 'NIGERIA',
       text: '4%',
-      position: { x: '50%', y: '50%' },
-      smPosition: { x: '50%', y: '50%' },
+      position: { x: '51%', y: '50%' },
+      smPosition: { x: '51%', y: '50%' },
    },
    {
       id: 'bangladesh',
@@ -119,35 +120,38 @@ const worldMapLocations = [
       id: 'indonesia',
       label: 'INDONESIA',
       text: '8%',
-      position: { x: '79%', y: '56%' },
-      smPosition: { x: '79%', y: '56%' },
+      position: { x: '79%', y: '53%' },
+      smPosition: { x: '79%', y: '53%' },
    },
    {
       id: 'philippines',
       label: 'PHILIPPINES',
       text: '6%',
-      position: { x: '83%', y: '40%' },
-      smPosition: { x: '57%', y: '35%' },
+      position: { x: '83%', y: '38%' },
+      smPosition: { x: '83%', y: '38%' },
    },
    {
       id: 'south_africa',
       label: <span>SOUTH<br/>AFRICA</span>,
       text: '3%',
-      position: { x: '55%', y: '74%' },
-      smPosition: { x: '55%', y: '74%' },
+      position: { x: '55%', y: '70%' },
+      smPosition: { x: '55%', y: '70%' },
    },
    {
       id: '_rest',
       label: 'REST',
       text: '33%',
-      position: { x: '90%', y: '68%' },
-      smPosition: { x: '90%', y: '68%' },
+      position: { x: '90%', y: '70%' },
+      smPosition: { x: '90%', y: '70%' },
    },
 ]
 export default function OmegaTab({ Component, pageProps, news, settings }) {
 
    return (
       <StyledHome settings={settings}>
+         <Head>
+            <title>Omega TB</title>
+         </Head>
          <HeroSection />
          <Section className="">
             <Section.Container className="container mx-auto py-12">
