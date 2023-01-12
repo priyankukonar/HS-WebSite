@@ -59,7 +59,7 @@ const HeroSection = () => {
          <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8 px-3 md:px-0">
-                  <h3 className="mb-4 text-4xl font-extrabold">
+                  <h3 className="mb-4 text-4xl font-extrabold 2xl:!text-5xl">
                      ΩTB® is a <br />
                      Universal Drug <br />
                      Resistance Test for TB
@@ -85,8 +85,8 @@ const worldMapLocations = [
       id: 'india',
       label: 'INDIA',
       text: '27%',
-      position: { x: '70.5%', y: '34%' },
-      smPosition: { x: '70.5%', y: '34%' },
+      position: { x: '70.5%', y: '38%' },
+      smPosition: { x: '70.5%', y: '38%' },
    },
    {
       id: 'pakistan',
@@ -113,8 +113,8 @@ const worldMapLocations = [
       id: 'bangladesh',
       label: 'BANGLADESH',
       text: '4%',
-      position: { x: '73%', y: '36%' },
-      smPosition: { x: '73%', y: '36%' },
+      position: { x: '73%', y: '37%' },
+      smPosition: { x: '73%', y: '37%' },
    },
    {
       id: 'indonesia',

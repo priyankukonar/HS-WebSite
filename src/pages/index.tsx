@@ -64,6 +64,12 @@ const StyledHeroSection = styled(Section)`
          justify-content: flex-start;
       }
    }
+   @media (min-width: 1600px) {
+      background-position: center;
+      .section__container {
+         min-height: calc(100vh - var(--safe-top-padding, 160px));
+      }
+   }
 
 `
 
@@ -73,7 +79,7 @@ const HeroSection = () => {
          <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col px-3 md:px-0o py-8">
-                  <h3 className="mb-4 text-banner font-extrabold text-muted">Infectious Diseases<br /> Should Not Kill Anyone</h3>
+                  <h3 className="mb-4 text-banner font-extrabold text-muted 2xl:text-5xl">Infectious Diseases<br /> Should Not Kill Anyone</h3>
                   <div className="my-8">
                      <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>
                      <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
@@ -166,7 +172,7 @@ function Home({ Component, pageProps, news, settings }) {
             </Section.Container>
          </Section>
          <SectionGridItems
-            gridClassName={'grid-cols-1 md:grid-cols-3'}
+            gridClassName={'grid-cols-1 md:grid-cols-3 2xl:gap-2'}
             title={`The Universal Infectious Diseases Test`}
             description={`UID Test is an NGS based culture-free test to identify causative pathogen in a quick turn around time`}
             items={[

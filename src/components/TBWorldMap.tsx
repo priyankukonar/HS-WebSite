@@ -7,7 +7,7 @@ import MapMarker from "./MapMarker";
 const StyledTBWorldMap = styled.div`
 position: relative;
 .map__marker {
-   --size: 22px;
+   --size: 15px;
    position: absolute;
    left: var(--left);
    top: var(--top);
