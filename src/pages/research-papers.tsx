@@ -9,6 +9,7 @@ import Section from '../components/atoms/Section'
 import ShareButton from "../components/molecules/ShareButton";
 import { dateFormat } from "../utils/index";
 import { orderBy } from "lodash";
+import Head from "next/head";
 
 const StyledHome = styled(AppTemplate)`
 
@@ -54,6 +55,9 @@ const PostItem = (props) => {
 export default function ResearchPapers({ settings }) {
    return (
       <StyledHome settings={settings}>
+         <Head>
+            <title>Research Papers</title>
+         </Head>
          <Section className="">
             <Section.Container className="container mx-auto py-12">
                <h3 className="text-3xl font-bold text-blue-600 mb-4 md:mb-8">

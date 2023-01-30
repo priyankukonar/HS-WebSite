@@ -37,7 +37,7 @@ body, #__next {
 }
 @media screen and (max-width: 700px) {
    .body__content {
-      margin-top: 20% !important;
+      margin-top: 13% !important;
    }
 }
 
@@ -534,4 +534,13 @@ body, #__next {
 }
 thead tr , tbody tr{
    vertical-align: top;
+}
+@media screen and (min-width:1500px) {
+   .container {
+      max-width: 85%!important;
+  }
+  
+}
+.social-media svg{
+   height:1em;
 }
