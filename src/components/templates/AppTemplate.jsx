@@ -5,6 +5,7 @@ import { useEffect } from "react";
 // import AOS from 'aos'
 // import 'aos/dist/aos.css'
 import settings from '../../json/settings.json'
+import Head from "next/head";
 const StyledTemplate = styled.div`
    margin: 0;
    padding: 0;
@@ -19,6 +20,9 @@ function AppTemplate({ children, pageProps = {}, bodyClassName = '', renderMenu,
 
    return (
       <StyledTemplate {...props} className={`body__content ${bodyClassName}`}>
+         <Head>
+            <link rel="icon" href="/assets/favicon.png" />
+         </Head>
          <Navbar renderMenu={renderMenu} />
          {children}
          <Footer settings={settings} />

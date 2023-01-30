@@ -12,6 +12,7 @@ import 'swiper/css';
 import { useRef } from "react";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
+import Head from "next/head";
 const StyledHome = styled(AppTemplate)`
 .awards-carousel {
    img {
@@ -79,6 +80,9 @@ export default function About({ Component, pageProps, news, settings }) {
 
    return (
       <StyledHome settings={settings}>
+         <Head>
+            <title>About us</title>
+         </Head>
          <HeroSection />
          <Section className="bg-blue-800 text-white">
             <Section.Container className="container mx-auto py-12 md:py-20">

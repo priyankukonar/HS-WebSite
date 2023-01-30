@@ -41,6 +41,10 @@ const StyledHeroSection = styled(Section)`
          justify-content: flex-start;
       }
    }
+   @media (min-width: 1600px) {
+      background-size: cover;
+      background-position: center;
+   }
 `
 
 const HeroSection = () => {
@@ -49,7 +53,7 @@ const HeroSection = () => {
          <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col py-8 px-3 md:px-0">
-                  <h3 className="mb-4 text-4xl font-extrabold">
+                  <h3 className="mb-4 text-4xl font-extrabold 2xl:!text-5xl">
                      Universal Infectious <br />
                      Diseases Test
                   </h3>

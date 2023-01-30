@@ -11,6 +11,7 @@ import SectionPosts from "../components/organisms/SectionPosts";
 import ResearchItem from "../components/molecules/ResearchItem";
 import TBWorldMap from "../components/TBWorldMap";
 import TBPieChart from "../components/TBPieChart";
+import Head from "next/head";
 
 
 const page = {
@@ -58,7 +59,7 @@ const HeroSection = () => {
          <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8 px-3 md:px-0">
-                  <h3 className="mb-4 text-4xl font-extrabold">
+                  <h3 className="mb-4 text-4xl font-extrabold 2xl:!text-5xl">
                      ΩTB® is a <br />
                      Universal Drug <br />
                      Resistance Test for TB
@@ -84,55 +85,73 @@ const worldMapLocations = [
       id: 'india',
       label: 'INDIA',
       text: '27%',
-      position: { x: '61%', y: '43%' },
+      position: { x: '70.5%', y: '38%' },
+      smPosition: { x: '70.5%', y: '38%' },
    },
    {
       id: 'pakistan',
       label: 'PAKISTAN',
       text: '6%',
-      position: { x: '57%', y: '35%' },
+      position: { x: '68%', y: '30%' },
+      smPosition: { x: '68%', y: '30%' },
+   },
+   {
+      id: 'china',
+      label: 'CHINA',
+      text: '9%',
+      position: { x: '76%', y: '30%' },
+      smPosition: { x: '76%', y: '30%' },
    },
    {
       id: 'nigeria',
       label: 'NIGERIA',
       text: '4%',
-      position: { x: '57%', y: '35%' },
+      position: { x: '51%', y: '50%' },
+      smPosition: { x: '51%', y: '50%' },
    },
    {
       id: 'bangladesh',
       label: 'BANGLADESH',
       text: '4%',
-      position: { x: '57%', y: '35%' },
+      position: { x: '73%', y: '37%' },
+      smPosition: { x: '73%', y: '37%' },
    },
    {
       id: 'indonesia',
       label: 'INDONESIA',
-      text: '4%',
-      position: { x: '57%', y: '35%' },
+      text: '8%',
+      position: { x: '79%', y: '53%' },
+      smPosition: { x: '79%', y: '53%' },
    },
    {
       id: 'philippines',
       label: 'PHILIPPINES',
-      text: '4%',
-      position: { x: '57%', y: '35%' },
+      text: '6%',
+      position: { x: '83%', y: '38%' },
+      smPosition: { x: '83%', y: '38%' },
    },
    {
       id: 'south_africa',
       label: <span>SOUTH<br/>AFRICA</span>,
-      text: '6%',
-      position: { x: '57%', y: '35%' },
+      text: '3%',
+      position: { x: '55%', y: '70%' },
+      smPosition: { x: '55%', y: '70%' },
    },
    {
       id: '_rest',
       label: 'REST',
       text: '33%',
-      position: { x: '90%', y: '68%' },
+      position: { x: '90%', y: '70%' },
+      smPosition: { x: '90%', y: '70%' },
    },
 ]
 export default function OmegaTab({ Component, pageProps, news, settings }) {
 
    return (
       <StyledHome settings={settings}>
+         <Head>
+            <title>Omega TB</title>
+         </Head>
          <HeroSection />
          <Section className="">
             <Section.Container className="container mx-auto py-12">

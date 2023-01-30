@@ -20,6 +20,7 @@ import { Navigation } from "swiper";
 import SepsisChart from "../components/SepsisChart";
 import { useRef } from "react";
 import { filteredNews } from "../utils/index";
+import Head from "next/head";
 
 const loadPartnerImg = ({ src }) => {
    return `/assets/${src}`
@@ -63,6 +64,12 @@ const StyledHeroSection = styled(Section)`
          justify-content: flex-start;
       }
    }
+   @media (min-width: 1600px) {
+      background-position: center;
+      .section__container {
+         min-height: calc(100vh - var(--safe-top-padding, 160px));
+      }
+   }
 
 `
 
@@ -72,7 +79,7 @@ const HeroSection = () => {
          <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col px-3 md:px-0o py-8">
-                  <h3 className="mb-4 text-banner font-extrabold text-muted">Infectious Diseases<br /> Should Not Kill Anyone</h3>
+                  <h3 className="mb-4 text-banner font-extrabold text-muted 2xl:text-5xl">Infectious Diseases<br /> Should Not Kill Anyone</h3>
                   <div className="my-8">
                      <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>
                      <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
@@ -117,6 +124,11 @@ function Home({ Component, pageProps, news, settings }) {
 
    return (
       <StyledHome bodyClassName="home" settings={settings}>
+         <Head>
+            <title>HaystackAnalytics: Leader in Infectious Genomics</title>
+            <meta name="title" content="HaystackAnalytics: Leader in Infectious Genomics" />
+            <meta name="description" content="Based out of IIT Bombay, HaystackAnalytics is a HealthTech company creating clinical genomics products, which enable diagnostic labs and hospitals to offer accurate and personalized diagnostics." />
+         </Head>
          <HeroSection />
          <Section className="">
             <Section.Container className="container mx-auto py-8 md:py-16">
@@ -160,7 +172,7 @@ function Home({ Component, pageProps, news, settings }) {
             </Section.Container>
          </Section>
          <SectionGridItems
-            gridClassName={'grid-cols-1 md:grid-cols-3'}
+            gridClassName={'grid-cols-1 md:grid-cols-3 2xl:gap-2'}
             title={`The Universal Infectious Diseases Test`}
             description={`UID Test is an NGS based culture-free test to identify causative pathogen in a quick turn around time`}
             items={[
@@ -182,14 +194,14 @@ function Home({ Component, pageProps, news, settings }) {
                               Tests for <br />ID
                            </th>
                            <th className="text-lg text-left p-3 md:w-2/12">
-                              Turn<br />
+                           Turn<br />
                               Around Time
                            </th>
                            <th className="text-lg text-left p-3">
                               Pathogen <br />Coverage
                            </th>
                            <th className="text-lg text-left p-3">
-                              Antibiotic<br />Coverage
+                              Antibiotic <br />Coverage
                            </th>
                            <th className="text-lg text-left p-3">
                               Additional <br />Information
