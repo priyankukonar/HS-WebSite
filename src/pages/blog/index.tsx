@@ -86,13 +86,13 @@ export default function Diagnostician({ Component, pageProps, posts, settings })
             image={heroPost.image_url}
             citation={`by ${heroPost.author_name}, ${heroPost.author_bio}`}
          />
-         <SectionBlogPosts
+         <SectionPosts
             title={'Recent Articles'}
-            enableCarousel={true}
-            posts={orderBy(otherPosts, 'date', 'desc')}
+            posts={orderBy(posts, 'date', 'desc')}
+            enableCarousel={posts.length > 1}
          />
          <SectionPosts
-            enableCarousel={webinars.data?.length > 3}
+            enableCarousel={webinars.data?.length > 1}
             className="webinar"
             renderHeaderRight={() => (
                <>
