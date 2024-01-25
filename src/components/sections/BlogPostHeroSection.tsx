@@ -44,7 +44,8 @@ const BlogPostHeroSection = ({ title, date, thumbnailUrl,author_name,author_bio 
                      <h3 className="mb-4 md:mb-12 text-3xl font-bold md:w-4/5">
                         {title}
                      </h3>
-                     <p className="font-bold mb-0 text-blue-600 text-sm md:w-4/5">by {author_name}, {author_bio}</p>
+                     <p className="font-bold mb-0 text-blue-600 text-sm md:w-4/5">by {author_name}<br></br>  {author_bio}</p>
+                   
                   </div>
 
                </div>

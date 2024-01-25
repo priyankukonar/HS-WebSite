@@ -37,7 +37,7 @@ const StyledHeroSection = styled(Section)`
    }
 
 `
-const HeroSection = ({ title, date, description, citation, image, url }) => {
+const HeroSection = ({ title, date, description, citation, image, url, authorbio }) => {
    return (
       <StyledHeroSection className="HeroSection " data-aos="fade-up">
          <Section.Container className="mx-auto ">
@@ -56,7 +56,7 @@ const HeroSection = ({ title, date, description, citation, image, url }) => {
                   <h3 className="mb-4 md:mb-12 text-3xl font-bold md:w-4/5">
                      {title}
                   </h3>
-                  <p className="font-semibold mb-4 md:mb-8 text-blue-600 text-sm">{citation}</p>
+                  <p className="font-semibold mb-4 md:mb-8 text-blue-600 text-sm">{citation}<br></br> {authorbio}</p>
                   <p className="font-base text-muted line-clamp-4 md:w-4/5">
                      {description}
                   </p>
@@ -84,9 +84,10 @@ export default function Diagnostician({ Component, pageProps, posts, settings })
             url={`/blog/${heroPost.slug}`}
             description={heroPost.excerpt}
             image={heroPost.image_url}
-            citation={`by ${heroPost.author_name}, ${heroPost.author_bio}`}
+            citation={`by ${heroPost.author_name}`}
+            authorbio={`${heroPost.author_bio}`}
          />
-         <SectionPosts
+         <SectionBlogPosts
             title={'Recent Articles'}
             posts={orderBy(posts, 'date', 'desc')}
             enableCarousel={posts.length > 1}
