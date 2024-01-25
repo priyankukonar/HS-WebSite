@@ -21,7 +21,7 @@ const PostItem = (props: IPostItem) => {
          <figcaption className="item__caption my-6">
             <p className="font-semibold text-sm line-clamp-3">{dateFormat(props.date)}&nbsp;|&nbsp;{props.source}</p>
             <p className="font-semibold text-sm my-6 line-clamp-3 post-title">{props.title}</p>
-            <p className="mb-4 text-sm line-clamp-3">{props.description}</p>
+            {/* <p className="mb-4 text-sm line-clamp-3">{props.description}</p> */}
             <p>
                {props.url && (
                <Link href={props.url}>

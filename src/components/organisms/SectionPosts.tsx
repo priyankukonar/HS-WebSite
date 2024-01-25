@@ -54,6 +54,7 @@ interface ISectionPros {
    ItemComponent?: JSX.Element,
    enableCarousel?: boolean,
    carouselProps: ICarouselProps|any
+   url?:string
 }
 
 const SectionPosts = (props: ISectionPros) => {
