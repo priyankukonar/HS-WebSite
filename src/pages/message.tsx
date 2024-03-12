@@ -14,16 +14,16 @@ const Message = () => {
 >
                <div className="grid grid-rows-1 gap-1">
                   <div className="col-span-2 h-[250px]">
-                     <img src="/assets/messageboard/img1.jpg" className="w-full h-[250px]" />
+                     <img src="/assets/messageboard/Green_Bar.png" className="w-full h-[250px]" />
 
                   </div>
                   <div className="grid grid-cols-3 col-span-2 border">
                      <div className=" col-span-1">
-                        <img src="/assets/messageboard/img2a.jpg" className="w-full" />
+                        <img src="/assets/messageboard/COO.png" className="w-full" />
 
                      </div>
                      <div className=" col-span-2 ">
-                        <img src="/assets/messageboard/img2b.jpg" className="w-full" />
+                        <img src="/assets/messageboard/the_message2.png" className="w-full" />
 
                      </div>
                   </div>
