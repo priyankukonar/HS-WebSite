@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Script from 'next/script'
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import { useEffect } from "react";
