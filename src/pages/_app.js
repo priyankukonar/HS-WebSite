@@ -1,5 +1,7 @@
 import { SSRProvider } from "@react-aria/ssr";
 import { StrictMode, useEffect } from "react";
+import { initializeGoogleTagManager } from '../googleTagManager';
+
 import '../styles/main.css'
 import Router from 'next/router';
 import NProgress from 'nprogress'; //nprogress module
@@ -13,15 +15,19 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
    useEffect(() => {
+         // Initialize Google Tag Manager with your GTM ID
+      initializeGoogleTagManager('GTM-5JZW9ZK8');
       AOS.init()
 
    }, [])
    return (
+     
       <StrictMode>
          <SSRProvider>
             <Component {...pageProps} />
          </SSRProvider>
       </StrictMode>
+      
    );
 }
 
