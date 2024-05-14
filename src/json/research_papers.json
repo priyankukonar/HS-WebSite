@@ -6,35 +6,35 @@
          "image_url": "/assets/research/research-1.jpg",
          "url": "https://pubmed.ncbi.nlm.nih.gov/32339719/",
          "category": "clinician",
-         "date":"2020-04-24"
+         "date": "2020-04-24"
       },
       {
          "title": "Cost-effectiveness of molecular diagnostic assays for the therapy of severe sepsis and septic shock in the emergency department.",
          "reference": "Zacharioudakis IM, Zervou FN, Shehadeh F, Mylonakis E",
          "image_url": "/assets/research/research-2.jpg",
          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0217508",
-         "date":"2019-05-24"
+         "date": "2019-05-24"
       },
       {
          "title": "The Effect of Molecular Rapid Diagnostic Testing on Clinical Outcomes in Bloodstream Infections: A Systematic Review and Meta-analysis.",
          "reference": "Timbrook TT, Morton JB, McConeghy KW, Caffrey AR, Mylonakis E, LaPlante KL",
          "image_url": "/assets/research/research-3.jpg",
          "url": "https://pubmed.ncbi.nlm.nih.gov/27678085/",
-         "date":"2017-01-01"
+         "date": "2017-01-01"
       },
       {
          "title": "Whole genome sequencing of Mycobacterium tuberculosis isolates and clinical outcomes of patients treated for multidrug-resistant tuberculosis in Tanzania.",
          "reference": "Katale BZ, Mbelele PM, Lema NA, Campino S, Mshana SE, Rweyemamu MM, Phelan JE, Keyyu JD, Majigo M, Mbugi EV, Dockrell HM, Clark TG, Matee MI, Mpagama S",
          "image_url": "/assets/research/research-4.jpg",
          "url": "https://doi.org/10.1186/s12864-020-6577-1",
-         "date":"2020-02-21"
+         "date": "2020-02-21"
       },
       {
          "title": "Whole Genome Sequencing of Mycobacterium tuberculosis Clinical Isolates From India Reveals Genetic Heterogeneity and Region-Specific Variations That Might Affect Drug Susceptibility.",
          "reference": "Advani J, Verma R, Chatterjee O, et al",
          "image_url": "/assets/research/research-5.jpg",
          "url": "https://www.frontiersin.org/articles/10.3389/fmicb.2019.00309/full",
-         "date":"2019-02-26"
+         "date": "2019-02-26"
       },
       {
          "title": "Analysis of Serial Multidrug-Resistant Tuberculosis Strains Causing Treatment Failure and Within-Host Evolution by Whole Genome Sequencing. MSphere.",
@@ -42,7 +42,7 @@
          "image_url": "/assets/research/research-6.jpg",
          "url": "https://journals.asm.org/doi/10.1128/mSphere.00884-20",
          "category": "diagnostic",
-         "date":"2020-12-23"
+         "date": "2020-12-23"
       },
       {
          "title": "Optimization of sepsis therapy based on patient-specific digital precision diagnostics using next generation sequencing(DigiSep-Trial)—study protocol for a randomized, controlled, interventional, open-label, multicenter trial.",
@@ -50,7 +50,7 @@
          "image_url": "/assets/research/research-7.jpg",
          "url": "https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-021-05667-x",
          "category": "diagnostic",
-         "date":"2021-10-18"
+         "date": "2021-10-18"
       },
       {
          "title": "Whole-genome sequencing of presumptive MDR-TB isolates from a tertiary healthcare setting in Mumbai.",
@@ -58,7 +58,7 @@
          "image_url": "/assets/research/Whole-genome sequencing of presumptive MDR-TB isolates from a tertiary healthcare setting in Mumbai.jpg",
          "url": "https://www.sciencedirect.com/science/article/pii/S2213716522002326",
          "category": "diagnostic",
-         "date":"2022-12-18"
+         "date": "2022-12-18"
       },
       {
          "title": "COVID-19 and global childhood tuberculosis notifications.",
@@ -66,7 +66,7 @@
          "image_url": "/assets/research/COVID-19 and global childhood tuberculosis notifications.jpg",
          "url": "https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(22)00453-3/fulltext",
          "category": "diagnostic",
-         "date":"2022-12-15"
+         "date": "2022-12-15"
       },
       {
          "title": "Development of a PNA–DiSc2 based portable absorbance platform for the detection of pathogen nucleic acids",
@@ -74,7 +74,7 @@
          "image_url": "/assets/research/Development of a PNA DiSc2 based portable absorbance platform for the detection of pathogen nucleic acids.jpg",
          "url": "https://pubs.rsc.org/en/content/articlehtml/2022/an/d2an01351g",
          "category": "diagnostic",
-         "date":"2022-12-07"
+         "date": "2022-12-07"
       },
       {
          "title": "Giant viral genomic signatures in the previously reported gut metagenomes of pre-school children in rural India",
@@ -82,7 +82,7 @@
          "image_url": "/assets/research/Giant viral genomic signatures in the previously reported gut metagenomes of pre-school children in rural India.jpg",
          "url": "https://link.springer.com/article/10.1007/s00705-019-04387-7",
          "category": "diagnostic",
-         "date":"2022-12-03"
+         "date": "2022-12-03"
       },
       {
          "title": "Whole genome sequencing of clinical strains of Mycobacterium tuberculosis from Mumbai, India: A potential tool for determining drug-resistance and strain lineage",
@@ -90,7 +90,7 @@
          "image_url": "/assets/research/Whole genome sequencing of clinical strains of Mycobacterium tuberculosis from Mumbai India.jpg",
          "url": "https://www.sciencedirect.com/science/article/pii/S1472979217301786",
          "category": "diagnostic",
-         "date":"2017-12-13"
+         "date": "2017-12-13"
       },
       {
          "title": "Genome-wide analysis of multi- and extensively drug-resistant Mycobacterium tuberculosis",
@@ -98,7 +98,7 @@
          "image_url": "/assets/research/Genome-wide analysis of multi- and extensively drug-resistant Mycobacterium tuberculosis.jpg",
          "url": "https://www.nature.com/articles/s41588-017-0029-0",
          "category": "diagnostic",
-         "date":"2018-01-22"
+         "date": "2018-01-22"
       },
       {
          "title": "Same-Day Diagnostic and Surveillance Data for Tuberculosis via Whole-Genome Sequencing of Direct Respiratory Samples",
@@ -106,7 +106,7 @@
          "image_url": "/assets/research/Same Day Diagnostic and Surveillance Data for Tuberculosis via Whole Genome Sequencing of Direct Respiratory Samples.jpg",
          "url": "https://journals.asm.org/doi/full/10.1128/JCM.02483-16",
          "category": "diagnostic",
-         "date":"2017-04-25"
+         "date": "2017-04-25"
       },
       {
          "title": "Edge Implementation with Intel® NUC Mini PCs for MDR, XDR and XXDR Tuberculosis Genome Informatics Pipeline",
@@ -114,7 +114,7 @@
          "image_url": "/assets/research/Edge Implementation with Intel.jpg",
          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/ai-haystackanalytics-tb-genomics-white-paper.pdf",
          "category": "diagnostic",
-         "date":"2020-12-12"
+         "date": "2020-12-12"
       },
       {
          "title": "Complete Genome Sequence of a New Megavirus Family Member Isolated from an Inland Water Lake for the First Time in India",
@@ -122,7 +122,7 @@
          "image_url": "/assets/research/Complete Genome Sequence of a New Megavirus Family Member Isolated from an Inland Water Lake for the First Time in India.jpg",
          "url": "https://journals.asm.org/doi/full/10.1128/genomeA.00402-16",
          "category": "diagnostic",
-         "date":"2016-06-16"
+         "date": "2016-06-16"
       },
       {
          "title": "Genomic and metagenomic signatures of giant viruses are ubiquitous in water samples from sewage, inland lake, waste water treatment plant, and municipal water supply in Mumbai, India",
@@ -130,7 +130,7 @@
          "image_url": "/assets/research/Genomic and metagenomic signatures of giant viruses are ubiquitous in water samples from sewage inland lake waste water treatment plant and municipal water supply in Mumbai India.jpg",
          "url": "https://www.nature.com/articles/s41598-019-40171-y",
          "category": "diagnostic",
-         "date":"2019-03-06"
+         "date": "2019-03-06"
       },
       {
          "title": "Mimivirus encodes a multifunctional primase with DNA/RNA polymerase, terminal transferase and translesion synthesis activities",
@@ -138,8 +138,23 @@
          "image_url": "/assets/research/Mimivirus encodes a multifunctional primase with.jpg",
          "url": "https://academic.oup.com/nar/article/47/13/6932/5475173",
          "category": "diagnostic",
-         "date":"2019-07-26"
+         "date": "2019-07-26"
+      },
+      {
+         "title": " Whole-genome sequencing of clinical isolates from tuberculosis patients in India: real-world data indicates a high proportion of pre-XDR cases",
+         "reference": " Aparna Bhanushali, Preethi Nair, Geethanjali Anilkumar, Thandaseery, Sanchi Shah, Sanjana Kuruwa, Amrutraj Zade, Chaitali Nikam, Mangala Gomare, Anirvan Chatterjee",
+         "image_url": "/assets/research/WGS_TB.jpg",
+         "url": "https://journals.asm.org/doi/full/10.1128/spectrum.02770-23",
+         "category": "diagnostic",
+         "date": "2024-05-13"
+      },
+      {
+         "title": "An integrated method for targeted Oxford Nanopore sequencing and automated bioinformatics for the simultaneous detection of bacteria, fungi, and ARG",
+         "reference": "Sanjana Kuruwa, Amrutraj Zade, Sanchi Shah, Rameez Moidu1, Shailesh Lad, Anirvan Chatterjee, Chaitali Nikam, Mahua Kapoor,Kiran Kondabagil Chhaya Chande, Ameeta Joshi, Nilma Hirani,Sanjay Bhattacharya, Aruna Poojary",
+         "image_url": "/assets/research/NGS_image.jpg",
+         "url": "https://academic.oup.com/jambio/article-abstract/135/2/lxae037/7606793?redirectedFrom=fulltext&login=false",
+         "category": "diagnostic",
+         "date": "2024-05-13"
       }
    ]
-
 }
