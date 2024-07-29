@@ -12,6 +12,10 @@
       {
          "title": "Products",
          "url": "/universal-id"
+      },
+      {
+         "title": "Privacy Policy",
+         "url": "/privacy"
       }
    ],
    "navbar": [
