@@ -8,23 +8,65 @@ interface IContactFormProps {
 }
 
 const ContactUsModal = ({ setIsOpen, isOpen }: IContactFormProps) => {
+   const [response, setResponse] = useState(null);
+   const [error, setError] = useState(null);
+   const [formData, setFormData] = useState(null);
+   const [isLoading, setIsLoading] = useState(false);
    const onClick = () => {
       setIsOpen(false);
    };
 
    const handleSubmit = (event) => {
       event.preventDefault();
-      setIsOpen(false);
+      if (formData !== null) {
+         const req = new Request("/", {
+            body: formData,
+            method: "POST",
+            headers: {
+               Accept: "application/json",
+            },
+         });
+         setIsLoading(true);
+         setError(null);
+         setResponse("Submitted Success");
+         // fetch(req)
+         //    .then((res) => res.json())
+         //    .then((res) => {
+         //       console.log({ res });
+         //       setResponse(res);
+         //    })
+         //    .catch((err) => {
+         //       setError(err);
+         //    })
+         //    .finally(() => {
+         //       setIsLoading(false);
+         //    });
+         setIsLoading(false);
+         setTimeout(() => setResponse(false), 2000);
+      }
+   };
+
+   const handleChangeInput = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+   ) => {
+      const { name, value } = e.target;
+      setFormData({
+         ...formData,
+         [name]: value,
+      });
    };
 
    return (
-      <Modal isOpen={isOpen} className="md:w-10/12 mx-auto md:my-4 mt-32">
+      <Modal
+         isOpen={isOpen}
+         className="md:w-10/12 mx-auto md:my-4 mt-8 md:mt-16"
+      >
          <form
-            onSubmit={handleSubmit}
-            className="bg-white shadow-lg relative contact-form h-max-screen h-[90vh] overflow-y-auto"
+            className="bg-white shadow-lg relative contact-form h-max-screen h-[85vh] overflow-y-auto"
+            name="contact"
          >
-            <div className="h-2 bg-gradient-to-r from-customBlue to-red-500" />
-            <div className="p-4 md:p-6 md:px-32 md:py-8">
+            <div className="h-[2%] bg-gradient-to-r from-customBlue to-red-500" />
+            <div className="m-4 md:m-6 md:mx-32 md:my-8 [h-94%]">
                <button
                   type="button"
                   onClick={onClick}
@@ -56,67 +98,86 @@ const ContactUsModal = ({ setIsOpen, isOpen }: IContactFormProps) => {
                   </div>
                   <div className="mb-4">
                      <input
+                        onChange={handleChangeInput}
                         placeholder="Name"
                         type="text"
                         id="name"
+                        name="name"
                         className="font-extralight shadow appearance-none border rounded-lg w-full py-4 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:outline-customBlue"
                      />
                   </div>
                   <div className="flex mb-4">
                      <div className="w-1/2 mr-2">
                         <input
+                           onChange={handleChangeInput}
                            placeholder="Email"
                            type="email"
                            id="email"
+                           name="email"
                            className="font-extralight shadow appearance-none border rounded-lg w-full py-4 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:outline-customBlue"
                         />
                      </div>
                      <div className="w-1/2">
                         <input
+                           onChange={handleChangeInput}
                            placeholder="Phone"
                            type="tel"
                            id="phone"
+                           name="phone"
                            className="font-extralight shadow appearance-none border rounded-lg w-full py-4 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:outline-customBlue"
                         />
                      </div>
                   </div>
                   <div className="mb-4">
                      <input
+                        onChange={handleChangeInput}
                         placeholder="Occupation"
                         type="text"
                         id="occupation"
+                        name="occupation"
                         className="font-extralight shadow appearance-none border rounded-lg w-full py-4 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:outline-customBlue"
                      />
                   </div>
                   <div className="mb-4">
                      <textarea
+                        onChange={handleChangeInput}
                         rows={3}
                         placeholder="Address"
                         id="address"
+                        name="address"
                         className="font-extralight shadow appearance-none border rounded-lg w-full py-4 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:outline-customBlue"
                      />
                   </div>
                   <div className="flex mb-4">
                      <div className="w-1/2 mr-2">
                         <input
+                           onChange={handleChangeInput}
                            placeholder="City"
                            type="text"
                            id="city"
+                           name="city"
                            className="font-extralight shadow appearance-none border rounded-lg w-full py-4 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:outline-customBlue"
                         />
                      </div>
                      <div className="w-1/2">
                         <input
+                           onChange={handleChangeInput}
                            placeholder="State"
+                           name="state"
                            type="text"
                            id="state"
                            className="font-extralight shadow appearance-none border rounded-lg w-full py-4 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:outline-customBlue"
                         />
                      </div>
                   </div>
+                  <div className="text-green-600 mb-2">{response}</div>
                   <div className="flex items-center">
-                     <button className="bg-customBlue py-4 px-6 rounded-full shadow-xl border-8 border-gray-100 transition-all duration-300 flex items-center">
-                        <div className="h-6 w-6 min-w-6 relative">
+                     <button
+                        onClick={handleSubmit}
+                        disabled={isLoading}
+                        className="bg-customBlue py-4 px-6 rounded-full shadow-xl border-8 border-gray-100 transition-all duration-300 flex items-center"
+                     >
+                        <div className="h-6 w-6 min-w-6 relative mr-2">
                            <Image
                               src={"/assets/identifi/book_now.png"}
                               alt={"download"}
@@ -124,12 +185,14 @@ const ContactUsModal = ({ setIsOpen, isOpen }: IContactFormProps) => {
                               objectFit="contain"
                            />
                         </div>
-                        <span className="text-white font-semibold">Submit</span>
+                        <span className="text-white font-semibold">
+                           {isLoading ? "Submitting..." : "Submit"}
+                        </span>
                      </button>
                   </div>
                </div>
             </div>
-            <div className="h-2 bg-gradient-to-r from-customBlue to-red-500" />
+            <div className="h-[2%] bg-gradient-to-r from-customBlue to-red-500" />
          </form>
       </Modal>
    );

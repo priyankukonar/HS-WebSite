@@ -130,7 +130,7 @@ const Navbar1 = ({ renderMenu }) => {
             } !p-0`}
          >
             <div className="h-6 bg-gradient-to-r from-customBlue to-red-500 w-full"></div>
-            <nav className="navbar-main container mx-auto flex items-center justify-between gap-4 p-2 md:p-4">
+            <nav className="navbar-main container mx-auto flex items-center justify-between gap-4 p-0 md:p-4">
                <div className="navbar-brand flex items-center">
                   <Link href={"/"}>
                      <a className="flex px-3 md:px-0 w-[250px] h-[60px]">

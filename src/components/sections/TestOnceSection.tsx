@@ -77,7 +77,7 @@ const TestOnceComponentSection = ({
                   <div className="flex items-center">
                      <div className="flex flex-wrap md:flex-nowrap gap-4">
                         <button className="bg-customBlue py-2 px-6 rounded-full shadow-xl border-8 border-gray-100 transition-all duration-300 flex items-center">
-                           <span className="text-white font-semibold">
+                           <span className="text-white font-semibold mr-2">
                               Download Brochure
                            </span>
                            <div className="h-6 w-6 min-w-6 relative">
@@ -94,7 +94,7 @@ const TestOnceComponentSection = ({
                            className="bg-customBlue py-2 px-6 rounded-full shadow-xl border-8 border-gray-100 transition-all duration-300 flex items-center"
                            onClick={() => setIsOpen(true)}
                         >
-                           <div className="h-6 w-6 min-w-6 relative">
+                           <div className="h-6 w-6 min-w-6 relative mr-2">
                               <Image
                                  src={"/assets/identifi/book_now.png"}
                                  alt={"download"}
