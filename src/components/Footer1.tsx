@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import Image from "next/image";
+import Link from "next/link";
 
 const StyledFooter = styled.footer``;
 
@@ -63,13 +64,7 @@ function Footer1({}) {
                      <div className="flex md:items-center justify-between w-full md:flex-row flex-col gap-4 md:gap-0">
                         <div className="flex md:items-center gap-2 md:gap-10 md:flex-row flex-col">
                            <a
-                              target="_blank"
-                              className="underline underline-offset-2"
-                           >
-                              Cookie Management Center
-                           </a>
-                           <a
-                              target="_blank"
+                              href={"/privacy"}
                               className="underline underline-offset-2"
                            >
                               Privacy Policy
