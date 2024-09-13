@@ -1,0 +1,20 @@
+{
+   "data": [
+      {
+         "thumbnailUrl": "/assets/identifi/pharmacogenomics/patient_care.png",
+         "title": "Helps improve patient care"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/pharmacogenomics/recommendation.png",
+         "title": "Provides specific drug dosing recommendations"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/pharmacogenomics/trial_error.png",
+         "title": "Reduces trial and error"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/pharmacogenomics/genetic_variant_metabolizer.png",
+         "title": "Provides genetic variant details and metabolizer status "
+      }
+   ]
+}

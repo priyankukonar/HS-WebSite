@@ -1,0 +1,24 @@
+{
+   "data": [
+      {
+         "thumbnailUrl": "/assets/identifi/whoShouldGetTested/patients_under_treatment.png",
+         "desc": "Patients under treatment for cardiology, oncology, neurology, pain management, gastroenterology, etc."
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/whoShouldGetTested/patients_medication_related_advers_events.png",
+         "desc": "Patients with a history of medication-related adverse events"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/whoShouldGetTested/patients_poor_response.png",
+         "desc": "Patients with history of poor response to certian medications"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/whoShouldGetTested/patients_complex_medication_regimen.png",
+         "desc": "Patients with a complex medication regimen"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/whoShouldGetTested/patients_undergoing_surgery.png",
+         "desc": "Patients undergoing surgery (anaesthetic agents)"
+      }
+   ]
+}

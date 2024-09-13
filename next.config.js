@@ -17,11 +17,8 @@ const nextConfig = {
       ignoreBuildErrors: true,
    },
    images: {
-      domains: [
-         'haystackanalytics.in',
-         'images.unsplash.com',
-
-      ]
+      domains: ["haystackanalytics.in", "images.unsplash.com"],
+      unoptimized: true,
    },
    webpack5: true,
    webpack: (config) => {
@@ -34,7 +31,6 @@ const nextConfig = {
       // your project has ESLint errors.
       ignoreDuringBuilds: true,
    },
-
 };
 
 module.exports = nextConfig;
