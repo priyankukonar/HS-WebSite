@@ -28,21 +28,25 @@ const ContactUsModal = ({ setIsOpen, isOpen }: IContactFormProps) => {
          });
          setIsLoading(true);
          setError(null);
-         setResponse("Submitted Success");
-         // fetch(req)
-         //    .then((res) => res.json())
-         //    .then((res) => {
-         //       console.log({ res });
-         //       setResponse(res);
-         //    })
-         //    .catch((err) => {
-         //       setError(err);
-         //    })
-         //    .finally(() => {
-         //       setIsLoading(false);
-         //    });
+         setResponse("Thanks for Your Interest");
+         setError("Sorry could not take your request now.");
+         fetch(req)
+            .then((res) => res.json())
+            .then((res) => {
+               console.log({ res });
+               setResponse(res);
+            })
+            .catch((err) => {
+               setError(err);
+            })
+            .finally(() => {
+               setIsLoading(false);
+            });
          setIsLoading(false);
-         setTimeout(() => setResponse(false), 2000);
+         setTimeout(() => {
+            setResponse(false);
+            setError(false);
+         }, 2000);
       }
    };
 
@@ -171,6 +175,7 @@ const ContactUsModal = ({ setIsOpen, isOpen }: IContactFormProps) => {
                      </div>
                   </div>
                   <div className="text-green-600 mb-2">{response}</div>
+                  <div className="text-red-600 mb-2">{error}</div>
                   <div className="flex items-center">
                      <button
                         onClick={handleSubmit}
