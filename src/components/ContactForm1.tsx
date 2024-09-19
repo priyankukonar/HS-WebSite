@@ -8,15 +8,15 @@ interface IContactFormProps {
 }
 
 const ContactUsModal = ({ setIsOpen, isOpen }: IContactFormProps) => {
-   const [response, setResponse] = useState(null);
-   const [error, setError] = useState(null);
-   const [formData, setFormData] = useState(null);
+   const [response, setResponse] = useState<any>(null);
+   const [error, setError] = useState<any>(null);
+   const [formData, setFormData] = useState<any>(null);
    const [isLoading, setIsLoading] = useState(false);
    const onClick = () => {
       setIsOpen(false);
    };
 
-   const handleSubmit = (event) => {
+   const handleSubmit = (event: any) => {
       event.preventDefault();
       if (formData !== null) {
          const req = new Request("/", {
@@ -24,20 +24,25 @@ const ContactUsModal = ({ setIsOpen, isOpen }: IContactFormProps) => {
             method: "POST",
             headers: {
                Accept: "application/json",
+               "Content-Type": "application/json",
+               "Access-Control-Allow-Origin": "*",
+               "Access-Control-Allow-Methods":
+                  "GET, POST, PUT, DELETE, OPTIONS",
+               "Access-Control-Allow-Headers": "Content-Type",
             },
          });
          setIsLoading(true);
          setError(null);
-         setResponse("Thanks for Your Interest");
-         setError("Sorry could not take your request now.");
+         // setResponse("Thanks for Your Interest");
+         // setError("Sorry could not take your request now.");
          fetch(req)
             .then((res) => res.json())
             .then((res) => {
                console.log({ res });
-               setResponse(res);
+               setResponse("Thanks for Your Interest");
             })
             .catch((err) => {
-               setError(err);
+               setError("Sorry could not take your request now.");
             })
             .finally(() => {
                setIsLoading(false);
