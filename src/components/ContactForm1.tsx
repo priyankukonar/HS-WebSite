@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import Image from "next/Image";
+import Image from "next/image";
 
 interface IContactFormProps {
    setIsOpen: (val: boolean) => void;

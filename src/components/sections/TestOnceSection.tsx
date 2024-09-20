@@ -1,6 +1,6 @@
 import Section from "../atoms/Section";
 import styled from "@emotion/styled";
-import Image from "next/Image";
+import Image from "next/image";
 
 interface ITestOnceItem {
    thumbnailUrl: string;

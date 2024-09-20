@@ -1,5 +1,4 @@
 import Section from "../atoms/Section";
-import Image from "next/Image";
 import styled from "@emotion/styled";
 
 interface IHighlightsOfPGxComprehensiveSectionProps {
