@@ -55,7 +55,7 @@ const StyledHeroSection = styled(Section)`
    }
 `;
 
-const HeroSection = () => {
+const HeroSection = ({ setIsOpen }: any) => {
    return (
       <StyledHeroSection className="HeroSection " data-aos="fade-up">
          <Section.Container className="mx-auto px-0">
@@ -66,10 +66,21 @@ const HeroSection = () => {
                      with PGx <br />
                      Comprehensive
                   </h3>
-                  <div className="p-1 border-y-customBlue border-y-4 border-solid max-w-max">
+                  <div className="p-1 border-y-customBlue border-y-4 border-solid max-w-max mb-4">
                      <h3 className="whitespace-nowrap tracking-wider !leading-[3.25rem] font-normal text-red-600 text-2xl md:!text-5xl">
                         Using NGS
                      </h3>
+                  </div>
+                  <div
+                     className="flex items-center gap-4"
+                     onClick={() => setIsOpen(true)}
+                  >
+                     <a
+                        target="_blank"
+                        className="btn text-white text-center px-8 py-4 bg-customBlue rounded-md"
+                     >
+                        Contact Us
+                     </a>
                   </div>
                </div>
                <div className="grid__col block md:hidden">
@@ -85,18 +96,15 @@ const HeroSection = () => {
    );
 };
 
-export default function IdentifiPage({ settings }) {
+export default function IdentifiPage({ settings }: any) {
    const [isOpen, setIsOpen] = useState(false);
 
-   const onCloseClick = () => {
-      setIsOpen(false);
-   };
    return (
-      <StyledHome settings={settings}>
+      <StyledHome settings={settings} renderMenu={undefined}>
          <Head>
             <title>Identifi Page</title>
          </Head>
-         <HeroSection />
+         <HeroSection setIsOpen={setIsOpen} />
          <SectionGridPharmacogenomics
             hide={false}
             items={pharmacogenomics.data}

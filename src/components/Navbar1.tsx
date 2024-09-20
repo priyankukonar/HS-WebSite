@@ -149,9 +149,9 @@ const Navbar1 = ({ renderMenu }) => {
                   <div className="close md:hidden">
                      <XIcon className="w-8 h-8" onClick={toggleMenu} />
                   </div>
-                  <div className="flex gap-6 flex-col md:flex-row">
-                     <div className="flex md:flex-col flex-col-reverse">
-                        <div className="mb-3 md:mb-6 text-sm flex flex-col md:flex-row gap-6 text-gray-500 mt-6 justify-center md:justify-end md:mt-0 social-media">
+                  {/* <div className="flex gap-6 flex-col md:flex-row"> */}
+                  {/* <div className="flex md:flex-col flex-col-reverse"> */}
+                  {/* <div className="mb-3 md:mb-6 text-sm flex flex-col md:flex-row gap-6 text-gray-500 mt-6 justify-center md:justify-end md:mt-0 social-media">
                            <a
                               className="text-dark"
                               href={`mailto:${settings.email}`}
@@ -216,126 +216,116 @@ const Navbar1 = ({ renderMenu }) => {
                                  </a>
                               ) : null}
                            </div>
+                        </div> */}
+                  <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end relative">
+                     <div className="has-dropdown">
+                        <div
+                           className="font-semibold flex gap-2 justify-between items-center "
+                           href={"#"}
+                        >
+                           <span className="cursor-pointer">
+                              {"Science Corner"}
+                           </span>
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={2}
+                              stroke="currentColor"
+                              className="w-4 h-4"
+                           >
+                              <path
+                                 strokeLinecap="round"
+                                 strokeLinejoin="round"
+                                 d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                              />
+                           </svg>
                         </div>
-                        <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end relative">
-                           <div className="has-dropdown">
-                              <div
-                                 className="font-semibold flex gap-2 justify-between items-center "
-                                 href={"#"}
-                              >
-                                 <span className="cursor-pointer">
-                                    {"Science Corner"}
-                                 </span>
-                                 <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={2}
-                                    stroke="currentColor"
-                                    className="w-4 h-4"
-                                 >
-                                    <path
-                                       strokeLinecap="round"
-                                       strokeLinejoin="round"
-                                       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                                    />
-                                 </svg>
-                              </div>
-                              <div
-                                 className={`dropdown-menu md:absolute top-5 left-0 bg-white py-4 md:py-6 px-3  md:shadow-lg ${
-                                    dropdownOpened1 ? "" : "hidden"
-                                 }`}
-                              >
-                                 <ol className="flex flex-col gap-3">
-                                    {menus.sciencecornerHeader.map(
-                                       (mn, mnIndex) => (
-                                          <li key={`scm_${mnIndex}`}>
-                                             <Link
-                                                key={`mn${mnIndex}`}
-                                                href={mn.url}
-                                             >
-                                                <a
-                                                   className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${
-                                                      router.pathname == mn.url
-                                                         ? "active text-blue-600"
-                                                         : ""
-                                                   }`}
-                                                >
-                                                   {mn.label}
-                                                </a>
-                                             </Link>
-                                          </li>
-                                       )
-                                    )}
-                                 </ol>
-                              </div>
-                           </div>
-                           {menus.navbar.map((mn, mnIndex) => (
-                              <Link key={`mn${mnIndex}`} href={mn.url}>
-                                 <a
-                                    className={`${
-                                       router.pathname == mn.url
-                                          ? "active text-blue-600"
-                                          : ""
-                                    }`}
-                                 >
-                                    {mn.label}
-                                 </a>
-                              </Link>
-                           ))}
-                           <div className="has-dropdown">
-                              <div
-                                 className="font-semibold flex gap-2 justify-between items-center has-dropdown"
-                                 href={"#"}
-                              >
-                                 <span className="cursor-pointer">
-                                    {"Products"}
-                                 </span>
-                                 <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={2}
-                                    stroke="currentColor"
-                                    className="w-4 h-4"
-                                 >
-                                    <path
-                                       strokeLinecap="round"
-                                       strokeLinejoin="round"
-                                       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                                    />
-                                 </svg>
-                              </div>
-                              <div
-                                 className={`dropdown-menu md:absolute top-5 bg-white py-4 md:py-6 px-3  md:shadow-lg ${
-                                    dropdownOpened ? "" : "hidden"
-                                 }`}
-                              >
-                                 <ol className="flex flex-col gap-3">
-                                    {menus.productsHeader.map((mn, mnIndex) => (
-                                       <li key={`mnss_${mnIndex}`}>
-                                          <Link
-                                             key={`mn${mnIndex}`}
-                                             href={mn.url}
-                                          >
-                                             <a
-                                                className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${
-                                                   router.pathname == mn.url
-                                                      ? "active text-blue-600"
-                                                      : ""
-                                                }`}
-                                             >
-                                                {mn.label}
-                                             </a>
-                                          </Link>
-                                       </li>
-                                    ))}
-                                 </ol>
-                              </div>
-                           </div>
+                        <div
+                           className={`dropdown-menu md:absolute top-5 left-0 bg-white py-4 md:py-6 px-3  md:shadow-lg ${
+                              dropdownOpened1 ? "" : "hidden"
+                           }`}
+                        >
+                           <ol className="flex flex-col gap-3">
+                              {menus.sciencecornerHeader.map((mn, mnIndex) => (
+                                 <li key={`scm_${mnIndex}`}>
+                                    <Link key={`mn${mnIndex}`} href={mn.url}>
+                                       <a
+                                          className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${
+                                             router.pathname == mn.url
+                                                ? "active text-blue-600"
+                                                : ""
+                                          }`}
+                                       >
+                                          {mn.label}
+                                       </a>
+                                    </Link>
+                                 </li>
+                              ))}
+                           </ol>
                         </div>
                      </div>
-                     <div
+                     {menus.navbar.map((mn, mnIndex) => (
+                        <Link key={`mn${mnIndex}`} href={mn.url}>
+                           <a
+                              className={`${
+                                 router.pathname == mn.url
+                                    ? "active text-blue-600"
+                                    : ""
+                              }`}
+                           >
+                              {mn.label}
+                           </a>
+                        </Link>
+                     ))}
+                     <div className="has-dropdown">
+                        <div
+                           className="font-semibold flex gap-2 justify-between items-center has-dropdown"
+                           href={"#"}
+                        >
+                           <span className="cursor-pointer">{"Products"}</span>
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={2}
+                              stroke="currentColor"
+                              className="w-4 h-4"
+                           >
+                              <path
+                                 strokeLinecap="round"
+                                 strokeLinejoin="round"
+                                 d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                              />
+                           </svg>
+                        </div>
+                        <div
+                           className={`dropdown-menu md:absolute top-5 bg-white py-4 md:py-6 px-3  md:shadow-lg ${
+                              dropdownOpened ? "" : "hidden"
+                           }`}
+                        >
+                           <ol className="flex flex-col gap-3">
+                              {menus.productsHeader.map((mn, mnIndex) => (
+                                 <li key={`mnss_${mnIndex}`}>
+                                    <Link key={`mn${mnIndex}`} href={mn.url}>
+                                       <a
+                                          className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${
+                                             router.pathname == mn.url
+                                                ? "active text-blue-600"
+                                                : ""
+                                          }`}
+                                       >
+                                          {mn.label}
+                                       </a>
+                                    </Link>
+                                 </li>
+                              ))}
+                           </ol>
+                        </div>
+                     </div>
+                  </div>
+                  {/* </div> */}
+                  {/* <div
                         className="flex items-center gap-4 justify-center"
                         onClick={() => setIsOpen(true)}
                      >
@@ -345,8 +335,8 @@ const Navbar1 = ({ renderMenu }) => {
                         >
                            Contact Us
                         </a>
-                     </div>
-                  </div>
+                     </div> */}
+                  {/* </div> */}
                </div>
                <div className="md:mt-3 mr-3 md:hidden">
                   <MenuIcon
