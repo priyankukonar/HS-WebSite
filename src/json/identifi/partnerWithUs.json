@@ -1,0 +1,12 @@
+{
+   "data": [
+      {
+         "thumbnailUrl": "/assets/identifi/doctors.png",
+         "title": "Doctors"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/hosptials.png",
+         "title": "Hospitals & Diagnostic Labs"
+      }
+   ]
+}

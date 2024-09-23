@@ -1,0 +1,16 @@
+{
+   "data": [
+      {
+         "thumbnailUrl": "/assets/identifi/advantagesOfPGX/adverse_drug_reactions.png",
+         "desc": "Prevents Adverse Drug Reactions (ADRs)"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/advantagesOfPGX/higher_compliance_medication_adherence.png",
+         "desc": "Higher compliance and medication adherence"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/advantagesOfPGX/cost_effective_personalized.png",
+         "desc": "Cost effective and personalized"
+      }
+   ]
+}

@@ -1,0 +1,16 @@
+{
+   "data": [
+      {
+         "thumbnailUrl": "/assets/identifi/testIndicates/drugs_recommendations.png",
+         "desc": "Drugs to be 'avoided' 'used with caution' |  'used as directed'"
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/testIndicates/dosing_recommendations.png",
+         "desc": "Dosing recommendations based on guidelines "
+      },
+      {
+         "thumbnailUrl": "/assets/identifi/testIndicates/genetic_variants.png",
+         "desc": "Genetic variants that impact the drugs "
+      }
+   ]
+}
