@@ -4,7 +4,6 @@
          "title": "Science Corner",
          "url": "/blog"
       },
-      
       {
          "title": "About Us",
          "url": "/about"
@@ -18,11 +17,7 @@
          "url": "/privacy"
       }
    ],
-   "navbar": [
-      
-      { "label": "About Us", "url": "/about" }
-
-   ],
+   "navbar": [{ "label": "About Us", "url": "/about" }],
    "productsHeader": [
       {
          "label": "Universal ID",
@@ -31,9 +26,12 @@
       {
          "label": "ΩTB ®",
          "url": "/omegatb"
+      },
+      {
+         "label": "Identifi",
+         "url": "/identifi"
       }
-   ]
-   ,
+   ],
    "sciencecornerHeader": [
       {
          "label": "Blog",
