@@ -9,10 +9,12 @@ interface IAdvantagesOfPGXItems {
 interface IAdvantagesOfPGXSectionProps {
    hide: boolean;
    items: IAdvantagesOfPGXItems[];
+   knowMore?: boolean;
 }
 
 const AdvantagesOfPGXSection = ({
    hide,
+   knowMore,
    items,
 }: IAdvantagesOfPGXSectionProps) => {
    return (
@@ -54,6 +56,19 @@ const AdvantagesOfPGXSection = ({
                   ))}
                </div>
             </div>
+            {knowMore && (
+               <div className="w-full flex items-center justify-center pb-16">
+                  <a
+                     href="/identifi"
+                     className="items-center bg-white py-2 px-8 rounded-full border-8 border-gray-100 shadow-xl transition-all duration-300 flex items-center"
+                     // onClick={() => setIsOpen(true)}
+                  >
+                     <span className="text-customBlue font-semibold">
+                        Know More
+                     </span>
+                  </a>
+               </div>
+            )}
          </Section.Container>
       </Section>
    );

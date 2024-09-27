@@ -61,13 +61,13 @@ const HeroSection = ({ setIsOpen }: any) => {
          <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col py-8 px-3 md:px-8">
-                  <h3 className="md:whitespace-nowrap tracking-wider !leading-[3.25rem] font-bold text-customBlue text-2xl md:!text-5xl mb-4">
+                  <h3 className="md:whitespace-nowrap tracking-wider md:!leading-[3.25rem] font-bold text-customBlue text-2xl md:!text-5xl mb-4">
                      Tailored Treatment <br />
                      with PGx <br />
                      Comprehensive
                   </h3>
                   <div className="p-1 border-y-customBlue border-y-4 border-solid max-w-max mb-4">
-                     <h3 className="whitespace-nowrap tracking-wider !leading-[3.25rem] font-normal text-red-600 text-2xl md:!text-5xl">
+                     <h3 className="whitespace-nowrap tracking-wider md:!leading-[3.25rem] font-normal text-red-600 text-2xl md:!text-5xl">
                         Using NGS
                      </h3>
                   </div>

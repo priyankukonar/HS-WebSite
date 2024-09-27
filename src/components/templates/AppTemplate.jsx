@@ -34,13 +34,15 @@ function AppTemplate({
          <Head>
             <link rel="icon" href="/assets/favicon.png" />
          </Head>
-         {router.pathname === "/identifi" ? (
+         {router.pathname === "/identifi" ||
+         router.pathname.includes("template") ? (
             <Navbar1 renderMenu={renderMenu} />
          ) : (
             <Navbar renderMenu={renderMenu} />
          )}
          {children}
-         {router.pathname === "/identifi" ? (
+         {router.pathname === "/identifi" ||
+         router.pathname.includes("template") ? (
             <Footer1 settings={settings} />
          ) : (
             <Footer settings={settings} />
