@@ -1,0 +1,24 @@
+{
+   "data": [
+      {
+         "title": "Diagnostic Labs",
+         "thumbnailUrl": "/assets/franchise/diagnostic_labs.png"
+      },
+      {
+         "title": "Pathology Labs",
+         "thumbnailUrl": "/assets/franchise/pathology_labs.png"
+      },
+      {
+         "title": "Sequencing Centres",
+         "thumbnailUrl": "/assets/franchise/sequencing_centres.png"
+      },
+      {
+         "title": "Hospitals",
+         "thumbnailUrl": "/assets/franchise/hospitals.png"
+      },
+      {
+         "title": "Private Clinics",
+         "thumbnailUrl": "/assets/franchise/private_clinic.png"
+      }
+   ]
+}

@@ -1,12 +1,16 @@
 import styled from "@emotion/styled";
-import Script from 'next/script'
+import Script from "next/script";
 import Footer from "../Footer";
+import Footer2 from "../Footer2";
 import Navbar from "../Navbar";
 import { useEffect } from "react";
 // import AOS from 'aos'
 // import 'aos/dist/aos.css'
-import settings from '../../json/settings.json'
+import settings from "../../json/settings.json";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import Navbar2 from "../Navbar2";
+
 const StyledTemplate = styled.div`
    margin: 0;
    padding: 0;
@@ -15,18 +19,32 @@ const StyledTemplate = styled.div`
 
    padding: 0px;
    margin: 0px;
-`
+`;
 
-function AppTemplate({ children, pageProps = {}, bodyClassName = '', renderMenu, ...props  }) {
-
+function AppTemplate({
+   children,
+   pageProps = {},
+   bodyClassName = "",
+   renderMenu,
+   ...props
+}) {
+   const router = useRouter();
    return (
       <StyledTemplate {...props} className={`body__content ${bodyClassName}`}>
          <Head>
             <link rel="icon" href="/assets/favicon.png" />
          </Head>
-         <Navbar renderMenu={renderMenu} />
+         {router.pathname === "/franchisee" ? (
+            <Navbar2 renderMenu={renderMenu} />
+         ) : (
+            <Navbar renderMenu={renderMenu} />
+         )}
          {children}
-         <Footer settings={settings} />
+         {router.pathname === "/franchisee" ? (
+            <Footer2 renderMenu={renderMenu} />
+         ) : (
+            <Footer settings={settings} />
+         )}
       </StyledTemplate>
    );
 }
