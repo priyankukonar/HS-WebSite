@@ -31,6 +31,8 @@ module.exports = {
             muted: "#5d5d5d",
             customBlue: "#2f3186",
             customPurple: "#eae9f6",
+            customGreen: "#85bf6c",
+            customBlue1: "#3f78be",
          },
       },
    },

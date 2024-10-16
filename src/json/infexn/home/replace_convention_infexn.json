@@ -1,0 +1,55 @@
+{
+   "data": [
+      {
+         "title": "Culture",
+         "thumbnailUrl": "/assets/infexn/home/culture.png",
+         "desc": [
+            "Time, resource intensive",
+            "Difficult for fastidious organisms",
+            "Poor specificity"
+         ]
+      },
+      {
+         "title": "Microscopy",
+         "thumbnailUrl": "/assets/infexn/home/microscopy.png",
+         "desc": [
+            "High skill level",
+            "Low sensitivity",
+            "Interpretive challenges",
+            "Untargeted"
+         ]
+      },
+      {
+         "title": "Immunoassay",
+         "thumbnailUrl": "/assets/infexn/home/immunoassay.png",
+         "desc": [
+            "Specificity challenges",
+            "Costly",
+            "Specific primers and probes needed"
+         ]
+      },
+      {
+         "title": "PCR",
+         "thumbnailUrl": "/assets/infexn/home/pcr.png",
+         "desc": ["Costly", "Specific primers and probes needed"]
+      }
+   ],
+   "data1": [
+      {
+         "title": "Direct from sample",
+         "thumbnailUrl": "/assets/infexn/home/direct_sample.png"
+      },
+      {
+         "title": "Clinically validated",
+         "thumbnailUrl": "/assets/infexn/home/clinical_validated.png"
+      },
+      {
+         "title": "Automated data analysis",
+         "thumbnailUrl": "/assets/infexn/home/data_analysis.png"
+      },
+      {
+         "title": "Easy to read, actionable report",
+         "thumbnailUrl": "/assets/infexn/home/actionable_report.png"
+      }
+   ]
+}

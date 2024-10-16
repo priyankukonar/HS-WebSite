@@ -1,0 +1,20 @@
+{
+   "data": [
+      {
+         "title": "Mumbai",
+         "thumbnailUrl": "/assets/infexn/home/mumbai.png"
+      },
+      {
+         "title": "New Delhi",
+         "thumbnailUrl": "/assets/infexn/home/new_delhi.png"
+      },
+      {
+         "title": "Bengaluru",
+         "thumbnailUrl": "/assets/infexn/home/bengaluru.png"
+      },
+      {
+         "title": "Kolkata",
+         "thumbnailUrl": "/assets/infexn/home/kolkata.png"
+      }
+   ]
+}
