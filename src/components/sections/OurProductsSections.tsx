@@ -20,7 +20,7 @@ const OurProductsSection = () => {
                         <div className="flex-1 flex items-center justify-center">
                            <a
                               href="#"
-                              className="inline-block bg-[#2f3184] text-white px-3 py-1 rounded-full hover:bg-green-600 border-4 border-white shadow-lg"
+                              className="inline-block bg-[#2f3184] text-white px-3 py-1 rounded-full border-4 border-white shadow-lg"
                            >
                               Know More
                            </a>
@@ -28,7 +28,7 @@ const OurProductsSection = () => {
                         <div className="flex-1 flex items-center justify-center">
                            <a
                               href="#"
-                              className="inline-block bg-[#2f3184] text-white px-3 py-1 rounded-full hover:bg-green-600 border-4 border-white shadow-lg"
+                              className="inline-block bg-[#2f3184] text-white px-3 py-1 rounded-full border-4 border-white shadow-lg"
                            >
                               Watch Video
                            </a>
@@ -48,7 +48,7 @@ const OurProductsSection = () => {
                         <div className="flex-1 flex items-center justify-center">
                            <a
                               href="#"
-                              className="inline-block bg-[#8ac36b] text-white px-3 py-1 rounded-full hover:bg-green-600 border-4 border-white shadow-lg"
+                              className="inline-block bg-[#8ac36b] text-white px-3 py-1 rounded-full border-4 border-white shadow-lg"
                            >
                               Know More
                            </a>
@@ -56,7 +56,7 @@ const OurProductsSection = () => {
                         <div className="flex-1 flex items-center justify-center">
                            <a
                               href="#"
-                              className="inline-block bg-[#8ac36b] text-white px-3 py-1 rounded-full hover:bg-green-600 border-4 border-white shadow-lg"
+                              className="inline-block bg-[#8ac36b] text-white px-3 py-1 rounded-full border-4 border-white shadow-lg"
                            >
                               Watch Video
                            </a>
