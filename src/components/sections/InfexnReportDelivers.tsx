@@ -15,7 +15,7 @@ const InfexnReportDeliverSection = ({
       <Section className="">
          <Section.Container className="container mx-auto py-8 md:py-16 px-2">
             <div className="text-left">
-               <h1 className="text-3xl font-medium text-blue-900 mt-4">
+               <h1 className="text-3xl font-medium text-customBlue1 mt-4">
                   What the infexn&#8482; report delivers
                </h1>
             </div>
@@ -31,12 +31,12 @@ const InfexnReportDeliverSection = ({
                <div className="flex flex-col md:flex-row gap-10">
                   {data?.map((dat) => (
                      <div className="flex-1">
-                        <p className="text-white p-4 bg-blue-900 rounded-xl">
+                        <p className="text-white p-4 bg-customBlue1 rounded-xl">
                            {dat.title}
                         </p>
                         <div className="mt-4 py-4 pl-4">
                            {dat.desc.map((val) => (
-                              <div className="flex flex-row gap-4 justify-between items-end border-b-2 border-blue-900 pb-2 mb-4 h-16">
+                              <div className="flex flex-row gap-4 justify-between items-end border-b-2 border-customBlue1 pb-2 mb-4 h-16">
                                  <p>{val}</p>
                                  <div className="flex w-8">
                                     <img

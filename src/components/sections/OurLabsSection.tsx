@@ -13,7 +13,7 @@ const OurLabsSection = ({ data }: IOurLabsSectionProps) => {
       <Section className="">
          <Section.Container className="container mx-auto py-8 md:py-16 px-2">
             <div className="text-left">
-               <h1 className="text-3xl font-medium text-blue-900 mt-4">
+               <h1 className="text-3xl font-medium text-customBlue1 mt-4">
                   Our Labs
                </h1>
             </div>
@@ -26,7 +26,7 @@ const OurLabsSection = ({ data }: IOurLabsSectionProps) => {
             </div>
             <div className="mt-12">
                <img
-                  src={"/assets/infexn/home/haystack_labs_logo.png"}
+                  src={"/assets/haystack_labs_logo.svg"}
                   alt={""}
                   className="w-80"
                />

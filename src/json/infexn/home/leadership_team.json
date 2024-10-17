@@ -1,0 +1,22 @@
+{
+   "data": [
+      {
+         "name": "Prof. Kiran Kondabagil",
+         "thumbnailUrl": "/assets/infexn/home/leaders/leader_kiran.jpg",
+         "designation": "Co-founder & Chief Scientific Mentor",
+         "company": "HaystackAnalytics Pvt. Ltd."
+      },
+      {
+         "name": "Dr. Anirvan Chatterjee",
+         "thumbnailUrl": "/assets/infexn/home/leaders/leader_anirvan.jpg",
+         "designation": "Co-founder & CEO",
+         "company": "HaystackAnalytics Pvt. Ltd."
+      },
+      {
+         "name": "Gaurav Srivastav",
+         "thumbnailUrl": "/assets/infexn/home/leaders/leader_gourav.jpg",
+         "designation": "Co founder & CO-",
+         "company": "HaystackAnalytics Pvt. Ltd."
+      }
+   ]
+}

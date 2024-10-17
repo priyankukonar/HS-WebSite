@@ -2,19 +2,19 @@
    "data": [
       {
          "title": "Mumbai",
-         "thumbnailUrl": "/assets/infexn/home/mumbai.png"
+         "thumbnailUrl": "/assets/infexn/home/cities/mumbai.png"
       },
       {
          "title": "New Delhi",
-         "thumbnailUrl": "/assets/infexn/home/new_delhi.png"
+         "thumbnailUrl": "/assets/infexn/home/cities/new_delhi.png"
       },
       {
          "title": "Bengaluru",
-         "thumbnailUrl": "/assets/infexn/home/bengaluru.png"
+         "thumbnailUrl": "/assets/infexn/home/cities/bengaluru.png"
       },
       {
          "title": "Kolkata",
-         "thumbnailUrl": "/assets/infexn/home/kolkata.png"
+         "thumbnailUrl": "/assets/infexn/home/cities/kolkata.png"
       }
    ]
 }
