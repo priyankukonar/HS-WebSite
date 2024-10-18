@@ -1,25 +1,11 @@
-// @ts-nocheck
-import awards from "../json/awards.json";
-import { Autoplay } from "swiper";
 import AppTemplate from "../components/templates/AppTemplate";
 import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import heroBg from "../assets/homepage-banner.png";
-import sec5 from "../assets/section-clinician-bg-doctor.png";
 import Section from "../components/atoms/Section";
-import Link from "next/link";
-import SectionGridItems from "../components/organisms/SectionGridItems";
-import SectionPosts from "../components/organisms/SectionPosts";
-import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
-import SepsisChart from "../components/SepsisChart";
-import { useRef } from "react";
-import { filteredNews } from "../utils/index";
-import Head from "next/head";
 import replace_convention_infexn from "../json/infexn/home/replace_convention_infexn.json";
 import infexn_report_delivers from "../json/infexn/home/infexn_report_delivers.json";
 import ReplaceConventionWithInfexn from "@/components/sections/ReplaceConventionWithInfexn";
@@ -33,10 +19,6 @@ import InfexnTestimonialsSection from "@/components/sections/InfexnTestimonialsS
 import testimonials from "../json/infexn/home/testimonials.json";
 import partners from "../json/infexn/home/partners.json";
 import TrustedPartnerSection from "@/components/sections/TrustedPartnerSection";
-
-const loadPartnerImg = ({ src }) => {
-   return `/assets/${src}`;
-};
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
@@ -108,12 +90,13 @@ const HeroSection = () => {
    );
 };
 
-function InfexnHome({ Component, pageProps, news, settings }) {
-   const testimonialCarousel = useRef(null);
-   const awardsCarousel = useRef(null);
-
+function InfexnHome({ settings }: any) {
    return (
-      <StyledHome bodyClassName="home" settings={settings}>
+      <StyledHome
+         bodyClassName="home"
+         settings={settings}
+         renderMenu={undefined}
+      >
          <HeroSection />
          <Section className="">
             <Section.Container className="container mx-auto py-8 md:py-16 px-2">
@@ -301,12 +284,10 @@ function InfexnHome({ Component, pageProps, news, settings }) {
    );
 }
 
-export async function getStaticProps(context) {
-   let news = getActiveNews();
+export async function getStaticProps() {
    const settings = getSettings();
    return {
       props: {
-         news: JSON.parse(JSON.stringify(news)),
          settings: JSON.parse(JSON.stringify(settings)),
       }, // will be passed to the page component as props
    };

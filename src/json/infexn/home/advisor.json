@@ -2,15 +2,18 @@
    "data": [
       {
          "name": "Dr. Aruna Poojary",
-         "thumbnailUrl": "/assets/infexn/home/advisor/aruna.jpg"
+         "thumbnailUrl": "/assets/infexn/home/advisor/aruna.jpg",
+         "desc": "Dr. Aruna Poojary is the Laboratory Director and Infection Prevention & Control specialist at Breach Candy Hospital Trust in Mumbai. She holds multiple"
       },
       {
          "name": "Dr. Arunaloke Chakraborti",
-         "thumbnailUrl": "/assets/infexn/home/advisor/arunalok.jpg"
+         "thumbnailUrl": "/assets/infexn/home/advisor/arunalok.jpg",
+         "desc": "Dr. Arunaloke Chakrabarti is a distinguished figure in the field of medical mycology, renowned for his extensive contributions to the study of fungal diseases."
       },
       {
          "name": "Dr. Pallab Ray",
-         "thumbnailUrl": "/assets/infexn/home/advisor/pallay_ray.jpg"
+         "thumbnailUrl": "/assets/infexn/home/advisor/pallay_ray.jpg",
+         "desc": "Dr. Pallab Ray is a distinguished medical microbiologist with over four decades of experience. He earned his MBBS from Medical College, Calcutta,"
       }
    ]
 }
