@@ -35,6 +35,7 @@ module.exports = {
             customBlue1: "#1E396C",
             toBlue: "#5073AE",
             customGray: "#585858",
+            customBlue2: "#0575BC",
          },
          backgroundImage: {
             news_events: "url('/assets/news_events.svg')",
