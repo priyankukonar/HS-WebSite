@@ -69,8 +69,8 @@ const HeroSection = () => {
          >
             <Section.Container className="mx-auto !p-0 bg-gradient-to-r from-customGreen to-toBlue md:bg-none">
                <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="grid__col p-4 md:px-6 pb-0 md:pb-8">
-                     <h3 className="font-semibold md:font-normal text-white text-2xl md:text-3xl 2xl:text-5xl mt-0 md:mt-20">
+                  <div className="grid__col p-4 md:px-6 pb-2 md:pb-8">
+                     <h3 className="font-medium text-white text-2xl md:text-5xl mt-0 md:mt-20">
                         Your first go-to-test <br />
                         for infection detection
                      </h3>

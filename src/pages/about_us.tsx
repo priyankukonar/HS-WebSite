@@ -1,6 +1,5 @@
 import AppTemplate from "../components/templates/AppTemplate";
 import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import heroBg from "../assets/homepage-banner.png";
 import Section from "../components/atoms/Section";
@@ -99,11 +98,9 @@ function InfexnAbout({ settings }: any) {
 }
 
 export async function getStaticProps() {
-   let news = getActiveNews();
    const settings = getSettings();
    return {
       props: {
-         news: JSON.parse(JSON.stringify(news)),
          settings: JSON.parse(JSON.stringify(settings)),
       }, // will be passed to the page component as props
    };
