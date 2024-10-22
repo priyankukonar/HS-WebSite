@@ -1,34 +1,29 @@
-// @ts-nocheck
-import partners from "../json/partners.json";
-import awards from "../json/awards.json";
-import { Autoplay } from "swiper";
 import AppTemplate from "../components/templates/AppTemplate";
 import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
-import heroBg from '../assets/homepage-banner.png'
-import sec5 from '../assets/section-clinician-bg-doctor.png'
-import Section from '../components/atoms/Section'
-import Link from "next/link";
-import SectionGridItems from "../components/organisms/SectionGridItems";
-import SectionPosts from "../components/organisms/SectionPosts";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import heroBg from "../assets/homepage-banner.png";
+import Section from "../components/atoms/Section";
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
-import SepsisChart from "../components/SepsisChart";
-import { useRef } from "react";
-import { filteredNews } from "../utils/index";
-import Head from "next/head";
-
-const loadPartnerImg = ({ src }) => {
-   return `/assets/${src}`
-}
+import replace_convention_infexn from "../json/replace_convention_infexn.json";
+import infexn_report_delivers from "../json/infexn_report_delivers.json";
+import ReplaceConventionWithInfexn from "@/components/sections/ReplaceConventionWithInfexn";
+import InfexnReportDeliverSection from "@/components/sections/InfexnReportDelivers";
+import OurLabsSection from "@/components/sections/OurLabsSection";
+import our_labs from "../json/our_labs.json";
+import leadership_team from "../json/leadership_team.json";
+import advisors from "../json/advisor.json";
+import OurLeadershipTeamSection from "@/components/sections/OurLeadershipTeam";
+import InfexnTestimonialsSection from "@/components/sections/InfexnTestimonialsSection";
+import testimonials from "../json/testimonials.json";
+import partners from "../json/partners.json";
+import TrustedPartnerSection from "@/components/sections/TrustedPartnerSection";
+import Link from "next/link";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
-      background-image: var(--bg);
+      background-image: url("/assets/infexn/home/infexn_home_bg.png");
       background-size: 60%;
       background-repeat: no-repeat;
       background-position: right center;
@@ -40,19 +35,18 @@ const StyledHome = styled(AppTemplate)`
          height: var(--size);
       }
    }
-`
+`;
 
 const StyledHeroSection = styled(Section)`
    background-repeat: no-repeat;
-   background-position: right;
-   background-size: contain;
-   background-image: var(--bg);
-   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-image: url("/assets/infexn/home/infexn_home_bg.png");
    .section__container {
       min-height: calc(100vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
    }
    @media (max-width: 768px) {
       background-image: none;
@@ -64,374 +58,243 @@ const StyledHeroSection = styled(Section)`
          justify-content: flex-start;
       }
    }
-   @media (min-width: 1600px) {
-      background-position: center;
-      .section__container {
-         min-height: calc(100vh - var(--safe-top-padding, 160px));
-      }
-   }
-
-`
+`;
 
 const HeroSection = () => {
    return (
-      <StyledHeroSection className="HeroSection " data-aos="fade-up"  style={{ '--bg': `url(${heroBg.src})` }}>
-         <Section.Container className="mx-auto px-0">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col px-3 md:px-0o py-8">
-                  <h3 className="mb-4 text-banner font-extrabold text-muted 2xl:text-5xl">Infectious Diseases<br /> Should Not Kill Anyone</h3>
-                  <div className="my-8">
-                     <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>
-                     <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
+      <>
+         <StyledHeroSection
+            className="HeroSection "
+            data-aos="fade-up"
+            style={{ "--bg": `url(${heroBg.src})` }}
+         >
+            <Section.Container className="mx-auto !p-0 bg-gradient-to-r from-customGreen to-toBlue md:bg-none">
+               <div className="grid grid-cols-1 md:grid-cols-2">
+                  <div className="grid__col p-4 md:px-6 pb-2 md:pb-8">
+                     <h3 className="font-medium text-white text-2xl md:text-5xl mt-0 md:mt-20">
+                        Your first go-to-test <br />
+                        for infection detection
+                     </h3>
                   </div>
-                  <div className="mt-8 flex">
-                     <Link href={'/universal-id'} >
-                        <a className="btn-outline-info font-bold">KNOW MORE</a>
-                     </Link>
+                  <div className="grid__col block md:hidden">
+                     <img
+                        src="/assets/infexn/home/infexn_home_bg.png"
+                        alt=""
+                        className="w-full"
+                     />
                   </div>
                </div>
-               <div className="grid__col block md:hidden">
-                  <img src="/assets/mob-ban.png" alt="" className="w-full" />
-               </div>
-            </div>
-         </Section.Container>
-      </StyledHeroSection>
-   )
-}
+            </Section.Container>
+         </StyledHeroSection>
+         <div className="h-[10px] bg-gradient-to-r from-customGreen to-toBlue" />
+      </>
+   );
+};
 
-const sepsisChartLabels = [
-   {
-      label: 'Sepsis 11Mn',
-      value: 'red',
-   },
-   {
-      label: 'TB 1.5Mn',
-      value: 'blue',
-   },
-   {
-      label: 'Cancer 10Mn',
-      value: 'green',
-   },
-   {
-      label: 'Stroke 6Mn',
-      value: 'gray',
-   }
-]
-
-function Home({ Component, pageProps, news, settings }) {
-   const partnersCarousel = useRef(null)
-   const awardsCarousel = useRef(null)
-
+function InfexnHome({ settings }: any) {
    return (
-      <StyledHome bodyClassName="home" settings={settings}>
-         <Head>
-            
-            <title>HaystackAnalytics: Leader in Infectious Genomics</title>
-            <meta name="title" content="HaystackAnalytics: Leader in Infectious Genomics" />
-            <meta name="description" content="Based out of IIT Bombay, HaystackAnalytics is a HealthTech company creating clinical genomics products, which enable diagnostic labs and hospitals to offer accurate and personalized diagnostics." />
-         </Head>
+      <StyledHome
+         bodyClassName="home"
+         settings={settings}
+         renderMenu={undefined}
+      >
          <HeroSection />
          <Section className="">
-            <Section.Container className="container mx-auto py-8 md:py-16">
-               <h3 className="section-heading">
-                  Sepsis And Its Global Impact
-               </h3>
-               <p className="text-base text-muted">
-                  Sepsis is the body's extreme response to an infection and is potentially life-threatening. This occurs when a pre-existing infection <br></br>triggers a chain reaction throughout your body, often leading to shock, disability, multi organ failure, or even death.
-               </p>
-               <div className="flex flex-col md:flex-row gap-4 my-8 mt-8 md:mt-24">
-                  <div className="md:w-5/12">
-                     <h3 className="heading">SEPSIS IS A LEADING CAUSE OF DEATH</h3>
-                     <SepsisChart labels={sepsisChartLabels} />
-                  </div>
-                  <div className="flex-1">
-                     <h3 className="heading ">{`>2 BILLION PEOPLE WITH THE FOLLOWING PRE-EXISTING`}<br />CONDITIONS ARE AT A HIGHER RISK OF SEPSIS</h3>
-                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 mt-8">
-                        <div className="grid__col">
-                           <div className="text-4xl font-extrabold text-green-600">18.5</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">million</div>
-                           <div className="text-base font-semibold text-green-600">CANCER PATIENTS</div>
-                        </div>
-                        <div className="grid__col">
-                           <div className="text-4xl font-extrabold text-green-600">422</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">million</div>
-                           <div className="text-base font-semibold text-green-600">DIABETES PATIENTS</div>
-                        </div>
-                        <div className="grid__col">
-                           <div className="text-4xl font-extrabold text-green-600">{'>1.5'}</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">billion</div>
-                           <div className="text-base font-semibold text-green-600">HYPERTENSION PATIENTS</div>
-                        </div>
-                        <div className="grid__col">
-                           <div className="text-4xl font-extrabold text-green-600">140</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">million</div>
-                           <div className="text-base font-semibold text-green-600">IMMUNE COMPROMISED PATIENTS</div>
-                        </div>
+            <Section.Container className="container mx-auto py-8 md:py-16 px-2">
+               <div className="text-left">
+                  <h2 className="text-base text-customBlue1 tracking-wider font-semibold">
+                     <span className="text-[#3f78be]">[</span>TECHNOLOGY
+                     <span className="text-[#3f78be]">]</span>
+                  </h2>
+                  <h1 className="text-3xl font-medium text-customBlue1 mt-4">
+                     Harnessing the power of <br />
+                     Next Generation Sequencing (NGS)
+                  </h1>
+               </div>
+
+               <div className="bg-white overflow-hidden border-customBlue1 border-2 rounded-xl mt-12">
+                  <div className="md:flex">
+                     <div className="md:w-1/2 md:shrink-0">
+                        <img
+                           className="h-48 w-full object-cover md:h-full"
+                           src="/assets/infexn/home/technology_bg.png"
+                           alt="NGS Image"
+                        />
+                     </div>
+                     <div className="md:w-1/2 p-8">
+                        <p className="text-dark text-base">
+                           Next Generation Sequencing is revolutionizing the
+                           speed and accuracy with which pathogens in clinical
+                           samples are detected and treated. HaystackAnalytics
+                           with its clinical genomic products and proprietary
+                           bioinformatics platform is bringing this precision to
+                           infection management.
+                        </p>
+                        <a
+                           href="#"
+                           className="mt-6 inline-block bg-customBlue1 text-white py-3 px-8 rounded-lg shadow hover:bg-blue-700 transition duration-200"
+                        >
+                           Learn More
+                        </a>
                      </div>
                   </div>
                </div>
             </Section.Container>
          </Section>
-         <SectionGridItems
-            gridClassName={'grid-cols-1 md:grid-cols-3 2xl:gap-2'}
-            title={`The Universal Infectious Diseases Test`}
-            description={`UID Test is an NGS based culture-free test to identify causative pathogen in a quick turn around time`}
-            items={[
-               { title: '1200+ PATHOGENS', thumbnailUrl: '/assets/pathogens-icon.svg', description: 'Comprehensive single screening test covering bacteria and fungi' },
-               { title: 'ARG PROFILING', thumbnailUrl: '/assets/microscope_icon.svg', description: 'Identifies drug resistance based on Antibiotic Resistance Gene (ARG) profile' },
-               { title: 'RESULT REPORTED IN < 12 HOURS', thumbnailUrl: '/assets/timer_icon.svg', description: 'Hands on time < 4 hours' },
-            ]}
+         <div className="h-[10px] bg-gradient-to-r from-customGreen to-toBlue" />
+         <ReplaceConventionWithInfexn
+            data={replace_convention_infexn.data}
+            data1={replace_convention_infexn.data1}
          />
-         <Section className="bg-light">
-            <Section.Container className="container mx-auto py-8 md:py-16 ">
-               <h3 className="section-heading">
-                  The Current System Needs An Upgrade To Save Lives
-               </h3>
-               <div className="table-wrapper w-full overflow-auto table--home">
-                  <table className="border-spacing-table">
-                     <thead>
-                        <tr className="text-blue-600 font-extrabold">
-                           <th className="text-lg text-left p-3 md:w-3/12">
-                              Tests for <br />ID
-                           </th>
-                           <th className="text-lg text-left p-3 md:w-2/12">
-                           Turn<br />
-                              Around Time
-                           </th>
-                           <th className="text-lg text-left p-3">
-                              Pathogen <br />Coverage
-                           </th>
-                           <th className="text-lg text-left p-3">
-                              Antibiotic <br />Coverage
-                           </th>
-                           <th className="text-lg text-left p-3">
-                              Additional <br />Information
-                           </th>
-                        </tr>
-                     </thead>
-                     <tbody className="text-sm text-muted-new">
-                        <tr className="bg-gray-100 bg-blue-trans mb-3 text-green-600 text-lg">
-                           <td className="p-3">
-                              <div className="flex items-center gap-3">
-                                 <img src="/assets/tests_icon.svg" alt="" className="w-10" />
-                                 <span className="font-semibold">UID Test</span>
-                              </div>
-                           </td>
-                           <td className="p-3">
-                              <div className="flex items-center gap-3">
-                                 <img src="/assets/turn_around_icon.svg" alt="" className="w-8" />
-                                 <div>12 hours</div>
-                              </div>
-                           </td>
-                           <td className="p-3">
-                              <div>{'>1200 pathogens'}</div>
-                           </td>
-                           <td className="p-3">
-                              <div>{'ARGs'}</div>
-                           </td>
-                           <td className="p-3">
-                              <div>Species and Genus identification</div>
-                           </td>
-                        </tr>
-                        <tr className="bg-gray-trans mb-3">
-                           <td className="p-3">
-                              <div className="flex items-center gap-3">
-                                 <img src="/assets/culture_test.svg" alt="" className="w-8" />
-                                 <span className="font-semibold">Culture Test</span>
-                              </div>
-                           </td>
-                           <td className="p-3">
-                              <div>2-10 Days</div>
-                           </td>
-                           <td className="p-3">
-                              <div>{'Culturable bacteria and fungi'}</div>
-                           </td>
-                           <td className="p-3">
-                              <div>{'Selected Panel'}</div>
-                           </td>
-                           <td className="p-3">
-                           </td>
-                        </tr>
-                        <tr className="bg-gray-trans-1 mb-3">
-                           <td className="p-3">
-                              <div className="flex items-center gap-3">
-                                 <img src="/assets/molecular_test_icon.svg" alt="" className="w-8" />
-                                 <span className="font-semibold">Molecular Test</span>
-                              </div>
-                           </td>
-                           <td className="p-3">
-                              <div>12-24 Hours</div>
-                           </td>
-                           <td className="p-3">
-                              <div>{'Up to 43 pathogens'}</div>
-                           </td>
-                           <td className="p-3">
-                              <div>{'1-5 Antibiotics'}</div>
-                           </td>
-                           <td className="p-3">
-                              <div>Upgradation of technology on existing set up is not possible or is very difficult</div>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            </Section.Container>
-         </Section>
-
+         <div className="h-[10px] bg-gradient-to-r from-customGreen to-toBlue" />
+         <InfexnReportDeliverSection data={infexn_report_delivers.data} />
          <Section className="">
-            <Section.Container className="container mx-auto py-8 md:py-16">
-               <h3 className="section-heading text-center">
-                  Our Partners
-               </h3>
-               <div className="md:w-6/12 mx-auto mb-12">
-                  <div className="grid grid-cols-3">
-                     <div className="bg-green-600 text-white p-12 py-10 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-5xl font-bold text-white">100+</h3>
-                        <p>CITIES</p>
+            <Section.Container className="container mx-auto py-8 md:py-16 px-2">
+               <div className="text-left">
+                  <h1 className="text-3xl font-medium text-customBlue1 mt-4">
+                     Getting started
+                  </h1>
+                  <p className="w-full md:w-1/2 text-customGray mt-6 pr-0 md:pr-16">
+                     At moments of criticality, the field tested infexnTM
+                     workflow can give you accurate results quicker than
+                     conventional tests. All you need to do is:
+                  </p>
+               </div>
+               <div className="m-10 mt-16 rounded-lg">
+                  <div className="flex flex-wrap items-center justify-center gap-10 md:gap-20">
+                     <div className="">
+                        <img
+                           src="/assets/infexn/home/sample_collection.png"
+                           alt="Doctors"
+                           className="w-full h-60 object-cover rounded-t-2xl"
+                        />
                      </div>
-                     <div className="bg-blue-600 text-white p-12 py-10 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-5xl font-bold text-white">100+</h3>
-                        <p>HOSPITALS</p>
+                     <div className="">
+                        <img
+                           src="/assets/infexn/home/laboratory_testing.png"
+                           alt="Doctors"
+                           className="w-full h-60 object-cover rounded-t-2xl"
+                        />
                      </div>
-                     <div className="bg-gray-600 text-white p-12 py-10 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-5xl font-bold text-white">500+</h3>
-                        <p>DOCTORS</p>
+                     <div className="">
+                        <img
+                           src="/assets/infexn/home/report_generation.png"
+                           alt="Doctors"
+                           className="w-full h-60 object-cover rounded-t-2xl"
+                        />
                      </div>
                   </div>
-               </div>
-               <div className="relative">
-                  <Swiper
-                     className="partners-carousel w-4/5"
-                     spaceBetween={0}
-                     navigation={true}
-                     loop={true}
-                     ref={partnersCarousel}
-                     onSlideChange={console.info}
-                     onReachEnd={console.info}
-                     onReachBeginning={console.info}
-                     autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                     }}
-                     modules={[Navigation,Autoplay]}
-                     breakpoints={{
-                        300: {
-                           slidesPerView: 2,
-                           spaceBetween: 20,
-                        },
-                        768: {
-                           slidesPerView: 4,
-                           spaceBetween: 20,
-                        },
-                        1024: {
-                           slidesPerView: 5,
-                           spaceBetween: 20,
-                        },
-                     }}
-                     onSwiper={(swiper: any) => partnersCarousel.current = swiper}
-                  >
-                     {partners.data?.map((slide, slideIndex) => (
-                        <SwiperSlide className="" key={`slide_${slideIndex}`}>
-                           <div className="w-36 flex items-center justify-center">
-                              <img src={slide.thumbnailUrl} layout='contain' />
-                           </div>
-                        </SwiperSlide>
-                     ))}
-                  </Swiper>
-                  <div className="swiper-button--outer swiper-button-prev" onClick={() => partnersCarousel.current?.slidePrev()}></div>
-                  <div className="swiper-button--outer swiper-button-next" onClick={() => partnersCarousel.current?.slideNext()}></div>
+                  <div className="flex items-center justify-center mt-16">
+                     <a
+                        href="#"
+                        className="mt-6 inline-block bg-customBlue1 text-white py-3 px-8 rounded-lg shadow transition duration-200"
+                     >
+                        Order Now
+                     </a>
+                  </div>
                </div>
             </Section.Container>
          </Section>
-         <Section className="bg-gray-100" style={{ '--bg': `url(${sec5.src})` }}>
-            <Section.Container className="container mx-auto flex flex-col md:flex-row justify-between items-center bg-highlight px-3">
-               <div className="grid__col w-100">
-                  <h3 className="section-heading font-5xl">
-                     How may we help you?
-                  </h3>
-                  <div className="flex flex-col md:flex-row gap-8 mt-8">
-                     <Link href={'/clinician'}>
-
-                        <a className="btn-secondary bg-gray-400 text-xl">I AM A CLINICIAN</a>
-                     </Link>
-                     <Link href={'/diagnostician'}>
-                        <a className="btn-secondary bg-gray-400 text-xl">WE ARE A LAB / HOSPITAL</a>
-                     </Link>
-                  </div>
+         <OurLabsSection data={our_labs.data} />
+         <Section className="">
+            <Section.Container className="container mx-auto py-8 md:py-16 px-2">
+               <div className="text-left">
+                  <h2 className="text-base text-customBlue1 tracking-wider font-semibold">
+                     <span className="text-[#3f78be]">[</span>PARTNER
+                     <span className="text-[#3f78be]">]</span>
+                  </h2>
+                  <h1 className="text-3xl font-medium text-customBlue1 mt-4">
+                     Collaborate with us
+                  </h1>
                </div>
 
+               <div className="flex justify-center flex-col md:flex-row items-center gap-10 p-10 mt-6">
+                  <Link href="/partners">
+                     <div className="cursor-pointer bg-white rounded-2xl shadow-md w-[350px]">
+                        <div className="rounded-t-2xl ">
+                           <img
+                              src="/assets/infexn/home/doctors.png"
+                              alt="Doctors"
+                              className="w-full h-40 object-cover rounded-t-2xl"
+                           />
+                        </div>
+
+                        <div className="p-4 text-center rounded-b-2xl bg-[#1E396CA3]">
+                           <h3 className="text-xl font-semibold text-white">
+                              Doctors
+                           </h3>
+                        </div>
+                     </div>
+                  </Link>
+                  <Link href="/partners">
+                     <div className="cursor-pointer bg-white rounded-2xl shadow-md w-[350px]">
+                        <div className="rounded-t-2xl">
+                           <img
+                              src="/assets/infexn/home/hospitals_labs.png"
+                              alt="Hospitals & Diagnostic Labs"
+                              className="w-full h-40 object-cover rounded-t-2xl"
+                           />
+                        </div>
+                        <div className="p-4 text-center rounded-b-2xl bg-[#1E396CA3]">
+                           <h3 className="text-xl font-semibold text-white">
+                              Hospitals & Diagnostic Labs
+                           </h3>
+                        </div>
+                     </div>
+                  </Link>
+               </div>
             </Section.Container>
          </Section>
-         {/* {JSON.stringify({ news })} */}
-         <SectionPosts
-            title={`In the news`}
-            posts={filteredNews(news, 'date')}
-            colsCount={3}
-            enableCarousel={false}
+         <OurLeadershipTeamSection
+            data={leadership_team.data}
+            advisorData={advisors.data}
          />
-
+         <InfexnTestimonialsSection data={testimonials.data} />
+         <TrustedPartnerSection data={partners.data} />
          <Section className="">
-            <Section.Container className="container mx-auto py-8 md:py-16">
-               <h3 className="section-heading text-center mb-6">
-                  {`Awards & Recognition`}
-               </h3>
-               <div className="relative">
-                  <Swiper
-                     spaceBetween={50}
-                     autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                     }}
-                     loop={true}
-                     breakpoints={{
-                        300: {
-                           slidesPerView: 2,
-                           spaceBetween: 20,
-                        },
-                        768: {
-                           slidesPerView: 4,
-                           spaceBetween: 40,
-                        },
-                        1024: {
-                           slidesPerView: 5,
-                           spaceBetween: 50,
-                        },
-                     }}
-                     modules={[Autoplay]}
-                     onSwiper={(swiper: any) => awardsCarousel.current = swiper}
-                     className="awards-carousel"
-                  >
-                     {awards.data?.map((slide, slideIndex) => (
-                        <SwiperSlide key={`slide_${slideIndex}`} >
-                           <div className="w-48 h-36 hover-layer hover:text-white">
-                              <img src={slide.thumbnailUrl} />
-                              <div className="hover-layer__overlay">
-                                 <span className="text-center px-2 text-sm">{slide.title}</span>
-                              </div>
+            <Section.Container className="container mx-auto py-8 md:py-16 px-2">
+               <div className="text-left">
+                  <h2 className="text-base text-customBlue1 tracking-wider font-semibold">
+                     <span className="text-[#3f78be]">[</span>RESOURCES
+                     <span className="text-[#3f78be]">]</span>
+                  </h2>
+                  <h1 className="text-3xl font-medium text-customBlue1 mt-4">
+                     What's new
+                  </h1>
+               </div>
+               <div className="m-10 mt-16 rounded-3xl">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-4 h-full w-full">
+                     <div className="p-4 min-h-80 h-80 bg-news_events bg-contain md:bg-cover bg-no-repeat rounded-3xl text-white w-full flex flex-1">
+                        New/Events
+                     </div>
+                     <div className="h-80 flex flex-col items-center justify-center gap-4 flex-1 w-full">
+                        <div className="p-4 min-h-40 h-40 bg-case_studies bg-contain md:bg-cover bg-no-repeat rounded-3xl text-white w-full flex flex-1">
+                           Case Studies
+                        </div>
+                        <div className="flex flex-row items-center justify-center gap-4 w-full flex-1">
+                           <div className="p-4 min-h-40 h-40 bg-blogs bg-contain md:bg-cover bg-no-repeat rounded-3xl text-white w-full flex flex-1">
+                              Blogs
                            </div>
-                           {/* {JSON.stringify({ slide })} */}
-                        </SwiperSlide>
-                     ))}
-                  </Swiper>
-                  {/* <div className="swiper-button--outer swiper-button-prev" onClick={() => awardsCarousel.current?.slidePrev()}></div>
-                  <div className="swiper-button--outer swiper-button-next" onClick={() => awardsCarousel.current?.slideNext()}></div> */}
+                           <div className="p-4 min-h-40 h-40 bg-papers bg-contain md:bg-cover bg-no-repeat rounded-3xl text-white w-full flex flex-1">
+                              Papers
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </Section.Container>
          </Section>
       </StyledHome>
-   )
+   );
 }
 
-export async function getStaticProps(context) {
-   let news = getActiveNews()
-   const settings = getSettings()
+export async function getStaticProps() {
+   const settings = getSettings();
    return {
       props: {
-         news: JSON.parse(JSON.stringify(news)),
-         settings: JSON.parse(JSON.stringify(settings))
+         settings: JSON.parse(JSON.stringify(settings)),
       }, // will be passed to the page component as props
-   }
+   };
 }
 
-
-export default Home;
+export default InfexnHome;

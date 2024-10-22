@@ -5,7 +5,7 @@ import heroBg from "../assets/homepage-banner.png";
 import Section from "../components/atoms/Section";
 import NewWorldChanllengesSection from "@/components/sections/NewWorldChallengesSection";
 import FoundingTeamSection from "@/components/sections/FoundingTeamSection";
-import advisors from "../json/infexn/home/advisor.json";
+import advisors from "../json/advisor.json";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {

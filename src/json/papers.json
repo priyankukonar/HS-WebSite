@@ -1,0 +1,22 @@
+{
+   "data": [
+      {
+         "name": "Name of journal",
+         "btnUrl": "",
+         "desc1": "An integrated method for targeted Oxford Nanopore sequencing and automated bioinformatics for the simultaneous detection of bacteria, fungi and ARG",
+         "desc2": "Genomic evaluation of clinical samples and microbiomes have improved our understanding of the role of pathogens in clinical microbiology."
+      },
+      {
+         "name": "Name of journal",
+         "btnUrl": "",
+         "desc1": "Genomic revolution: Transforming tuberculosis diagnosis and treatment with the use of Whole Genome Sequencing - A consensus statement",
+         "desc2": "Tuberculosis (TB) is a preventable, treatable, and curable disease. However, in 2020, 9.9 million people were estimated to have developed tuberculosis, and 1.5 million people were estimated to have died from it."
+      },
+      {
+         "name": "Name of journal",
+         "btnUrl": "",
+         "desc1": "An integrated method for targeted Oxford Nanopore sequencing and automated bioinformatics for the simultaneous detection of bacteria, fungi and ARG",
+         "desc2": "Genomic evaluation of clinical samples and microbiomes have improved our understanding of the role of pathogens in clinical microbiology."
+      }
+   ]
+}

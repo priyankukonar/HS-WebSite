@@ -1,0 +1,21 @@
+{
+   "data": [
+      {
+         "title": "Identification of pathogens",
+
+         "desc": [
+            "All bacteria, fungi and major respiratory viruses",
+            "High sensitivity & specificity of detection",
+            "Reliable detection of mixed infections"
+         ]
+      },
+      {
+         "title": "ARGs",
+         "desc": [
+            "Key genes covered",
+            "AMR guideline",
+            "Assists tailored antimicrobial therapy"
+         ]
+      }
+   ]
+}

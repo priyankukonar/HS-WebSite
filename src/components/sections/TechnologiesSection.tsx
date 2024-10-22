@@ -129,14 +129,14 @@ const TechnologiesSection = () => {
                </p>
                <div className="flex flex-wrap items-center justify-center gap-10 mt-12 text-center">
                   <a
-                     href="#"
+                     href="/universal_id"
                      className="w-72 mt-6 inline-block bg-[#0575BC] text-white py-3 px-8 rounded-2xl shadow  transition duration-200"
                   >
                      Universal IDTM Kit (CE IVD)
                   </a>
                   <a
-                     href="#"
-                     className="w-72 mt-6 inline-block bg-[#22AE53] text-white py-3 px-8 rounded-2xl shadow  transition duration-200"
+                     href="/omega_id"
+                     className="w-72 mt-6 inline-block bg-customGreen text-white py-3 px-8 rounded-2xl shadow  transition duration-200"
                   >
                      Ω IDTM
                   </a>

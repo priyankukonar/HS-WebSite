@@ -6,30 +6,10 @@ import useHeadroom from "react-useheadroom";
 import styled from "@emotion/styled";
 import settings from "../json/settings.json";
 import menus from "../json/menus.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import {
-   faYoutube,
-   faInstagram,
-   faFacebookF,
-   faLinkedin,
-   faTwitter,
-   faX,
-} from "@fortawesome/free-brands-svg-icons";
 import { XIcon, MenuIcon } from "@heroicons/react/outline";
 
 // import iocns from "@f";
-
-const productHeaderMenu = menus.productsHeader;
-import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/router";
-
-const MENU_LIST = [
-   {
-      text: "content will shown here in a while",
-      href: "/Home",
-   },
-];
 
 const StyledNavbar = styled.nav`
    transition: all 0.4s;
@@ -74,15 +54,13 @@ const StyledNavbar = styled.nav`
    }
 `;
 
-const Navbar = ({ renderMenu }) => {
+const Navbar = ({}) => {
    const router = useRouter();
    const [navActive, setNavActive] = useState(false);
-   const [dropdownOpened, setDropdownOpened] = useState(false);
-   const [dropdownOpened1, setDropdownOpened1] = useState(false);
+   const [dropdownOpened, setDropdownOpened] = useState("");
+   const [dropdownOpened1, setDropdownOpened1] = useState("");
 
-   const [activeIdx, setActiveIdx] = useState(0);
    const [inView, setInView] = useState(false);
-   const isActiveMenu = useMemo(() => {}, []);
    const toggleMenu = () => {
       setNavActive(false);
    };
@@ -110,15 +88,24 @@ const Navbar = ({ renderMenu }) => {
       onUnpin: () => {
          document.body?.classList?.remove("header-is-pinned");
       },
-      onFix: (fixedAt) => {
+      onFix: () => {
          // set(`fixed at ${fixedAt}`)
          document.body?.classList?.add("header-is-fixed");
       },
-      onUnfix: (fixedAt) => {
+      onUnfix: () => {
          // set(["unpinned", ` and unfixed from ${fixedAt}`])
          document.body?.classList?.remove("header-is-fixed");
       },
    });
+
+   const scrollToSection = (id: string) => {
+      const section = document.getElementById(id);
+      if (section) {
+         section.scrollIntoView({ behavior: "smooth" });
+      }
+   };
+   console.log(router.pathname);
+
    return (
       <StyledNavbar
          isPinned={isPinned}
@@ -126,185 +113,124 @@ const Navbar = ({ renderMenu }) => {
             inView ? "" : "bg-white"
          }`}
       >
-         <nav className="navbar-main container mx-auto flex justify-between gap-4">
+         <nav className="navbar-main container mx-auto flex justify-between items-center gap-4">
             <div className="navbar-brand flex">
-               <Link href={"/"}>
-                  <a className="flex px-3 md:px-0">
-                     <img
-                        src={settings.logo_url}
-                        alt=""
-                        className="navbar-logo"
-                        width={"250"}
-                        height={"60"}
-                     />
-                  </a>
+               <Link href={"/"} className="flex px-3 md:px-0">
+                  <Image
+                     src={settings.logo_url}
+                     alt="Haystack Labs"
+                     className={"navbar-logo"}
+                     width={300}
+                     height={60}
+                     loading="lazy"
+                  />
                </Link>
             </div>
 
             <div className={`${navActive ? "active" : ""} nav__menu-list`}>
                <div className="close md:hidden">
-                  <XIcon className="w-8 h-8" onClick={toggleMenu} />
+                  <XIcon
+                     className="w-8 h-8"
+                     onClick={() => {
+                        toggleMenu();
+                     }}
+                  />
                </div>
-               <div className="mb-3 md:mb-6 text-sm flex flex-col md:flex-row gap-6 text-gray-500 mt-6 justify-center md:justify-end md:mt-0 social-media">
-                  <a className="text-dark" href={`mailto:${settings.email}`}>
-                     {settings.email}
-                  </a>
-                  <div className="mb-3 md:mb-2 text-lg md:text-sm flex gap-6 md:gap-2 text-gray-500 md:mt-0">
-                     {settings.facebook_url ? (
-                        <a href={settings.facebook_url} target="_blank">
-                           <FontAwesomeIcon
-                              id="icons"
-                              className="text-dark"
-                              icon={faFacebookF}
-                           />
-                        </a>
-                     ) : null}
-
-                     {settings.instagram_url ? (
-                        <a href={settings.instagram_url} target="_blank">
-                           <FontAwesomeIcon
-                              id="icons"
-                              className="text-dark"
-                              icon={faInstagram}
-                           />
-                        </a>
-                     ) : null}
-
-                     {settings.linkedin_url ? (
-                        <a href={settings.linkedin_url} target="_blank">
-                           <FontAwesomeIcon
-                              id="icons"
-                              className="text-dark"
-                              icon={faLinkedin}
-                           />
-                        </a>
-                     ) : null}
-                     {settings.youtube_url ? (
-                        <a href={settings.youtube_url} target="_blank">
-                           <FontAwesomeIcon
-                              id="icons"
-                              className="text-dark"
-                              icon={faYoutube}
-                           />
-                        </a>
-                     ) : null}
-                     {settings.twitter_url ? (
-                        <a href={settings.twitter_url} target="_blank">
-                           <FontAwesomeIcon
-                              id="icons"
-                              className="text-dark"
-                              icon={faTwitter}
-                           />
-                        </a>
-                     ) : null}
-                  </div>
-               </div>
-               <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end relative">
-                  <div className="has-dropdown">
-                     <div
-                        className="font-semibold flex gap-2 justify-between items-center "
-                        href={"#"}
-                     >
-                        <span className="cursor-pointer">
-                           {"Science Corner"}
-                        </span>
-                        <svg
-                           xmlns="http://www.w3.org/2000/svg"
-                           fill="none"
-                           viewBox="0 0 24 24"
-                           strokeWidth={2}
-                           stroke="currentColor"
-                           className="w-4 h-4"
-                        >
-                           <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                           />
-                        </svg>
-                     </div>
-                     <div
-                        className={`dropdown-menu md:absolute top-5 left-0 bg-white py-4 md:py-6 px-3  md:shadow-lg ${
-                           dropdownOpened1 ? "" : "hidden"
-                        }`}
-                     >
-                        <ol className="flex flex-col gap-3">
-                           {menus.sciencecornerHeader.map((mn, mnIndex) => (
-                              <li key={`scm_${mnIndex}`}>
-                                 <Link key={`mn${mnIndex}`} href={mn.url}>
-                                    <a
-                                       className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${
-                                          router.pathname == mn.url
-                                             ? "active text-blue-600"
-                                             : ""
-                                       }`}
-                                    >
-                                       {mn.label}
-                                    </a>
-                                 </Link>
-                              </li>
-                           ))}
-                        </ol>
-                     </div>
-                  </div>
-                  {menus.navbar.map((mn, mnIndex) => (
-                     <Link key={`mn${mnIndex}`} href={mn.url}>
-                        <a
-                           className={`${
-                              router.pathname == mn.url
-                                 ? "active text-blue-600"
-                                 : ""
-                           }`}
-                        >
-                           {mn.label}
-                        </a>
-                     </Link>
-                  ))}
-                  <div className="has-dropdown">
-                     <div
-                        className="font-semibold flex gap-2 justify-between items-center has-dropdown"
-                        href={"#"}
-                     >
-                        <span className="cursor-pointer">{"Products"}</span>
-                        <svg
-                           xmlns="http://www.w3.org/2000/svg"
-                           fill="none"
-                           viewBox="0 0 24 24"
-                           strokeWidth={2}
-                           stroke="currentColor"
-                           className="w-4 h-4"
-                        >
-                           <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                           />
-                        </svg>
-                     </div>
-                     <div
-                        className={`dropdown-menu md:absolute top-5 bg-white py-4 md:py-6 px-3  md:shadow-lg ${
-                           dropdownOpened ? "" : "hidden"
-                        }`}
-                     >
-                        <ol className="flex flex-col gap-3">
-                           {menus.productsHeader.map((mn, mnIndex) => (
-                              <li key={`mnss_${mnIndex}`}>
-                                 <Link key={`mn${mnIndex}`} href={mn.url}>
-                                    <a
-                                       className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${
-                                          router.pathname == mn.url
-                                             ? "active text-blue-600"
-                                             : ""
-                                       }`}
-                                    >
-                                       {mn.label}
-                                    </a>
-                                 </Link>
-                              </li>
-                           ))}
-                        </ol>
-                     </div>
-                  </div>
+               <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end relative items-center">
+                  {menus.navbar.map((mn, mnIndex) => {
+                     if (mn.type === "link") {
+                        return (
+                           <Link key={`mn${mnIndex}`} href={mn.url}>
+                              <p
+                                 className={`font-semibold flex gap-2 justify-center items-center cursor-pointer ${
+                                    router.pathname == mn.url
+                                       ? "text-customBlue1"
+                                       : ""
+                                 }`}
+                              >
+                                 {mn.label}
+                              </p>
+                           </Link>
+                        );
+                     } else if (mn.type === "dropdown") {
+                        return (
+                           <div
+                              className="has-dropdown"
+                              key={`mn${mnIndex}`}
+                              onMouseOver={() => {
+                                 setDropdownOpened(mn.label);
+                              }}
+                              onMouseOut={() => setDropdownOpened("")}
+                           >
+                              <div
+                                 className="font-semibold flex gap-2 justify-center items-center "
+                                 href={"#"}
+                              >
+                                 <span
+                                    className={`cursor-pointer ${
+                                       mn.items?.find(
+                                          (val) => val.url === router.pathname
+                                       )
+                                          ? "text-customBlue1"
+                                          : ""
+                                    }`}
+                                 >
+                                    {mn.label}
+                                 </span>
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={2}
+                                    stroke="currentColor"
+                                    className="w-4 h-4"
+                                 >
+                                    <path
+                                       strokeLinecap="round"
+                                       strokeLinejoin="round"
+                                       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                                    />
+                                 </svg>
+                              </div>
+                              <div
+                                 className={`dropdown-menu md:absolute top-18 bg-white py-4 md:py-6 px-3  md:shadow-lg ${
+                                    dropdownOpened === mn.label ? "" : "hidden"
+                                 }`}
+                              >
+                                 <ol className="flex flex-col gap-3">
+                                    {mn.items.map(
+                                       (mn1, mn1Index) =>
+                                          mn1.type === "link" && (
+                                             <li key={`scm1_${mnIndex}`}>
+                                                <Link
+                                                   key={`mn1${mn1Index}`}
+                                                   href={mn1.url}
+                                                   className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${
+                                                      router.pathname == mn1.url
+                                                         ? "active underline underline-offset-8 decoration-red-500 decoration-2"
+                                                         : ""
+                                                   }`}
+                                                >
+                                                   <p
+                                                      className={`font-semibold cursor-pointer ${
+                                                         router.pathname ==
+                                                         mn1.url
+                                                            ? "text-customBlue1"
+                                                            : ""
+                                                      }`}
+                                                   >
+                                                      {mn1.label}
+                                                   </p>
+                                                </Link>
+                                             </li>
+                                          )
+                                    )}
+                                 </ol>
+                              </div>
+                           </div>
+                        );
+                     }
+                  })}
                </div>
             </div>
             <div className="md:mt-3 mr-3 md:hidden">

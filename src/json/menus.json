@@ -1,45 +1,45 @@
 {
-   "footer": [
+   "navbar": [
       {
-         "title": "Science Corner",
-         "url": "/blog"
+         "label": "About us",
+         "url": "/about_us",
+         "type": "link"
       },
       {
-         "title": "About Us",
-         "url": "/about"
+         "label": "Technology",
+         "type": "dropdown",
+         "items": [
+            {
+               "label": "Infexn",
+               "url": "/technology",
+               "type": "link"
+            },
+            {
+               "label": "Universal ID",
+               "url": "/universal_id",
+               "type": "link"
+            },
+            {
+               "label": "Ω ID",
+               "url": "/omega_id",
+               "type": "link"
+            }
+         ]
       },
       {
-         "title": "Products",
-         "url": "/universal-id"
+         "label": "Partners",
+         "url": "/partners",
+         "type": "link"
       },
       {
-         "title": "Privacy Policy",
-         "url": "/privacy"
-      }
-   ],
-   "navbar": [{ "label": "About Us", "url": "/about" }],
-   "productsHeader": [
-      {
-         "label": "Universal ID",
-         "url": "/universal-id"
+         "label": "Resources",
+         "url": "/resources",
+         "type": "link"
       },
       {
-         "label": "ΩTB ®",
-         "url": "/omegatb"
-      },
-      {
-         "label": "Identifi",
-         "url": "/identifi"
-      }
-   ],
-   "sciencecornerHeader": [
-      {
-         "label": "Blog",
-         "url": "/blog"
-      },
-      {
-         "label": "Research Papers",
-         "url": "/research-papers"
+         "label": "Contact us",
+         "url": "/contact_us",
+         "type": "link"
       }
    ]
 }

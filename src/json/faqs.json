@@ -1,0 +1,34 @@
+{
+   "data": [
+      {
+         "id": 1,
+         "ques": "Question 1",
+         "ans": "Answer 1"
+      },
+      {
+         "id": 2,
+         "ques": "Question 2",
+         "ans": "Answer 2"
+      },
+      {
+         "id": 3,
+         "ques": "Question 3",
+         "ans": "Answer 3"
+      },
+      {
+         "id": 4,
+         "ques": "Question 4",
+         "ans": "Answer 4"
+      },
+      {
+         "id": 5,
+         "ques": "Question 5",
+         "ans": "Answer 5"
+      },
+      {
+         "id": 6,
+         "ques": "Question 6",
+         "ans": "Answer 6"
+      }
+   ]
+}

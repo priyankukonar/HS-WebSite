@@ -42,7 +42,7 @@ const ReplaceConventionWithInfexn = ({
                   ))}
                </div>
                <div className="text-center mt-6">
-                  <button className="bg-customBlue1 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                  <button className="bg-customBlue1 text-white px-6 py-3 rounded-lg">
                      Replace with a single test
                   </button>
                </div>

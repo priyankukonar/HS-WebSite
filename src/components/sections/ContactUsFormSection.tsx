@@ -54,7 +54,7 @@ const ContactUsFormSection = () => {
                   <div className="flex justify-center mt-4">
                      <button
                         type="submit"
-                        className="bg-[#4570b5] text-white py-2 px-8 rounded-lg hover:bg-blue-700 transition duration-300"
+                        className="bg-[#4570b5] text-white py-2 px-8 rounded-lg transition duration-300"
                      >
                         Submit
                      </button>

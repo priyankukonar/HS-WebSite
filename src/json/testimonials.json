@@ -1,107 +1,28 @@
 {
    "data": [
       {
-         "message": "We must have a comprehensive diagnostic test which will help diagnose the latent as well as other forms of tuberculosis in a stipulated time and cost effective. And i can say that whole genome sequencing fulfils all the criteria!  ",
-         "avatar_url": "/assets/testimonials/dr-anil-kumar-singal.png",
-         "category": "clinician,diagnostician",
-         "author": {
-            "name": "Dr. Anil Kumar Singal"
-         }
+         "name": "Dr. Ashit Naik",
+         "thumbnailUrl": "/assets/infexn/home/ashit.jpg",
+         "designation": "MBBS, MD,",
+         "speciality": "Pain Physician and Intensivist",
+         "address": "Shri Medishine Hospital, Raipur",
+         "desc": "infexnTM has improved how I diagnose infections in patients. It has helped identify pathogens which were previously undiagnosed by conventional methods and has helped create personalized treatments and also in saving lives. infexnTM is reliable and has an effective impact for patient care."
       },
       {
-         "message": "The NGS approach overcomes  many of the significance  challenges associated with  conventional phenotypic testing,  as well as the limitations of other  less comprehensive molecular  tests by providing rapid, detailed  sequence information for  multiple gene regions or whole  genomes of interest.",
-         "avatar_url": "/assets/testimonials/dr-nikhil-sarangdhar.png",
-         "category": "clinician,diagnostician",
-         "author": {
-            "name": "Dr. Nikhil Sarangdhar"
-         }
+         "name": "Dr. Ashit Naik",
+         "thumbnailUrl": "/assets/infexn/home/ashit.jpg",
+         "designation": "MBBS, MD,",
+         "speciality": "Pain Physician and Intensivist",
+         "address": "Shri Medishine Hospital, Raipur",
+         "desc": "infexnTM has improved how I diagnose infections in patients. It has helped identify pathogens which were previously undiagnosed by conventional methods and has helped create personalized treatments and also in saving lives. infexnTM is reliable and has an effective impact for patient care."
       },
       {
-         "message": "Whole Genome Sequencing is the future gold standard in DST. It is comprehensive, accessible, affordable, and above all less time-consuming making the technology efficient and effective.",
-         "avatar_url": "/assets/testimonials/dr-v-k-jain.png",
-         "category": "omega",
-         "author": {
-            "name": "Dr. V. K. Jain",
-            "designation": "Advisory Board",
-            "company": "HaystackAnalytics Pvt Ltd"
-         }
-      }
-      ,
-      {
-         "message": "Whole Genome Sequencing has the potential to be the game changer in the treatment of TB and can ensure a bright future for TB patients.",
-         "avatar_url": "/assets/testimonials/dr-digambar-behera.png",
-         "category": "omega",
-         "author": {
-            "name": "Dr. Digambar Behera",
-            "designation": "Advisory Board",
-            "company": "HaystackAnalytics Pvt Ltd"
-         }
-      }
-      ,
-      {
-         "message": "There are >18 drugs which are currently used in different combinations and resistance to any drug in the combination will make the therapy futile... To overcome this HaystackAnalytics has launched one of its kind next generation TB test in India. The ΩTB® test launched by HaystackAnalytics analyses the entire mycobacterium genome (whole genome sequencing) obtained from the sample in that individual.",
-         "avatar_url": "/assets/testimonials/dr-rajendra-prasad.png",
-         "category": "omega",
-         "author": {
-            "name": "Dr. Rajendra Prasad",
-            "designation": "Advisory Board",
-            "company": "HaystackAnalytics Pvt Ltd"
-         }
-      }
-      ,
-      {
-         "message": "Whole Genome Sequencing is the Swiss Army Knife for the diagnosis of TB and detecting mutations associated with drug resistance in MT Complex.",
-         "avatar_url": "/assets/testimonials/dr-v-anilkumar.png",
-         "category": "omega",
-         "author": {
-            "name": "Dr. V. Anilkumar",
-            "designation": "Clinical professor & HOD Microbiology",
-            "company": "Amruta Institute of Medical Sciences, Kochi"
-         }
-      }
-      ,
-      {
-         "message": "Suspect earlier, treat earlier with Whole Genome Sequencing. Whole Genome Sequencing is the key to the right treatment not only for new patients but also for patients who are existingly taking treatment.",
-         "avatar_url": "/assets/testimonials/dr-eema-chaudhary.png",
-         "category": "omega",
-         "author": {
-            "name": "Dr. Eema Chaudhary",
-            "designation": "Professor and Head of the Department, TB and Respiratory Diseases",
-            "company": "Subharti Medical College, Meerut"
-         }
-      }
-      ,
-      {
-         "message": "We are heading towards an era of medicine where bioinformatics and NGS technology are going to play a big role in clinical research as well as patient care. Molecular detection and identification of microbial pathogens using next-generation sequencing is an important step forward toward early, rapid and comprehensive diagnostics and would provide a new tool for clinical microbiologists and infectious disease experts.",
-         "avatar_url": "/assets/testimonials/dr-sanjay-bhattacharya.png",
-         "category": "universal,clinician,diagnostician",
-         "author": {
-            "name": "Dr. Sanjay Bhattacharya",
-            "designation": "Consultant in Microbiology",
-            "company": "Tata Medical Center, Kolkata"
-         }
-      }
-      ,
-      {
-         "message": "The earlier we diagnose a disease the better are the chances of a successful treatment. The precision with which right drugs are prescribed further enhances the success of treatment. Using Genome Sequencing as a diagnostic tool has helped us to reach both these goals.",
-         "avatar_url": "/assets/testimonials/dr-ameeta-joshi.png",
-         "category": "universal,clinician,diagnostician",
-         "author": {
-            "name": "Dr. Ameeta Joshi",
-            "designation": "Prof Head Microbiology",
-            "company": "Grant Medical College, JJ Hospital, Mumbai"
-         }
-      }
-      ,
-      {
-         "message": "Microbiology diagnostics has entered an exciting phase, where many genomic methods are now available to routine clinical microbiology labs for diagnosis of infections. The research to clinical, gap seems to be narrowing , especially with methods like sequencing promising faster turnaround times for the diagnosis of deadly infections. Genomics appears to be the answer to a whole lot of challenges we traditionally faced as clinical Microbiologists.",
-         "avatar_url": "/assets/testimonials/dr-aruna-poojary.png",
-         "category": "universal,clinician,diagnostician",
-         "author": {
-            "name": "Dr. Aruna Poojary",
-            "designation": "Head of Dept , Pathology & Microbiology",
-            "company": "Breach Candy Hospital Trust, Mumbai"
-         }
+         "name": "Dr. Ashit Naik",
+         "thumbnailUrl": "/assets/infexn/home/ashit.jpg",
+         "designation": "MBBS, MD,",
+         "speciality": "Pain Physician and Intensivist",
+         "address": "Shri Medishine Hospital, Raipur",
+         "desc": "infexnTM has improved how I diagnose infections in patients. It has helped identify pathogens which were previously undiagnosed by conventional methods and has helped create personalized treatments and also in saving lives. infexnTM is reliable and has an effective impact for patient care."
       }
    ]
 }

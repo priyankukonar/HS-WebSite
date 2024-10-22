@@ -1,15 +1,7 @@
 import styled from "@emotion/styled";
-import Script from "next/script";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import { useEffect } from "react";
-// import AOS from 'aos'
-// import 'aos/dist/aos.css'
-import settings from "../../json/settings.json";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import Footer1 from "../Footer1";
-import Navbar1 from "../Navbar1";
 
 const StyledTemplate = styled.div`
    margin: 0;
@@ -22,31 +14,20 @@ const StyledTemplate = styled.div`
 `;
 
 function AppTemplate({
+   // @ts-ignore
    children,
    pageProps = {},
    bodyClassName = "",
-   renderMenu,
    ...props
 }) {
-   const router = useRouter();
    return (
       <StyledTemplate {...props} className={`body__content ${bodyClassName}`}>
          <Head>
             <link rel="icon" href="/assets/favicon.png" />
          </Head>
-         {router.pathname === "/identifi" ||
-         router.pathname.includes("template") ? (
-            <Navbar1 renderMenu={renderMenu} />
-         ) : (
-            <Navbar renderMenu={renderMenu} />
-         )}
+         <Navbar />
          {children}
-         {router.pathname === "/identifi" ||
-         router.pathname.includes("template") ? (
-            <Footer1 settings={settings} />
-         ) : (
-            <Footer settings={settings} />
-         )}
+         <Footer />
       </StyledTemplate>
    );
 }

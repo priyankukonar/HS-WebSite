@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
-import settings from '../json/settings.json'
-import menus from '../json/menus.json'
-import Modal from 'react-modal'
+import settings from "../json/settings.json";
+import menus from "../json/menus.json";
+import Modal from "react-modal";
 
 import {
    faYoutube,
@@ -18,118 +18,105 @@ import Image from "next/image";
 import ContactForm from "./ContactForm";
 import ContactFormProvider from "./providers/ContactFormProvider";
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled.footer``;
 
-`
-
-function Footer({  }) {
-
+function Footer({}) {
    return (
-      <StyledFooter className="bg-gray-100">
-         <div className="container mx-auto pt-8 pb-0 md:py-8 px-3 md:px-0">
-            <div className="flex flex-col md:flex-row gap-6">
-               <div className="md:w-4/12">
-                  <Link href={"/"}>
-                     <a className="flex px-3 md:px-0">
-                        <Image src={settings.logo_url} alt="" className="navbar-logo" width={'250'} height={'60'} />
-                     </a>
-                  </Link>
+      <StyledFooter className="bg-gradient-to-r from-customGreen to-toBlue">
+         <div className="container mx-auto p-4 md:p-16">
+            <div className="">
+               <Link href={"/"}>
+                  <a className="flex px-3 md:px-0">
+                     <Image
+                        src={settings.footer_logo_url}
+                        alt=""
+                        className="navbar-logo"
+                        width={"250"}
+                        height={"60"}
+                     />
+                  </a>
+               </Link>
+            </div>
+            <div className="flex flex-col md:flex-row gap-8 text-white mt-8 md:mt-16">
+               <div className="flex flex-col gap-4 md:w-1/4">
+                  <h1 className="font-semibold text-lg">CONTACT</h1>
+                  <div>
+                     <h1 className="text-base font-medium">Partner</h1>
+                     <p className="text-base font-light">Number: xxxxxxxxx</p>
+                     <p className="text-base font-light">Email: xxxxxxxxx</p>
+                  </div>
+                  <div>
+                     <h1 className="text-base font-medium">Career</h1>
+                     <p className="text-base font-light">Number: xxxxxxxxx</p>
+                     <p className="text-base font-light">Email: xxxxxxxxx</p>
+                  </div>
                </div>
-               <div className="md:w-2/12">
-                  <ul className="text-sm text-gray-600 flex flex-col gap-3">
-                     {menus.footer?.map((fm, fmIndex) => (
-                     <li key={`fm_${fmIndex}`}>
-                        <Link href={fm.url}>{fm.title}</Link>
-                     </li>
-                     ))}
-                     {/* <li >
-                        <ContactFormProvider
-                           renderTrigger={(rprops) => (
-                              <>
-                              <a href={'#'} {...rprops}>{'Contact'}</a>
-                              </>
-                           )}
-                        />
-                     </li> */}
-                  </ul>
+               <div className="flex flex-col gap-4 md:w-1/4">
+                  <h1 className="font-semibold text-lg">MEET</h1>
+                  <div>
+                     <h1 className="text-base font-medium">Team</h1>
+                     <p className="text-base font-light">
+                        H-22, 23 Akshar Business Park, Sector 25, Turbhe, Navi
+                        Mumbai 400703
+                     </p>
+                  </div>
+                  <div>
+                     <h1 className="text-base font-medium">Lab Address</h1>
+                     <p className="text-base font-light">
+                        H-22, 23 Akshar Business Park, Sector 25, Turbhe, Navi
+                        Mumbai 400703
+                     </p>
+                  </div>
                </div>
-               <div className="md:w-3/12 social-media">
-                  <ul className="text-sm text-gray-600 flex flex-col gap-3">
-                     <li>
-                     <a href={`mailto:${settings.email}`}>{settings.email}</a>
-                     </li>
-                     <li>
-                        <a>{settings.phone_number}</a>
-                     </li>
-                     <li className="flex items-center gap-6 text-xl">
-                        {settings.facebook_url ? (
-                           <a href={settings.facebook_url} target="_blank">
-                              <FontAwesomeIcon
-                                 id="icons"
-                                 className="text-dark"
-                                 icon={faFacebookF}
-                              />
-                           </a>
-                        ) : null}
-
-                        {settings.instagram_url ? (
-                           <a href={settings.instagram_url} target="_blank">
-                              <FontAwesomeIcon
-                                 id="icons"
-                                 className="text-dark"
-                                 icon={faInstagram}
-                              />
-                           </a>
-                        ) : null}
-
-                        {settings.linkedin_url ? (
-                           <a href={settings.linkedin_url} target="_blank">
-                              <FontAwesomeIcon
-                                 id="icons"
-                                 className="text-dark"
-                                 icon={faLinkedin}
-                              />
-                           </a>
-                        ) : null}
-                        {settings.youtube_url ? (
-                           <a href={settings.youtube_url} target="_blank">
-                              <FontAwesomeIcon
-                                 id="icons"
-                                 className="text-dark"
-                                 icon={faYoutube}
-                              />
-                           </a>
-                        ) : null}
-                        {settings.twitter_url ? (
-                           <a href={settings.twitter_url} target="_blank">
-                              <FontAwesomeIcon
-                                 id="icons"
-                                 className="text-dark"
-                                 icon={faTwitter}
-                              />
-                           </a>
-                        ) : null}
-                     </li>
-                  </ul>
+               <div className="flex flex-col gap-4 md:w-1/4">
+                  <h1 className="font-semibold text-lg">SITE MAP</h1>
+                  <div className="flex flex-col gap-1">
+                     <h1 className="text-base font-medium">Team</h1>
+                     <h1 className="text-base font-medium">Advisory Board</h1>
+                     <h1 className="text-base font-medium">Technology</h1>
+                     <h1 className="text-base font-medium">Partner</h1>
+                     <h1 className="text-base font-medium">Case Studies</h1>
+                     <h1 className="text-base font-medium">FAQ</h1>
+                  </div>
                </div>
-               <div className="pb-2 md:pb-0 md:mt-0 md:w-4/12">
-                  <p className="text-sm">
-                     HaystackAnalytics Private Limited
+               <div className="flex flex-col gap-4 md:w-1/4">
+                  <h1 className="font-semibold text-lg">SOCIALS</h1>
+                  <div className="flex flex-row md:flex-col gap-3">
+                     <img src="/assets/facebook.svg" className="w-8 h-8" />
+                     <img src="/assets/instagram.svg" className="w-8 h-8" />
+                     <img src="/assets/linkedin.svg" className="w-8 h-8" />
+                     <img src="/assets/youtube.svg" className="w-8 h-8" />
+                  </div>
+               </div>
+            </div>
+            <div className="text-sm flex flex-col md:flex-row justify-between gap-8 text-white mt-8 md:mt-16">
+               <div className="md:w-1/3 ">
+                  Disclaimer
+                  <p className="leading-3 mt-2">
+                     xxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                     xxxxxxxxxxxxxxxxxxxxx
+                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                     xxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                     xxxxxxxxxxxxxxxxxxxx
                   </p>
-                  <p className="text-xs my-2">
-                     CM 03, SINE, KReSIT Building 4th Floor, Department of Computer Science, IIT Bombay, Powai, Mumbai - 400076
-                  </p>
-                  <Link href=""><span className="text-center md:text-end text-sm">© HaystackAnalytics</span></Link>
+               </div>
+               <div className="md:w-1/3 flex flex-col justify-between gap-3">
+                  <div className=" flex md:flex-row flex-col justify-between gap-3">
+                     <p className="underline">Cookies Settings</p>
+                     <p className="underline">Privacy Policy </p>
+                  </div>
+                  <div className="flex md:justify-end">
+                     © 2024 All rights reserved
+                  </div>
                </div>
             </div>
          </div>
-
       </StyledFooter>
    );
 }
 
 Footer.defaultProps = {
    // menus: footerMenus.footer
-}
+};
 
 export default Footer;

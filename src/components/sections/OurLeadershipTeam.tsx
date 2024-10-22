@@ -87,8 +87,8 @@ const OurLeadershipTeamSection = ({
             </div>
             <div className="flex items-center justify-center">
                <a
-                  href="#"
-                  className="mt-6 inline-block bg-customBlue1 text-white py-3 px-8 rounded-lg shadow hover:bg-blue-700 transition duration-200"
+                  href="/about_us"
+                  className="mt-6 inline-block bg-customBlue1 text-white py-3 px-8 rounded-lg shadow transition duration-200"
                >
                   Learn More
                </a>
